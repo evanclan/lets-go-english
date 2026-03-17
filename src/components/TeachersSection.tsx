@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useRef, useState, useEffect, useCallback, useMemo } from "react";
 import Image from "next/image";
 
 const teachers = [
@@ -99,13 +99,11 @@ const teachers = [
   },
 ];
 
-// Duplicate the array for seamless infinite loop (shows 3 at a time, 4 total)
-const VISIBLE = 3;
+// Responsive carousel behavior
+const MOBILE_BREAKPOINT = 768;
+const MOBILE_VISIBLE = 2;
+const DESKTOP_VISIBLE = 3;
 const AUTO_SCROLL_MS = 2000; // Change this to adjust auto-scroll speed (milliseconds)
-const duplicated = [...teachers, ...teachers];
-const TOTAL = duplicated.length; // 8
-const STEP_PCT = 100 / TOTAL; // 12.5% per card step (relative to track width)
-const TRACK_WIDTH_PCT = (100 / VISIBLE) * TOTAL; // 266.67% of container
 
 function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
   return (
@@ -136,19 +134,16 @@ function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
 
       {/* Photo area */}
       <div
-        className="relative flex items-end justify-center pt-6 pb-0 overflow-hidden"
-        style={{
-          background: teacher.color.gradient,
-          minHeight: "400px",
-        }}
+        className="relative flex items-end justify-center pt-4 sm:pt-6 pb-0 overflow-hidden min-h-[290px] sm:min-h-[400px]"
+        style={{ background: teacher.color.gradient }}
       >
         {/* Decorative rings */}
         <div
-          className="absolute top-8 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full pointer-events-none"
+          className="absolute top-6 left-1/2 -translate-x-1/2 w-48 h-48 sm:w-64 sm:h-64 rounded-full pointer-events-none"
           style={{ border: `3px solid ${teacher.color.ring}` }}
         />
         <div
-          className="absolute top-2 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full pointer-events-none"
+          className="absolute top-1 left-1/2 -translate-x-1/2 w-64 h-64 sm:w-80 sm:h-80 rounded-full pointer-events-none"
           style={{ border: `2px solid ${teacher.color.ring}`, opacity: 0.5 }}
         />
 
@@ -171,23 +166,23 @@ function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
             alt={`${teacher.nameJp} - ${teacher.roleJp}`}
             width={400}
             height={460}
-            className="w-auto h-[380px] object-contain object-bottom drop-shadow-xl"
+            className="w-auto h-[250px] sm:h-[380px] object-contain object-bottom drop-shadow-xl"
             style={{ filter: "drop-shadow(0 8px 28px rgba(0,0,0,0.14))" }}
           />
         </motion.div>
 
         {/* Country badge */}
         <div
-          className="absolute top-4 right-4 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-sm z-20"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-2.5 sm:px-3 py-1.5 shadow-sm z-20"
           style={{ border: `1px solid ${teacher.color.border}` }}
         >
           <span className="text-base">{teacher.flag}</span>
-          <span className="text-xs font-bold text-gray-600">{teacher.from}</span>
+          <span className="text-[10px] sm:text-xs font-bold text-gray-600">{teacher.from}</span>
         </div>
 
         {/* Experience badge */}
         <div
-          className="absolute top-4 left-4 flex items-center gap-1.5 rounded-full px-3 py-1.5 shadow-sm z-20 text-white text-xs font-bold"
+          className="absolute top-3 left-3 sm:top-4 sm:left-4 flex items-center gap-1 sm:gap-1.5 rounded-full px-2.5 sm:px-3 py-1.5 shadow-sm z-20 text-white text-[10px] sm:text-xs font-bold"
           style={{
             background: `linear-gradient(135deg, ${teacher.color.primary}, ${teacher.color.secondary})`,
           }}
@@ -200,11 +195,11 @@ function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
       </div>
 
       {/* Info area */}
-      <div className="px-6 pt-5 pb-6">
+      <div className="px-4 sm:px-6 pt-4 sm:pt-5 pb-5 sm:pb-6">
         {/* Name + role */}
-        <div className="text-center mb-4">
-          <h3 className="text-2xl font-black text-gray-800 mb-0.5">{teacher.nameJp}</h3>
-          <p className="text-sm font-bold tracking-wide" style={{ color: teacher.color.primary }}>
+        <div className="text-center mb-3 sm:mb-4">
+          <h3 className="text-xl sm:text-2xl font-black text-gray-800 mb-0.5">{teacher.nameJp}</h3>
+          <p className="text-xs sm:text-sm font-bold tracking-wide" style={{ color: teacher.color.primary }}>
             {teacher.name}
           </p>
           <div className="flex items-center justify-center gap-2 mt-2">
@@ -220,7 +215,7 @@ function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
         </div>
 
         {/* Bio */}
-        <p className="text-gray-600 text-sm leading-relaxed mb-4 text-center">{teacher.bio}</p>
+        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 text-center">{teacher.bio}</p>
 
         {/* Quote */}
         <div
@@ -269,6 +264,22 @@ export default function TeachersSection() {
   const [current, setCurrent] = useState(0);
   const [transitioning, setTransitioning] = useState(true);
   const [paused, setPaused] = useState(false);
+  const [visible, setVisible] = useState(DESKTOP_VISIBLE);
+
+  const duplicated = useMemo(() => [...teachers, ...teachers], []);
+  const total = duplicated.length;
+  const stepPct = 100 / total;
+  const trackWidthPct = (100 / visible) * total;
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
+    const syncVisible = () => {
+      setVisible(media.matches ? MOBILE_VISIBLE : DESKTOP_VISIBLE);
+    };
+    syncVisible();
+    media.addEventListener("change", syncVisible);
+    return () => media.removeEventListener("change", syncVisible);
+  }, []);
 
   const advance = useCallback(() => {
     setTransitioning(true);
@@ -303,7 +314,7 @@ export default function TeachersSection() {
     }
   }, [transitioning]);
 
-  const translateX = -(current * STEP_PCT);
+  const translateX = -(current * stepPct);
 
   // Dot indicator: which original teacher is the leftmost visible
   const activeIndex = current % teachers.length;
@@ -387,12 +398,14 @@ export default function TeachersSection() {
           className="relative"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
+          onTouchStart={() => setPaused(true)}
+          onTouchEnd={() => setPaused(false)}
         >
           {/* Track wrapper — clips overflow */}
           <div className="overflow-hidden">
             <div
               style={{
-                width: `${TRACK_WIDTH_PCT}%`,
+                width: `${trackWidthPct}%`,
                 transform: `translateX(${translateX}%)`,
                 transition: transitioning ? "transform 0.5s ease-in-out" : "none",
                 display: "flex",
@@ -401,11 +414,10 @@ export default function TeachersSection() {
               {duplicated.map((teacher, i) => (
                 <div
                   key={`${teacher.name}-${i}`}
-                  className="group"
+                  className="group px-2 sm:px-4 pb-4"
                   style={{
-                    width: `${STEP_PCT}%`,
+                    width: `${stepPct}%`,
                     flexShrink: 0,
-                    padding: "0 1rem 1rem",
                   }}
                 >
                   <TeacherCard teacher={teacher} />
@@ -420,7 +432,7 @@ export default function TeachersSection() {
               setTransitioning(true);
               setCurrent((prev) => (prev === 0 ? teachers.length - 1 : prev - 1));
             }}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-orange-500 hover:border-orange-200 transition-all duration-200 hover:shadow-xl"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white shadow-lg border border-gray-100 hidden sm:flex items-center justify-center text-gray-600 hover:text-orange-500 hover:border-orange-200 transition-all duration-200 hover:shadow-xl"
             aria-label="Previous teacher"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -429,7 +441,7 @@ export default function TeachersSection() {
           </button>
           <button
             onClick={advance}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-orange-500 hover:border-orange-200 transition-all duration-200 hover:shadow-xl"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white shadow-lg border border-gray-100 hidden sm:flex items-center justify-center text-gray-600 hover:text-orange-500 hover:border-orange-200 transition-all duration-200 hover:shadow-xl"
             aria-label="Next teacher"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -437,6 +449,31 @@ export default function TeachersSection() {
             </svg>
           </button>
         </motion.div>
+
+        {/* Mobile controls */}
+        <div className="flex sm:hidden items-center justify-center gap-3 mt-4">
+          <button
+            onClick={() => {
+              setTransitioning(true);
+              setCurrent((prev) => (prev === 0 ? teachers.length - 1 : prev - 1));
+            }}
+            className="w-10 h-10 rounded-full bg-white shadow border border-gray-100 flex items-center justify-center text-gray-600"
+            aria-label="Previous teacher"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={advance}
+            className="w-10 h-10 rounded-full bg-white shadow border border-gray-100 flex items-center justify-center text-gray-600"
+            aria-label="Next teacher"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
 
         {/* Dot indicators */}
         <div className="flex items-center justify-center gap-3 mt-8">

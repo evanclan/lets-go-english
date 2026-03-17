@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const reasons = [
   {
@@ -176,7 +177,7 @@ export default function FeaturesSection() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-7"
         >
           {reasons.map((r) => (
             <motion.div
@@ -200,82 +201,104 @@ export default function FeaturesSection() {
                 }}
               />
 
-              <div className="flex flex-col flex-1 p-6">
-                {/* Card header */}
-                <div className="flex items-start gap-3.5 mb-4">
-                  {/* Gradient number circle */}
-                  <div
-                    className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center shadow-md"
-                    style={{ background: r.gradient }}
-                  >
-                    <span className="text-white font-black text-xl leading-none" style={{ fontFamily: "'Fredoka One', sans-serif" }}>
-                      {r.num}
-                    </span>
+              {/* Horizontal layout: text (70%) + image (30%) */}
+              <div className="flex flex-1 min-h-0">
+                {/* Text content */}
+                <div className="flex flex-col flex-1 p-6" style={{ flex: "7 1 0%" }}>
+                  {/* Card header */}
+                  <div className="flex items-start gap-3.5 mb-4">
+                    <div
+                      className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center shadow-md"
+                      style={{ background: r.gradient }}
+                    >
+                      <span className="text-white font-black text-xl leading-none" style={{ fontFamily: "'Fredoka One', sans-serif" }}>
+                        {r.num}
+                      </span>
+                    </div>
+
+                    <div className="flex-1 min-w-0 pt-0.5">
+                      <span className={`inline-block text-[10px] font-bold tracking-widest uppercase px-2.5 py-0.5 rounded-full border ${r.badgeCls} mb-1.5`}>
+                        {r.titleEn}
+                      </span>
+                      <h3 className="text-[0.95rem] font-black text-gray-900 leading-tight whitespace-pre-line">
+                        {r.title}
+                      </h3>
+                    </div>
                   </div>
 
-                  {/* Labels */}
-                  <div className="flex-1 min-w-0 pt-0.5">
-                    <span className={`inline-block text-[10px] font-bold tracking-widest uppercase px-2.5 py-0.5 rounded-full border ${r.badgeCls} mb-1.5`}>
-                      {r.titleEn}
-                    </span>
-                    <h3 className="text-[0.95rem] font-black text-gray-900 leading-tight whitespace-pre-line">
-                      {r.title}
-                    </h3>
+                  {/* Divider */}
+                  <div
+                    className="h-px mb-4 rounded-full"
+                    style={{
+                      background: `linear-gradient(to right, rgba(${r.accentRgb},0.35), transparent)`,
+                    }}
+                  />
+
+                  {/* Icon + body */}
+                  <div className="flex items-start gap-3 flex-1">
+                    <div
+                      className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xl mt-0.5"
+                      style={{ background: `rgba(${r.accentRgb},0.1)` }}
+                    >
+                      {r.icon}
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      {r.desc && (
+                        <p className="text-gray-600 text-sm leading-relaxed">{r.desc}</p>
+                      )}
+
+                      {r.bullets && (
+                        <>
+                          <ul className="space-y-2.5 mb-3">
+                            {r.bullets.map((b, i) => (
+                              <li key={i} className="flex items-center gap-2.5">
+                                <span
+                                  className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-white text-[10px] font-black shadow-sm"
+                                  style={{ background: r.gradient }}
+                                >
+                                  ✓
+                                </span>
+                                <span className="text-gray-800 font-semibold text-sm">{b.text}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          {r.note && (
+                            <p
+                              className="text-xs font-medium italic leading-relaxed px-3 py-2 rounded-lg"
+                              style={{
+                                background: `rgba(${r.accentRgb},0.07)`,
+                                color: r.accent,
+                              }}
+                            >
+                              💡 {r.note}
+                            </p>
+                          )}
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
 
-                {/* Divider */}
+                {/* Image on the right side (30%) */}
                 <div
-                  className="h-px mb-4 rounded-full"
-                  style={{
-                    background: `linear-gradient(to right, rgba(${r.accentRgb},0.35), transparent)`,
-                  }}
-                />
-
-                {/* Icon + body */}
-                <div className="flex items-start gap-3 flex-1">
-                  {/* Icon pill */}
+                  className="relative hidden sm:block overflow-hidden"
+                  style={{ flex: "3 1 0%" }}
+                >
+                  <Image
+                    src={`/gallery/${r.num}.jpg`}
+                    alt={r.titleEn}
+                    fill
+                    sizes="(max-width: 768px) 0px, 200px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Soft gradient overlay blending image into card */}
                   <div
-                    className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xl mt-0.5"
-                    style={{ background: `rgba(${r.accentRgb},0.1)` }}
-                  >
-                    {r.icon}
-                  </div>
-
-                  <div className="flex-1 min-w-0">
-                    {r.desc && (
-                      <p className="text-gray-600 text-sm leading-relaxed">{r.desc}</p>
-                    )}
-
-                    {r.bullets && (
-                      <>
-                        <ul className="space-y-2.5 mb-3">
-                          {r.bullets.map((b, i) => (
-                            <li key={i} className="flex items-center gap-2.5">
-                              <span
-                                className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-white text-[10px] font-black shadow-sm"
-                                style={{ background: r.gradient }}
-                              >
-                                ✓
-                              </span>
-                              <span className="text-gray-800 font-semibold text-sm">{b.text}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        {r.note && (
-                          <p
-                            className="text-xs font-medium italic leading-relaxed px-3 py-2 rounded-lg"
-                            style={{
-                              background: `rgba(${r.accentRgb},0.07)`,
-                              color: r.accent,
-                            }}
-                          >
-                            💡 {r.note}
-                          </p>
-                        )}
-                      </>
-                    )}
-                  </div>
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: `linear-gradient(to right, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 35%, rgba(${r.accentRgb},0.08) 100%)`,
+                    }}
+                  />
                 </div>
               </div>
 

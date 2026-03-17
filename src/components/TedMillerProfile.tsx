@@ -217,29 +217,29 @@ export default function TedMillerProfile() {
                   alt="校長先生 Ted Miller"
                   width={380}
                   height={440}
-                  className="w-full max-w-[220px] sm:max-w-[270px] lg:max-w-[300px] drop-shadow-2xl object-contain"
+                  className="w-full max-w-[170px] sm:max-w-[250px] lg:max-w-[300px] drop-shadow-2xl object-contain"
                   priority
                 />
               </motion.div>
 
               {/* Speech bubble */}
               <motion.div
-                className="absolute top-28 -right-2 sm:-right-6 bg-white rounded-2xl shadow-lg px-3 py-1.5 text-xs sm:text-sm font-bold text-green-700 border-2 border-green-200 whitespace-nowrap z-30"
+                className="absolute top-20 -right-14 sm:top-28 sm:-right-6 bg-white rounded-2xl shadow-lg px-2.5 sm:px-3 py-1.5 text-[11px] sm:text-sm font-bold text-green-700 border-2 border-green-200 whitespace-nowrap z-30"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.2, type: "spring" }}
                 style={{ borderRadius: "16px 16px 4px 16px" }}
               >
-                <span className="text-lg">👋</span> Nice to meet you!
+                <span className="text-base sm:text-lg">👋</span> Nice to meet you!
               </motion.div>
               <motion.div
-                className="absolute bottom-[34%] -left-2 sm:-left-6 bg-white rounded-2xl shadow-lg px-3 py-1.5 text-xs sm:text-sm font-bold text-orange-700 border-2 border-orange-200 whitespace-nowrap z-30"
+                className="absolute bottom-[36%] -left-14 sm:bottom-[34%] sm:-left-6 bg-white rounded-2xl shadow-lg px-2.5 sm:px-3 py-1.5 text-[11px] sm:text-sm font-bold text-orange-700 border-2 border-orange-200 whitespace-nowrap z-30"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.5, type: "spring" }}
                 style={{ borderRadius: "16px 16px 16px 4px" }}
               >
-                <span className="text-lg">🌸</span> 楽しく学ぼう！
+                <span className="text-base sm:text-lg">🌸</span> 楽しく学ぼう！
               </motion.div>
             </motion.div>
 
