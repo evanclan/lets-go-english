@@ -33,7 +33,7 @@ export default function HeroSection() {
 
       {/* Social media icons — top right */}
       <motion.div
-        className="absolute top-5 right-4 sm:right-6 lg:right-8 z-20 flex items-center gap-3"
+        className="absolute top-24 right-4 sm:top-5 sm:right-6 lg:right-8 z-20 flex items-center gap-3"
         initial={{ opacity: 0, x: 10 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
@@ -108,7 +108,7 @@ export default function HeroSection() {
         </motion.div>
       ))}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 lg:pt-10 pb-1 sm:pb-2 flex flex-col lg:flex-row items-center gap-7 lg:gap-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 lg:pt-10 pb-1 sm:pb-2 flex flex-col lg:flex-row items-center gap-7 lg:gap-0">
         {/* Left text content */}
         <div className="flex-1 text-center lg:text-left">
           <motion.div
