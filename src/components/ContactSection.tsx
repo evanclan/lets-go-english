@@ -54,10 +54,10 @@ export default function ContactSection() {
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
               <h3 className="font-black text-gray-800 text-lg mb-4">スクール情報</h3>
               {[
-                { icon: "📍", label: "住所", val: "東京都渋谷区\nサンプル町1-2-3" },
-                { icon: "📞", label: "電話", val: "03-XXXX-XXXX" },
-                { icon: "✉️", label: "メール", val: "info@raja-english.com" },
-                { icon: "⏰", label: "受付時間", val: "月〜土 10:00 - 20:00\n日・祝 10:00 - 18:00" },
+                { icon: "📍", label: "住所", val: "株式会社RaJA\n〒890-0051鹿児島県鹿児島市高\n麗町40-39" },
+                { icon: "📞", label: "電話", val: "+81-99-204=7730" },
+                { icon: "✉️", label: "メール", val: "info@raja-international.com.com" },
+                { icon: "⏰", label: "受付時間", val: "月〜土 9:00 - 6:00" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-3 py-3 border-b border-gray-50 last:border-0">
                   <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
@@ -83,10 +83,27 @@ export default function ContactSection() {
 
             <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
               <h3 className="font-black text-gray-800 mb-3">🗾 アクセス</h3>
-              <div className="bg-gray-100 rounded-xl h-32 flex items-center justify-center text-gray-400 text-sm">
-                <span>📍 Google Map</span>
+              <div className="rounded-xl overflow-hidden border border-gray-200 h-48 sm:h-52">
+                <iframe
+                  src="https://maps.app.goo.gl/gGPgSQPMd5BpTSoi9"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="RaJA International 所在地"
+                />
               </div>
-              <p className="text-xs text-gray-500 mt-2">
+              <a
+                href="https://maps.app.goo.gl/gGPgSQPMd5BpTSoi9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-teal-600 hover:text-teal-700 font-medium mt-2 inline-block"
+              >
+                Google Mapで開く →
+              </a>
+              <p className="text-xs text-gray-500 mt-1">
                 渋谷駅 徒歩5分 / 原宿駅 徒歩10分
               </p>
             </div>
@@ -186,10 +203,12 @@ export default function ContactSection() {
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-400 outline-none transition-colors text-gray-800 text-sm"
                   >
                     <option value="">コースを選んでください</option>
-                    <option value="kids">子ども英会話（3〜12歳）</option>
-                    <option value="junior">ジュニア英会話（中高生）</option>
-                    <option value="adult">大人英会話（18歳以上）</option>
-                    <option value="private">プライベートレッスン</option>
+                    <option value="toddler">幼児クラス（年少〜年長）</option>
+                    <option value="elementary">小学生クラス（小学1年生〜6年生）</option>
+                    <option value="junior">中学・高校生クラス（中学生〜高校生）</option>
+                    <option value="adult">大人クラス（大人）</option>
+                    <option value="studyabroad">留学クラス（留学希望者）</option>
+                    <option value="firststudyabroad">初めての留学クラス（小学4年生〜高校3年生）</option>
                     <option value="undecided">まだ決めていない</option>
                   </select>
                 </div>

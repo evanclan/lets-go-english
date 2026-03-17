@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 const courses = [
@@ -118,6 +119,18 @@ export default function CoursesSection() {
         className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-[0.06] pointer-events-none"
         style={{ background: "radial-gradient(circle, #E8571A, transparent 70%)", transform: "translate(-30%,30%)" }}
       />
+
+      {/* Ted Miller decorative figure — full height, left side */}
+      <div className="hidden lg:block absolute left-80 bottom-0 top-0 w-[800px] pointer-events-none select-none z-[1]">
+        <Image
+          src="/self intro/ted miller fun.png"
+          alt=""
+          fill
+          className="object-contain object-left-bottom"
+          sizes="480px"
+          priority={false}
+        />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}

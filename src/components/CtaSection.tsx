@@ -325,18 +325,14 @@ export default function CtaSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="relative rounded-3xl overflow-hidden mt-24"
-          style={{
-            background:
-              "linear-gradient(135deg, #E8571A 0%, #F5C200 40%, #3D8B3D 100%)",
-          }}
         >
-          <div
-            className="absolute inset-0 opacity-10 pointer-events-none"
-            style={{
-              backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-rule='evenodd'%3E%3Ccircle cx='20' cy='20' r='3'/%3E%3C/g%3E%3C/svg%3E\")",
-            }}
+          <Image
+            src="/gallery/LINE_ALBUM_COCO_240625_12.jpg"
+            alt="Classroom background"
+            fill
+            className="object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/35 to-black/50" />
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 p-10 sm:p-14">
             <div className="flex-1 text-center lg:text-left">
@@ -380,9 +376,6 @@ export default function CtaSection() {
               >
                 🎯 今すぐ無料体験に申し込む！
               </motion.a>
-              <p className="text-white/70 text-xs text-center">
-                オンラインフォームで24時間受付中
-              </p>
             </div>
           </div>
         </motion.div>

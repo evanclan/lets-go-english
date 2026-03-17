@@ -25,7 +25,11 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-[65vh] lg:min-h-[72vh] flex flex-col items-center justify-center overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #FFF9F0 0%, #FFF0E0 30%, #E8F8F4 65%, #F0FFF8 100%)",
+        backgroundImage:
+          "linear-gradient(160deg, rgba(255, 249, 240, 0.9) 0%, rgba(255, 240, 224, 0.88) 30%, rgba(232, 248, 244, 0.86) 65%, rgba(240, 255, 248, 0.9) 100%), url('/self%20intro/hero%20background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Dot pattern background */}

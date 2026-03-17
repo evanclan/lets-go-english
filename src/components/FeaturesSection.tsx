@@ -201,14 +201,40 @@ export default function FeaturesSection() {
                 }}
               />
 
-              {/* Horizontal layout: text (70%) + image (30%) */}
-              <div className="flex flex-1 min-h-0">
+              {/* Mobile: image on top | Desktop: text left + image right */}
+              <div className="flex flex-col sm:flex-row flex-1 min-h-0">
+                {/* Mobile-only image banner (shown on top) */}
+                <div className="relative sm:hidden w-full h-44 overflow-hidden">
+                  <Image
+                    src={`/gallery/${r.num}.jpg`}
+                    alt={r.titleEn}
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: `linear-gradient(to bottom, transparent 50%, rgba(255,255,255,0.85) 100%)`,
+                    }}
+                  />
+                  {/* Floating number badge on mobile image */}
+                  <div
+                    className="absolute top-3 left-3 w-10 h-10 rounded-xl flex items-center justify-center shadow-lg"
+                    style={{ background: r.gradient }}
+                  >
+                    <span className="text-white font-black text-lg leading-none" style={{ fontFamily: "'Fredoka One', sans-serif" }}>
+                      {r.num}
+                    </span>
+                  </div>
+                </div>
+
                 {/* Text content */}
                 <div className="flex flex-col flex-1 p-6" style={{ flex: "7 1 0%" }}>
                   {/* Card header */}
                   <div className="flex items-start gap-3.5 mb-4">
                     <div
-                      className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center shadow-md"
+                      className="hidden sm:flex flex-shrink-0 w-12 h-12 rounded-xl items-center justify-center shadow-md"
                       style={{ background: r.gradient }}
                     >
                       <span className="text-white font-black text-xl leading-none" style={{ fontFamily: "'Fredoka One', sans-serif" }}>
@@ -280,7 +306,7 @@ export default function FeaturesSection() {
                   </div>
                 </div>
 
-                {/* Image on the right side (30%) */}
+                {/* Desktop-only image on the right side (30%) */}
                 <div
                   className="relative hidden sm:block overflow-hidden"
                   style={{ flex: "3 1 0%" }}
@@ -289,10 +315,9 @@ export default function FeaturesSection() {
                     src={`/gallery/${r.num}.jpg`}
                     alt={r.titleEn}
                     fill
-                    sizes="(max-width: 768px) 0px, 200px"
+                    sizes="(max-width: 640px) 0px, 200px"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  {/* Soft gradient overlay blending image into card */}
                   <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
