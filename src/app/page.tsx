@@ -4,6 +4,7 @@ import MarqueeSection from "@/components/MarqueeSection";
 import PrincipalSection from "@/components/PrincipalSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import CoursesSection from "@/components/CoursesSection";
+import EikenJrSection from "@/components/EikenJrSection";
 import TeachersSection from "@/components/TeachersSection";
 import CtaSection from "@/components/CtaSection";
 import ContactSection from "@/components/ContactSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <PrincipalSection />
       <FeaturesSection />
       <CoursesSection />
+      <EikenJrSection />
       <TeachersSection />
       <CtaSection />
       <ContactSection />
