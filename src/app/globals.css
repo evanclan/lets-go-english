@@ -30,6 +30,15 @@ body {
   overflow-x: hidden;
 }
 
+/* Marquee: hide scrollbar, drag still works */
+.marquee-scroller {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.marquee-scroller::-webkit-scrollbar {
+  display: none;
+}
+
 .text-gradient-orange {
   background: linear-gradient(135deg, #E8571A, #F5C200);
   -webkit-background-clip: text;
