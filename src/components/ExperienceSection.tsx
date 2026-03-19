@@ -8,7 +8,7 @@ const experiences = [
   {
     id: "coco",
     name: "COCO",
-    nameJp: "瑚子",
+    nameJp: "",
     grade: "小学4年生",
     location: "鹿児島県",
     profileImage: "/reviews/COCO/LINE_ALBUM_COCO_240625_2.jpg",
