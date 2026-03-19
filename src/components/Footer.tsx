@@ -20,7 +20,7 @@ const footerLinks = [
     links: [
       { label: "先生紹介", href: "#teachers" },
       { label: "特徴・強み", href: "#features" },
-      { label: "コンセプト", href: "#concept" },
+      { label: "コンセプト", href: "/concept" },
       { label: "体験談", href: "#experiences" },
       { label: "よくある質問", href: "#" },
     ],

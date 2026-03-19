@@ -7,15 +7,16 @@ import Image from "next/image";
 const gallery = [
   "/gallery/1.jpg",
   "/gallery/3.jpg",
-  "/gallery/LINE_ALBUM_2025 November_251215_92.jpg",
+  "/gallery/LINE_ALBUM_2025%20November_251215_92.jpg",
   "/gallery/5.jpg",
   "/gallery/LINE_ALBUM_COCO_240625_12.jpg",
   "/gallery/2.jpg",
-  "/gallery/LINE_ALBUM_2025 November_251215_362.jpg",
+  "/gallery/LINE_ALBUM_2025%20November_251215_362.jpg",
   "/gallery/4.jpg",
-  "/gallery/LINE_ALBUM_2025 December_251229_839.jpg",
+  "/gallery/LINE_ALBUM_2025%20December_251229_839.jpg",
+  "/gallery/LINE_ALBUM_2025%20November_251215_439.jpg",
+  "/gallery/51.jpg",
   "/gallery/6.jpg",
-  "/gallery/LINE_ALBUM_2025 November_251215_554.jpg",
 ];
 
 const SPEED = 0.45; // px per frame
@@ -140,6 +141,7 @@ export default function MarqueeSection() {
   }, [lightboxSrc]);
 
   const doubled = [...gallery, ...gallery];
+  const originalCount = gallery.length;
 
   return (
     <>
@@ -197,6 +199,7 @@ export default function MarqueeSection() {
                     alt="教室の様子"
                     fill
                     sizes="220px"
+                    loading={i < originalCount ? "eager" : "lazy"}
                     className="object-cover transition-transform duration-500 hover:scale-110 pointer-events-none"
                     draggable={false}
                     onLoad={measureLoopWidth}

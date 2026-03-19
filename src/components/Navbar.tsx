@@ -10,7 +10,7 @@ const navLinks = [
   { label: "特徴", labelEn: "Features", href: "#features" },
   { label: "先生紹介", labelEn: "Teachers", href: "#teachers" },
   { label: "体験談", labelEn: "Experiences", href: "#experiences" },
-  { label: "コンセプト", labelEn: "Concept", href: "#concept" },
+  { label: "コンセプト", labelEn: "Concept", href: "/concept" },
   { label: "お問い合わせ", labelEn: "Contact", href: "#contact" },
 ];
 
