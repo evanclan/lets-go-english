@@ -147,6 +147,7 @@ export default function MarqueeSection() {
     <>
       {/* ═══════════════ MARQUEE STRIP ═══════════════ */}
       <section
+        id="marquee"
         className="relative py-6 sm:py-8 overflow-hidden"
         style={{ backgroundColor: "var(--warm-white)" }}
       >

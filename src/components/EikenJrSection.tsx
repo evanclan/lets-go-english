@@ -12,6 +12,7 @@ const levels = [
 export default function EikenJrSection() {
   return (
     <section
+      id="eiken-jr"
       className="relative py-14 sm:py-20 overflow-visible"
       style={{
         background: "linear-gradient(180deg, #FAFCFF 0%, #F0F5FF 50%, #FAFCFF 100%)",

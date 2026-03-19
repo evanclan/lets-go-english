@@ -148,7 +148,7 @@ function StepContent({
 
 export default function CtaSection() {
   return (
-    <section className="py-24 relative overflow-hidden bg-white">
+    <section id="cta" className="py-24 relative overflow-hidden bg-white">
       {/* Subtle wave texture */}
       <div
         className="absolute inset-0 pointer-events-none opacity-60"
