@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "ホーム", labelEn: "Home", href: "#home" },
+  { label: "ホーム", labelEn: "Home", href: "/" },
   { label: "コース", labelEn: "Courses", href: "#courses" },
   { label: "特徴", labelEn: "Features", href: "#features" },
   { label: "先生紹介", labelEn: "Teachers", href: "#teachers" },
@@ -39,7 +39,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Navbar brand logo */}
           <a
-            href="#home"
+            href="/"
             className="flex items-center gap-2 transition-transform duration-200 hover:scale-105 active:scale-95"
           >
             <Image
