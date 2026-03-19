@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const COURSE_LABELS: Record<string, string> = {
   toddler: "幼児クラス（年少〜年長）",
   elementary: "小学生クラス（小学1年生〜6年生）",
@@ -15,6 +13,16 @@ const COURSE_LABELS: Record<string, string> = {
 
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not set");
+      return NextResponse.json(
+        { error: "メール送信の設定がありません。" },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
     const { name, email, phone, course, message } = await request.json();
 
     if (!name || !email) {
