@@ -27,39 +27,27 @@ const steps = [
   },
   {
     num: "③",
-    icon: "💬",
-    title: "カウンセリング",
-    details: [
-      "目的（学校対策 / 会話 / 留学など）を確認",
-      "最適クラスをご提案いたします",
-    ],
-    color: "#2E9E8F",
-    gradient: "linear-gradient(135deg, #2E9E8F 0%, #3DBFAE 100%)",
-    isLast: false,
-  },
-  {
-    num: "④",
     icon: "📅",
     title: "クラス決定・スケジュール選択",
     details: [
       "曜日・時間を決定",
-      "無理なく続けられるプランを一緒に設計",
+      
     ],
     color: "#2274A5",
     gradient: "linear-gradient(135deg, #2274A5 0%, #3AADDB 100%)",
     isLast: false,
   },
   {
-    num: "⑤",
+    num: "④",
     icon: "📝",
     title: "お申し込み手続き",
-    details: ["入会申込書の記入", "月謝・規約の説明"],
+    details: ["入会申込書の記入", "月謝・規約の確認"],
     color: "#3D8B3D",
     gradient: "linear-gradient(135deg, #3D8B3D 0%, #52B252 100%)",
     isLast: false,
   },
   {
-    num: "⑥",
+    num: "⑤",
     icon: "🎉",
     title: "レッスンスタート！",
     details: [
@@ -176,7 +164,7 @@ export default function CtaSection() {
             申し込み<span className="text-gradient-orange">ステップ</span>
           </h2>
           <p className="text-gray-500 text-base max-w-md mx-auto leading-relaxed">
-            無料体験からレッスン開始まで、かんたん6ステップ
+            無料体験からレッスン開始まで、かんたん5ステップ
           </p>
         </motion.div>
 
@@ -187,7 +175,7 @@ export default function CtaSection() {
             className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] rounded-full"
             style={{
               background:
-                "linear-gradient(to bottom, #E8571A, #F5C200 20%, #2E9E8F 40%, #2274A5 60%, #3D8B3D 80%, #E8571A)",
+                "linear-gradient(to bottom, #E8571A, #F5C200 25%, #2274A5 50%, #3D8B3D 75%, #E8571A)",
             }}
           />
           {/* Gradient line — mobile (left) */}
@@ -195,7 +183,7 @@ export default function CtaSection() {
             className="md:hidden absolute left-[21px] top-0 bottom-0 w-[3px] rounded-full"
             style={{
               background:
-                "linear-gradient(to bottom, #E8571A, #F5C200 20%, #2E9E8F 40%, #2274A5 60%, #3D8B3D 80%, #E8571A)",
+                "linear-gradient(to bottom, #E8571A, #F5C200 25%, #2274A5 50%, #3D8B3D 75%, #E8571A)",
             }}
           />
 

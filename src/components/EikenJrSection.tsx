@@ -84,7 +84,7 @@ export default function EikenJrSection() {
 
             {/* Description */}
             <p className="relative z-10 text-gray-700 text-sm sm:text-[15px] leading-relaxed">
-              英会話棟の道向かいにある
+            
               <strong className="text-blue-700"> RaJA 本社ビル</strong>
               が受験会場です。日頃の学びの成果を発揮して、ブロンズ→シルバー→ゴールドの順にクリアしていきます。
             </p>

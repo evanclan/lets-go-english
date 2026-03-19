@@ -727,7 +727,7 @@ export default function CoursesDetailPage() {
         </div>
       </section>
 
-      {/* ── FAQ ── */}
+      {/* ── FAQ (hidden until real content is ready) ──
       <section className="py-16 bg-white relative overflow-hidden">
         <div
           className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-[0.06] pointer-events-none"
@@ -747,6 +747,7 @@ export default function CoursesDetailPage() {
           <FAQSection />
         </div>
       </section>
+      */}
 
       {/* ── CTA ── */}
       <section
