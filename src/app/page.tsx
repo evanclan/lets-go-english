@@ -6,6 +6,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import CoursesSection from "@/components/CoursesSection";
 import EikenJrSection from "@/components/EikenJrSection";
 import TeachersSection from "@/components/TeachersSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import CtaSection from "@/components/CtaSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -21,6 +22,7 @@ export default function Home() {
       <CoursesSection />
       <EikenJrSection />
       <TeachersSection />
+      <ExperienceSection />
       <CtaSection />
       <ContactSection />
       <Footer />
