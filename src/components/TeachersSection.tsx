@@ -8,10 +8,10 @@ const teachers = [
   {
     name: "Chris",
     nameJp: "クリス先生",
-    from: "USA",
-    flag: "🇺🇸",
-    role: "Head Instructor",
-    roleJp: "主任講師",
+    from: "Philippines",
+    flag: "🇵🇭",
+    role: "English Conversation Teacher",
+    roleJp: "英会話先生",
     exp: "10+ Years",
     image: "/teachers/CHRIS.png",
     bio: "アメリカ出身のクリス先生は、楽しくエネルギッシュな授業で子どもたちに大人気。フォニックスと会話力を伸ばすプロフェッショナルです。",
@@ -33,8 +33,8 @@ const teachers = [
     nameJp: "マイタ先生",
     from: "Philippines",
     flag: "🇵🇭",
-    role: "Phonics & Kids Specialist",
-    roleJp: "フォニックス専門講師",
+    role: "English Conversation Teacher",
+    roleJp: "英会話先生",
     exp: "5+ Years",
     image: "/teachers/MAITA.png",
     bio: "フィリピン出身のマイタ先生は、フォニックスと子ども英語教育のスペシャリスト。笑顔あふれるレッスンで生徒の可能性を広げます。",
@@ -56,8 +56,8 @@ const teachers = [
     nameJp: "ミワ先生",
     from: "Japan",
     flag: "🇯🇵",
-    role: "Bilingual Support",
-    roleJp: "バイリンガルサポート",
+    role: "English Conversation Teacher",
+    roleJp: "英会話先生",
     exp: "8+ Years",
     image: "/teachers/MIWA.png",
     bio: "日本語と英語のバイリンガル講師。初めて英語を学ぶ生徒にも安心のサポートで、自然な英語力を育てます。",
@@ -77,10 +77,10 @@ const teachers = [
   {
     name: "Erika",
     nameJp: "エリカ先生",
-    from: "Philippines",
-    flag: "🇵🇭",
-    role: "Conversation Specialist",
-    roleJp: "会話スペシャリスト",
+    from: "Japan",
+    flag: "🇯🇵",
+    role: "English Conversation Teacher",
+    roleJp: "英会話先生",
     exp: "6+ Years",
     image: "/teachers/ERIKA.png",
     bio: "フレンドリーで明るいエリカ先生は、実践的な英会話レッスンが得意。生徒の会話力を自然に引き出します。",
@@ -104,6 +104,7 @@ const MOBILE_BREAKPOINT = 768;
 const MOBILE_VISIBLE = 2;
 const DESKTOP_VISIBLE = 3;
 const AUTO_SCROLL_MS = 2000; // Change this to adjust auto-scroll speed (milliseconds)
+const SHOW_TEACHER_DETAILS = false; // Keep data but hide bio/quote/tags for now
 
 function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
   return (
@@ -214,44 +215,48 @@ function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
           </div>
         </div>
 
-        {/* Bio */}
-        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 text-center">{teacher.bio}</p>
+        {SHOW_TEACHER_DETAILS && (
+          <>
+            {/* Bio */}
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 text-center">{teacher.bio}</p>
 
-        {/* Quote */}
-        <div
-          className="relative rounded-xl px-4 py-3 mb-4"
-          style={{ background: teacher.color.gradient }}
-        >
-          <span
-            className="absolute top-1 left-3 text-3xl font-black leading-none pointer-events-none select-none"
-            style={{ color: teacher.color.ring, fontFamily: "Georgia, serif" }}
-          >
-            &ldquo;
-          </span>
-          <p
-            className="text-xs font-bold italic text-center pt-2"
-            style={{ color: teacher.color.primary }}
-          >
-            {teacher.quote}
-          </p>
-        </div>
-
-        {/* Tags */}
-        <div className="flex flex-wrap justify-center gap-2">
-          {teacher.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs font-bold px-3 py-1.5 rounded-full transition-all duration-200"
-              style={{
-                background: teacher.color.tagBg,
-                color: teacher.color.tagText,
-                border: `1px solid ${teacher.color.border}`,
-              }}
+            {/* Quote */}
+            <div
+              className="relative rounded-xl px-4 py-3 mb-4"
+              style={{ background: teacher.color.gradient }}
             >
-              {tag}
-            </span>
-          ))}
-        </div>
+              <span
+                className="absolute top-1 left-3 text-3xl font-black leading-none pointer-events-none select-none"
+                style={{ color: teacher.color.ring, fontFamily: "Georgia, serif" }}
+              >
+                &ldquo;
+              </span>
+              <p
+                className="text-xs font-bold italic text-center pt-2"
+                style={{ color: teacher.color.primary }}
+              >
+                {teacher.quote}
+              </p>
+            </div>
+
+            {/* Tags */}
+            <div className="flex flex-wrap justify-center gap-2">
+              {teacher.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs font-bold px-3 py-1.5 rounded-full transition-all duration-200"
+                  style={{
+                    background: teacher.color.tagBg,
+                    color: teacher.color.tagText,
+                    border: `1px solid ${teacher.color.border}`,
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

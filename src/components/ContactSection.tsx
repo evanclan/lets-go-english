@@ -55,8 +55,8 @@ export default function ContactSection() {
               <h3 className="font-black text-gray-800 text-lg mb-4">スクール情報</h3>
               {[
                 { icon: "📍", label: "住所", val: "株式会社RaJA\n〒890-0051鹿児島県鹿児島市高\n麗町40-39" },
-                { icon: "📞", label: "電話", val: "+81-99-204=7730" },
-                { icon: "✉️", label: "メール", val: "info@raja-international.com.com" },
+                { icon: "📞", label: "電話", val: "+81-99-204-7730" },
+                { icon: "✉️", label: "メール", val: "info@raja-international.com" },
                 { icon: "⏰", label: "受付時間", val: "月〜土 9:00 - 6:00" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-3 py-3 border-b border-gray-50 last:border-0">
@@ -83,11 +83,12 @@ export default function ContactSection() {
 
             <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
               <h3 className="font-black text-gray-800 mb-3">🗾 アクセス</h3>
-              <div className="rounded-xl overflow-hidden border border-gray-200 h-48 sm:h-52">
+              <div className="rounded-xl overflow-hidden border border-gray-200 h-48 sm:h-52 min-h-[12rem] bg-gray-100">
                 <iframe
-                  src="https://maps.app.goo.gl/gGPgSQPMd5BpTSoi9"
+                  src={`https://www.google.com/maps?q=${encodeURIComponent("鹿児島県鹿児島市高麗町40-39")}&output=embed`}
                   width="100%"
                   height="100%"
+                  className="min-h-[12rem] w-full"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
