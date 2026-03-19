@@ -5,6 +5,8 @@ import { useState } from "react";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,9 +15,30 @@ export default function ContactSection() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "送信に失敗しました。");
+      }
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", phone: "", course: "", message: "" });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "送信に失敗しました。もう一度お試しください。");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -227,13 +250,20 @@ export default function ContactSection() {
                   />
                 </div>
 
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm">
+                    {error}
+                  </div>
+                )}
+
                 <motion.button
                   type="submit"
-                  className="w-full btn-primary justify-center text-base py-4"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  disabled={sending}
+                  className="w-full btn-primary justify-center text-base py-4 disabled:opacity-60 disabled:cursor-not-allowed"
+                  whileHover={sending ? {} : { scale: 1.02 }}
+                  whileTap={sending ? {} : { scale: 0.98 }}
                 >
-                  🎯 無料体験レッスンに申し込む
+                  {sending ? "送信中..." : "🎯 無料体験レッスンに申し込む"}
                 </motion.button>
 
                 <p className="text-center text-xs text-gray-400">
