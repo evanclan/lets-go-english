@@ -91,10 +91,12 @@ export default function Footer() {
                 ) : (
                   <motion.button
                     key={s.label}
+                    type="button"
                     className={`w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-sm transition-colors ${s.color}`}
                     whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.9 }}
                     title={s.label}
+                    aria-label={s.label}
                   >
                     {s.icon}
                   </motion.button>
@@ -107,7 +109,7 @@ export default function Footer() {
           {footerLinks.map((group) => (
             <div key={group.title}>
               <p className="text-white font-black text-base mb-1">{group.title}</p>
-              <p className="text-gray-500 text-xs mb-4">{group.titleEn}</p>
+              <p className="text-gray-400 text-xs mb-4">{group.titleEn}</p>
               <ul className="space-y-2.5">
                 {group.links.map((link) => (
                   <li key={link.label}>
@@ -126,13 +128,13 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-xs text-center sm:text-left">
+          <p className="text-gray-400 text-xs text-center sm:text-left">
             © 2024 RaJA 英会話スクール / Let&apos;s Go English! All rights reserved.
           </p>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-500">Made with</span>
+            <span className="text-xs text-gray-400">Made with</span>
             <span className="text-red-400">❤️</span>
-            <span className="text-xs text-gray-500">in Japan</span>
+            <span className="text-xs text-gray-400">in Japan</span>
             <span className="text-sm">🇯🇵</span>
           </div>
         </div>

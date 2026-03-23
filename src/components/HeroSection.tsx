@@ -87,8 +87,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="font-black leading-tight mb-4"
-            style={{ fontFamily: "'Fredoka One', 'Nunito', sans-serif" }}
+            className="font-black leading-tight mb-4 font-brand"
           >
             <span
               className="block text-5xl sm:text-6xl lg:text-7xl"
@@ -206,15 +205,14 @@ export default function HeroSection() {
                 <div className="absolute inset-x-3 top-1 h-px bg-white/40 rounded-full" />
 
                 <p
-                  className="text-white text-ｍ font-bold tracking-widest uppercase mb-0.5 opacity-90"
+                  className="text-white text-[10px] font-bold tracking-widest uppercase mb-0.5 opacity-90"
                   style={{ letterSpacing: "0.15em" }}
                 >
                   校長
                 </p>
                 <p
-                  className="text-white font-black tracking-wide"
+                  className="text-white font-black tracking-wide font-brand"
                   style={{
-                    fontFamily: "'Fredoka One', 'Nunito', sans-serif",
                     fontSize: "1.35rem",
                     textShadow: "0 1px 4px rgba(0,0,0,0.2)",
                   }}
@@ -251,6 +249,10 @@ export default function HeroSection() {
               <img
                 src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/ted-miller.png"
                 alt="校長先生 Ted Miller｜鹿児島市の英会話教室 Let's Go English! RaJA英会話スクール"
+                width={600}
+                height={1000}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[380px] drop-shadow-2xl h-auto"
                 style={{ objectFit: "contain", objectPosition: "bottom" }}
               />

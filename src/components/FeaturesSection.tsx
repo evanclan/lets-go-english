@@ -223,7 +223,7 @@ export default function FeaturesSection() {
                     className="absolute top-3 left-3 w-10 h-10 rounded-xl flex items-center justify-center shadow-lg"
                     style={{ background: r.gradient }}
                   >
-                    <span className="text-white font-black text-lg leading-none" style={{ fontFamily: "'Fredoka One', sans-serif" }}>
+                    <span className="text-white font-black text-lg leading-none font-fredoka-only">
                       {r.num}
                     </span>
                   </div>
@@ -237,7 +237,7 @@ export default function FeaturesSection() {
                       className="hidden sm:flex flex-shrink-0 w-12 h-12 rounded-xl items-center justify-center shadow-md"
                       style={{ background: r.gradient }}
                     >
-                      <span className="text-white font-black text-xl leading-none" style={{ fontFamily: "'Fredoka One', sans-serif" }}>
+                      <span className="text-white font-black text-xl leading-none font-fredoka-only">
                         {r.num}
                       </span>
                     </div>

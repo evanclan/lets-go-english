@@ -345,9 +345,8 @@ export default function CocoReviewContent() {
                 小学4年生 · 鹿児島県出身
               </span>
               <h1
-                className="font-black mt-2"
+                className="font-black mt-2 font-brand"
                 style={{
-                  fontFamily: "'Fredoka One', 'Nunito', sans-serif",
                   fontSize: "clamp(2.5rem, 6vw, 4rem)",
                 }}
               >

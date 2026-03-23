@@ -28,10 +28,7 @@ export default function BlogPage() {
           <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 text-orange-600 px-4 py-2 rounded-full text-sm font-bold mb-6">
             <span>📝</span> Blog
           </div>
-          <h1
-            className="text-4xl sm:text-5xl font-black text-gray-900 mb-6"
-            style={{ fontFamily: "'Fredoka One', 'Nunito', sans-serif" }}
-          >
+          <h1 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6 font-brand">
             ブログ
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed max-w-xl mx-auto mb-12">

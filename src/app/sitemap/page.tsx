@@ -104,10 +104,7 @@ export default function SitemapPage() {
             <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-600 px-4 py-2 rounded-full text-sm font-bold mb-6">
               <span>🗺️</span> Sitemap
             </div>
-            <h1
-              className="text-3xl sm:text-4xl font-black text-gray-900 mb-4"
-              style={{ fontFamily: "'Fredoka One', 'Nunito', sans-serif" }}
-            >
+            <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4 font-brand">
               サイトマップ
             </h1>
             <p className="text-gray-500 text-base max-w-xl mx-auto">
