@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { Noto_Sans_JP, Nunito } from "next/font/google";
 import "./globals.css";
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+  display: "swap",
+  variable: "--font-noto-sans-jp",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-nunito",
+});
 
 const SITE_URL = "https://www.raja-english.com";
 const SITE_ICON =
@@ -100,16 +115,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={`${notoSansJP.variable} ${nunito.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+          as="style"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
           rel="stylesheet"
         />
       </head>

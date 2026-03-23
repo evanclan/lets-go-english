@@ -247,9 +247,11 @@ export default function ExperienceSection() {
                         whileHover={{ scale: 1.2, zIndex: 10 }}
                         style={{ zIndex: 4 - j }}
                       >
-                        <img
+                        <Image
                           src={img}
                           alt={`${exp.name}の写真 ${j + 1}`}
+                          width={48}
+                          height={48}
                           className="w-full h-full object-cover"
                         />
                       </motion.div>

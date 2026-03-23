@@ -481,7 +481,7 @@ export default function TeachersSection() {
         </div>
 
         {/* Dot indicators */}
-        <div className="flex items-center justify-center gap-3 mt-8">
+        <div className="flex items-center justify-center gap-1 mt-8">
           {teachers.map((_, i) => (
             <button
               key={i}
@@ -489,18 +489,25 @@ export default function TeachersSection() {
                 setTransitioning(true);
                 setCurrent(i);
               }}
-              className="transition-all duration-300"
+              className="relative flex items-center justify-center transition-all duration-300"
               style={{
-                width: activeIndex === i ? "28px" : "8px",
-                height: "8px",
-                borderRadius: "9999px",
-                background:
-                  activeIndex === i
-                    ? `linear-gradient(90deg, ${teachers[i].color.primary}, ${teachers[i].color.secondary})`
-                    : "rgba(0,0,0,0.15)",
+                width: "44px",
+                height: "44px",
               }}
               aria-label={`Go to ${teachers[i].name}`}
-            />
+            >
+              <span
+                className="block rounded-full transition-all duration-300"
+                style={{
+                  width: activeIndex === i ? "28px" : "8px",
+                  height: "8px",
+                  background:
+                    activeIndex === i
+                      ? `linear-gradient(90deg, ${teachers[i].color.primary}, ${teachers[i].color.secondary})`
+                      : "rgba(0,0,0,0.15)",
+                }}
+              />
+            </button>
           ))}
         </div>
 

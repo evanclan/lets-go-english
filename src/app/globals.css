@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', system-ui, sans-serif;
+  font-family: var(--font-noto-sans-jp), 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', system-ui, sans-serif;
   background-color: var(--warm-white);
   color: #1a1a1a;
   overflow-x: hidden;

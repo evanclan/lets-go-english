@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const floatingWords = [
   { word: "Hello!", x: "8%", y: "18%", delay: 0, color: "bg-orange-100 text-orange-600", rotate: -8 },
@@ -248,9 +249,13 @@ export default function HeroSection() {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="relative z-10"
             >
-              <img
+              <Image
                 src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/ted-miller.png"
                 alt="校長先生 Ted Miller｜鹿児島市の英会話教室 Let's Go English! RaJA英会話スクール"
+                width={380}
+                height={500}
+                priority
+                fetchPriority="high"
                 className="w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[380px] drop-shadow-2xl h-auto"
                 style={{ objectFit: "contain", objectPosition: "bottom" }}
               />
