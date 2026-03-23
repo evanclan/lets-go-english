@@ -113,8 +113,8 @@ export default function HeroSection() {
               RaJA 英会話スクール
             </p>
             <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-6 max-w-lg mx-auto lg:mx-0">
-              鹿児島市の英会話教室です。楽しく・わかりやすく・自信を持って！<br />
-              こどもから大人まで、あなたのペースで英語を学べる英会話スクールです。
+            鹿児島市で英会話を始めるなら！<br />
+            初心者も安心の「楽しく・分かりやすい」レッスンで、子どもから大人まで着実にステップアップ。
             </p>
           </motion.div>
 

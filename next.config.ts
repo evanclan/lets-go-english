@@ -1,13 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // R2 CDN URLs load in the browser; skip /_next/image proxy (avoids server-side fetch timeouts).
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev",
-      },
-    ],
+    unoptimized: true,
   },
   async redirects() {
     return [

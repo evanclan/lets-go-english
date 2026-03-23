@@ -158,7 +158,7 @@ export default function FeaturesSection() {
           </div>
 
           <h2 className="section-title text-gray-900 mb-5 leading-snug">
-            鹿児島市の英会話教室 Let&apos;s Go English が選ばれる
+            鹿児島市の英会話教室 Let&apos;s Go English が選ばれる <br/>
             <span className="text-gradient-orange"> 6つの理由</span>
           </h2>
 
@@ -166,7 +166,7 @@ export default function FeaturesSection() {
             私たちは単なる英会話スクールではありません。鹿児島市で一人ひとりが
             <strong className="text-gray-700">「使える英語」</strong>
             を身につけるための、
-            <br className="hidden sm:block" />
+            
             こども英会話から大人英会話まで対応する総合的な英語学習環境を提供しています。
           </p>
         </motion.div>
