@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CoursesDetailPage from "@/components/CoursesDetailPage";
+import PlanFeesHomeHashRedirect from "@/components/PlanFeesHomeHashRedirect";
 
 export const metadata = {
   title: "プラン＆料金 | Let's Go English! RaJA 英会話スクール",
@@ -11,6 +12,7 @@ export const metadata = {
 export default function PlanFeesPage() {
   return (
     <main>
+      <PlanFeesHomeHashRedirect />
       <Navbar />
       <CoursesDetailPage />
       <Footer />

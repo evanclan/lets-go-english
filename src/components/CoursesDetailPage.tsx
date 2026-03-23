@@ -720,7 +720,7 @@ export default function CoursesDetailPage() {
                 </motion.div>
               ))}
               <p className="text-right text-xs font-bold text-gray-400 pt-1">
-                Let&apos;s Go English! RaJA 英会話スクール　担当：森内
+                Let&apos;s Go English! RaJA 英会話スクール
               </p>
             </div>
           </motion.div>

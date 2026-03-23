@@ -60,21 +60,47 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: "📘", label: "Facebook", color: "hover:bg-blue-600" },
-                { icon: "📸", label: "Instagram", color: "hover:bg-pink-600" },
+                {
+                  icon: "📘",
+                  label: "Facebook",
+                  color: "hover:bg-blue-600",
+                  href: "https://www.facebook.com/RGA.0051/",
+                },
+                {
+                  icon: "📸",
+                  label: "Instagram",
+                  color: "hover:bg-pink-600",
+                  href: "https://www.instagram.com/raja.englishclass/",
+                },
                 { icon: "🐦", label: "Twitter", color: "hover:bg-sky-500" },
                 { icon: "▶️", label: "YouTube", color: "hover:bg-red-600" },
-              ].map((s) => (
-                <motion.button
-                  key={s.label}
-                  className={`w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-sm transition-colors ${s.color}`}
-                  whileHover={{ scale: 1.15 }}
-                  whileTap={{ scale: 0.9 }}
-                  title={s.label}
-                >
-                  {s.icon}
-                </motion.button>
-              ))}
+              ].map((s) =>
+                "href" in s && s.href ? (
+                  <motion.a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-sm transition-colors ${s.color}`}
+                    whileHover={{ scale: 1.15 }}
+                    whileTap={{ scale: 0.9 }}
+                    title={s.label}
+                    aria-label={s.label}
+                  >
+                    {s.icon}
+                  </motion.a>
+                ) : (
+                  <motion.button
+                    key={s.label}
+                    className={`w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-sm transition-colors ${s.color}`}
+                    whileHover={{ scale: 1.15 }}
+                    whileTap={{ scale: 0.9 }}
+                    title={s.label}
+                  >
+                    {s.icon}
+                  </motion.button>
+                )
+              )}
             </div>
           </div>
 

@@ -14,8 +14,9 @@ const COURSE_LABELS: Record<string, string> = {
 export async function POST(request: Request) {
   try {
     const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey) {
-      console.error("RESEND_API_KEY is not set");
+    const emailFrom = process.env.EMAIL_FROM?.trim();
+    if (!apiKey || !emailFrom) {
+      console.error("RESEND_API_KEY or EMAIL_FROM is not set");
       return NextResponse.json(
         { error: "メール送信の設定がありません。" },
         { status: 500 }
@@ -35,7 +36,7 @@ export async function POST(request: Request) {
     const courseLabel = COURSE_LABELS[course] || "未選択";
 
     const { error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || "RaJA Website <onboarding@resend.dev>",
+      from: emailFrom,
       to: process.env.EMAIL_TO || "info@raja-international.com",
       replyTo: email,
       subject: `【無料体験申込】${name}様からのお問い合わせ`,

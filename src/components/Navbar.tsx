@@ -1,19 +1,32 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-const navLinks = [
-  { label: "プラン＆料金", labelEn: "Plan & Fees", href: "/plan-fees/" },
-  { label: "特徴", labelEn: "Features", href: "#features" },
-  { label: "先生紹介", labelEn: "Teachers", href: "#teachers" },
-  { label: "体験談", labelEn: "Experiences", href: "#experiences" },
-  { label: "コンセプト", labelEn: "Concept", href: "/concept" },
-  { label: "お問い合わせ", labelEn: "Contact", href: "#contact" },
-];
+const homeSectionLinksBeforeConcept = [
+  { label: "特徴", labelEn: "Features", id: "features" as const },
+  { label: "先生紹介", labelEn: "Teachers", id: "teachers" as const },
+  { label: "体験談", labelEn: "Experiences", id: "experiences" as const },
+] as const;
 
 export default function Navbar() {
+  const pathname = usePathname() ?? "";
+  const isHome = pathname === "/";
+  const hashHref = (id: string) => (isHome ? `#${id}` : `/#${id}`);
+
+  const navLinks = [
+    { label: "プラン＆料金", labelEn: "Plan & Fees", href: "/plan-fees/" },
+    ...homeSectionLinksBeforeConcept.map((l) => ({
+      label: l.label,
+      labelEn: l.labelEn,
+      href: hashHref(l.id),
+    })),
+    { label: "コンセプト", labelEn: "Concept", href: "/concept" },
+    { label: "お問い合わせ", labelEn: "Contact", href: hashHref("contact") },
+  ];
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -84,7 +97,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <div className="flex items-center gap-2">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/RGA.0051/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-white/90 shadow-md border border-gray-100 text-[#1877F2] hover:scale-110 hover:shadow-lg transition-all duration-200"
@@ -95,7 +108,7 @@ export default function Navbar() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/raja.englishclass/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-white/90 shadow-md border border-gray-100 text-[#E4405F] hover:scale-110 hover:shadow-lg transition-all duration-200"
@@ -107,7 +120,7 @@ export default function Navbar() {
               </a>
             </div>
             <motion.a
-              href="#contact"
+              href={hashHref("contact")}
               className="btn-primary text-sm py-3 px-6 font-bold"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -119,7 +132,7 @@ export default function Navbar() {
 
           <div className="lg:hidden flex items-center gap-2">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/RGA.0051/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center rounded-full bg-white/90 shadow-md border border-gray-100 text-[#1877F2] hover:scale-110 transition-all duration-200"
@@ -130,7 +143,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/raja.englishclass/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center rounded-full bg-white/90 shadow-md border border-gray-100 text-[#E4405F] hover:scale-110 transition-all duration-200"
@@ -186,7 +199,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href={hashHref("contact")}
                 onClick={() => setMenuOpen(false)}
                 className="btn-primary mt-2 justify-center"
               >
