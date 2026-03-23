@@ -106,7 +106,7 @@ export default function ConceptPage() {
         className="relative overflow-hidden py-20 sm:py-28 lg:py-36"
         style={{
           background:
-            "linear-gradient(135deg, rgba(10,20,28,0.45) 0%, rgba(16,35,38,0.45) 100%), url('/gallery/LINE_ALBUM_2025%20December_251229_839.jpg')",
+            "linear-gradient(135deg, rgba(10,20,28,0.45) 0%, rgba(16,35,38,0.45) 100%), url('https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_2025%20December_251229_839.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

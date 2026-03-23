@@ -24,6 +24,17 @@
 .DS_Store
 *.pem
 
+# Static assets (moved to Cloudflare R2)
+/public/gallery/
+/public/reviews/
+/public/teachers/
+/public/self intro/
+/public/eiken/
+/public/*.png
+/public/*.jpg
+/public/*.pdf
+/public/*.docx
+
 # debug
 npm-debug.log*
 yarn-debug.log*

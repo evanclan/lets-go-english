@@ -11,7 +11,7 @@ const experiences = [
     nameJp: "",
     grade: "小学4年生",
     location: "鹿児島県",
-    profileImage: "/reviews/COCO/LINE_ALBUM_COCO_240625_2.jpg",
+    profileImage: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_2.jpg",
     achievement: "セブ島1ヶ月短期留学",
     achievementIcon: "✈️",
     quote:
@@ -19,10 +19,10 @@ const experiences = [
     summary:
       "小学4年生の夏、たった一人でフィリピン・セブ島へ1ヶ月の短期留学に挑戦。ホームシックを乗り越え、異文化の中で英語を学び、かけがえのない友情と成長を手にした感動の物語。",
     gallery: [
-      "/reviews/COCO/LINE_ALBUM_COCO_240625_11.jpg",
-      "/reviews/COCO/LINE_ALBUM_COCO_240625_7.jpg",
-      "/reviews/COCO/LINE_ALBUM_COCO_240625_15.jpg",
-      "/reviews/COCO/LINE_ALBUM_COCO_240625_8.jpg",
+      "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_11.jpg",
+      "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_7.jpg",
+      "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_15.jpg",
+      "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_8.jpg",
     ],
     slug: "/reviews/coco",
     available: true,
@@ -40,7 +40,7 @@ const experiences = [
     nameJp: "れいら",
     grade: "社会人",
     location: "RaJA歴1年半",
-    profileImage: "/reviews/LAYLA/layla_profile.png",
+    profileImage: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/LAYLA/layla_profile.png",
     achievement: "セブ島留学 → ワーホリ準備中",
     achievementIcon: "🌏",
     quote:
@@ -48,10 +48,10 @@ const experiences = [
     summary:
       "RaJAの英会話を1年半学んだ後、セブ島留学に挑戦。「完璧じゃなくてもまず話す」ことの大切さに気づき、今はワーキングホリデーで海外で働く夢に向けて毎日英語を磨き続けている。",
     gallery: [
-      "/reviews/LAYLA/IMG_3096.JPG",
-      "/reviews/LAYLA/IMG_2672%20(1).jpg",
-      "/reviews/LAYLA/IMG_2758%20(1).jpg",
-      "/reviews/LAYLA/IMG_2973%20(1).jpg",
+      "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/LAYLA/IMG_3096.JPG",
+      "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/LAYLA/IMG_2672%20(1).jpg",
+      "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/LAYLA/IMG_2758%20(1).jpg",
+      "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/LAYLA/IMG_2973%20(1).jpg",
     ],
     slug: "/reviews/layla",
     available: true,

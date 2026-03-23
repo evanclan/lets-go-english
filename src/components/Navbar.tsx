@@ -5,8 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "ホーム", labelEn: "Home", href: "/" },
-  { label: "コース", labelEn: "Courses", href: "#courses" },
+  { label: "プラン＆料金", labelEn: "Plan & Fees", href: "/plan-fees/" },
   { label: "特徴", labelEn: "Features", href: "#features" },
   { label: "先生紹介", labelEn: "Teachers", href: "#teachers" },
   { label: "体験談", labelEn: "Experiences", href: "#experiences" },
@@ -43,7 +42,7 @@ export default function Navbar() {
             className="flex items-center gap-2 transition-transform duration-200 hover:scale-105 active:scale-95"
           >
             <Image
-              src="/navbar-logo.png"
+              src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/navbar-logo.png"
               alt="Let's Go English mascot logo"
               width={150}
               height={75}

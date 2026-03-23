@@ -1,0 +1,79 @@
+---
+description: Upload new static assets (images, PDFs, etc.) to Cloudflare R2 and reference them via the public CDN URL
+alwaysApply: true
+---
+
+# Cloudflare R2 Static Asset Management
+
+All static assets (images, PDFs, documents) are hosted on Cloudflare R2, NOT in the local `public/` folder.
+
+## R2 Bucket Details
+
+- **Endpoint**: `https://619ee7ce9f849783030a908ebe4694dd.r2.cloudflarestorage.com`
+- **Bucket**: `lets-go-english`
+- **Public CDN URL**: `https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev`
+- **Credentials**: Stored in `.env.local` as `R2_ACCESS_KEY_ID` and `R2_SECRET_ACCESS_KEY`
+
+## When adding a new image or file
+
+1. **Write a temporary Node.js upload script** using `@aws-sdk/client-s3` (already installed):
+
+```javascript
+import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import { readFileSync } from "fs";
+import { lookup } from "mime-types";
+
+const s3 = new S3Client({
+  region: "auto",
+  endpoint: "https://619ee7ce9f849783030a908ebe4694dd.r2.cloudflarestorage.com",
+  credentials: {
+    accessKeyId: process.env.R2_ACCESS_KEY_ID,
+    secretAccessKey: process.env.R2_SECRET_ACCESS_KEY,
+  },
+});
+
+await s3.send(new PutObjectCommand({
+  Bucket: "lets-go-english",
+  Key: "folder/filename.png",       // The path/key in the bucket
+  Body: readFileSync("local-file.png"),
+  ContentType: lookup("local-file.png") || "application/octet-stream",
+}));
+```
+
+2. **Reference the file** in code using the public CDN URL:
+
+```tsx
+// ✅ CORRECT — use R2 CDN URL
+src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/photo.jpg"
+
+// ❌ WRONG — never use local public/ paths for assets
+src="/gallery/photo.jpg"
+```
+
+3. **Delete the temp script** after uploading.
+
+## Existing folder structure in the bucket
+
+```
+lets-go-english/
+├── gallery/          # Classroom & event photos
+├── reviews/COCO/     # COCO's review photos
+├── reviews/LAYLA/    # LAYLA's review photos
+├── teachers/         # Teacher profile images (CHRIS, MAITA, MIWA, ERIKA)
+├── self intro/       # Ted Miller profile images
+├── eiken/            # Eiken Jr. images
+├── *.png             # Root-level logos, banners, etc.
+└── *.pdf, *.docx     # Documents
+```
+
+## Next.js config
+
+- `images.unoptimized: true` is set in `next.config.ts` — images load directly from Cloudflare's CDN edge without the Next.js `/_next/image` proxy.
+- Do NOT add `remotePatterns` — it's unnecessary with `unoptimized: true`.
+
+## Rules
+
+- **Never** place new images in `public/`. The `public/` folder only contains default Next.js SVGs.
+- **Always** upload to R2 first, then use the CDN URL in code.
+- **Use `mime-types`** package (already installed) for correct `ContentType` on upload.
+- **Keep the bucket key structure** consistent with existing folders listed above.

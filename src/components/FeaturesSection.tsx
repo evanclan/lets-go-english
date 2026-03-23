@@ -206,7 +206,7 @@ export default function FeaturesSection() {
                 {/* Mobile-only image banner (shown on top) */}
                 <div className="relative sm:hidden w-full h-44 overflow-hidden">
                   <Image
-                    src={`/gallery/${r.num}.jpg`}
+                    src={`https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/${r.num}.jpg`}
                     alt={r.titleEn}
                     fill
                     sizes="100vw"
@@ -312,7 +312,7 @@ export default function FeaturesSection() {
                   style={{ flex: "3 1 0%" }}
                 >
                   <Image
-                    src={`/gallery/${r.num}.jpg`}
+                    src={`https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/${r.num}.jpg`}
                     alt={r.titleEn}
                     fill
                     sizes="(max-width: 640px) 0px, 200px"

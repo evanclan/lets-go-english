@@ -8,31 +8,32 @@ const footerLinks = [
     title: "コース",
     titleEn: "Courses",
     links: [
-      { label: "子ども英会話", href: "#courses" },
-      { label: "ジュニア英会話", href: "#courses" },
-      { label: "大人英会話", href: "#courses" },
-      { label: "プライベートレッスン", href: "#courses" },
+      { label: "プラン＆料金", href: "/plan-fees/" },
+      { label: "子ども英会話", href: "/plan-fees/#course-toddler" },
+      { label: "中学・高校生", href: "/plan-fees/#course-junior" },
+      { label: "大人英会話", href: "/plan-fees/#course-adult" },
+      { label: "留学クラス", href: "/plan-fees/#course-studyabroad" },
     ],
   },
   {
     title: "スクール情報",
     titleEn: "About",
     links: [
-      { label: "先生紹介", href: "#teachers" },
-      { label: "特徴・強み", href: "#features" },
+      { label: "About", href: "/about/" },
       { label: "コンセプト", href: "/concept" },
-      { label: "体験談", href: "#experiences" },
-      { label: "よくある質問", href: "#" },
+      { label: "先生紹介", href: "/#teachers" },
+      { label: "特徴・強み", href: "/#features" },
+      { label: "体験談", href: "/#experiences" },
     ],
   },
   {
     title: "サポート",
     titleEn: "Support",
     links: [
-      { label: "お問い合わせ", href: "#contact" },
-      { label: "無料体験レッスン", href: "#contact" },
-      { label: "プライバシーポリシー", href: "#" },
-      { label: "利用規約", href: "#" },
+      { label: "お問い合わせ", href: "/#contact" },
+      { label: "無料体験レッスン", href: "/#contact" },
+      { label: "プライバシーポリシー", href: "/j/privacy" },
+      { label: "サイトマップ", href: "/sitemap/" },
     ],
   },
 ];
@@ -46,7 +47,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <motion.div whileHover={{ scale: 1.03 }} className="inline-block mb-4">
               <Image
-                src="/logo-white-bg.png"
+                src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/logo-white-bg.png"
                 alt="Let's Go English RaJA"
                 width={160}
                 height={80}

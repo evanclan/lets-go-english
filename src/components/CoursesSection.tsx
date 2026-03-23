@@ -123,7 +123,7 @@ export default function CoursesSection() {
       {/* Ted Miller decorative figure — full height, left side */}
       <div className="hidden lg:block absolute left-80 bottom-0 top-0 w-[800px] pointer-events-none select-none z-[1]">
         <Image
-          src="/self intro/ted miller fun.png"
+          src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/self intro/ted miller fun.png"
           alt=""
           fill
           className="object-contain object-left-bottom"
@@ -238,7 +238,7 @@ export default function CoursesSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <Link href="/courses">
+          <Link href="/plan-fees/">
             <motion.span
               className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-teal-500 text-white px-8 py-4 rounded-full font-bold text-base shadow-lg cursor-pointer hover:shadow-xl transition-shadow"
               whileHover={{ scale: 1.05 }}

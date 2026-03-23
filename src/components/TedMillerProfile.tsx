@@ -213,7 +213,7 @@ export default function TedMillerProfile() {
                 className="relative z-10"
               >
                 <Image
-                  src="/self intro/tedmiller.png"
+                  src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/self intro/tedmiller.png"
                   alt="校長先生 Ted Miller"
                   width={380}
                   height={440}

@@ -315,7 +315,7 @@ export default function CtaSection() {
           className="relative rounded-3xl overflow-hidden mt-24"
         >
           <Image
-            src="/gallery/LINE_ALBUM_COCO_240625_12.jpg"
+            src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_COCO_240625_12.jpg"
             alt="Classroom background"
             fill
             className="object-cover"
@@ -350,7 +350,7 @@ export default function CtaSection() {
 
             <div className="flex flex-col items-center gap-4">
               <Image
-                src="/logo-dark-bg.png"
+                src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/logo-dark-bg.png"
                 alt="Let's Go English mascots"
                 width={200}
                 height={160}

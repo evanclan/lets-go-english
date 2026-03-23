@@ -26,7 +26,7 @@ export default function HeroSection() {
       className="relative min-h-[65vh] lg:min-h-[72vh] flex flex-col items-center justify-center overflow-hidden"
       style={{
         backgroundImage:
-          "linear-gradient(160deg, rgba(255, 249, 240, 0.9) 0%, rgba(255, 240, 224, 0.88) 30%, rgba(232, 248, 244, 0.86) 65%, rgba(240, 255, 248, 0.9) 100%), url('/self%20intro/hero%20background.png')",
+          "linear-gradient(160deg, rgba(255, 249, 240, 0.9) 0%, rgba(255, 240, 224, 0.88) 30%, rgba(232, 248, 244, 0.86) 65%, rgba(240, 255, 248, 0.9) 100%), url('https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/self%20intro/hero%20background.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -249,7 +249,7 @@ export default function HeroSection() {
               className="relative z-10"
             >
               <img
-                src="/ted-miller.png"
+                src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/ted-miller.png"
                 alt="校長先生 Ted Miller"
                 className="w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[380px] drop-shadow-2xl h-auto"
                 style={{ objectFit: "contain", objectPosition: "bottom" }}

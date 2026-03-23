@@ -28,7 +28,7 @@ export default function EikenJrSection() {
           <div
             className="hidden md:block absolute top-1/2 -right-44 -translate-y-1/2 w-[78%] h-[185%] pointer-events-none opacity-[0.2]"
             style={{
-              backgroundImage: "url('/eiken/eihen_image.png')",
+              backgroundImage: "url('https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/eiken/eihen_image.png')",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center center",
@@ -45,7 +45,7 @@ export default function EikenJrSection() {
           >
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/eiken/eiken.png"
+                src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/eiken/eiken.png"
                 alt="英検Jr. 受験会場 RaJA"
                 width={800}
                 height={600}

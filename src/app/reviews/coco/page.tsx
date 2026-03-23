@@ -7,47 +7,47 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 
-const profileImage = "/reviews/COCO/LINE_ALBUM_COCO_240625_2.jpg";
+const profileImage = "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_2.jpg";
 
 const galleryImages = [
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_11.jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_11.jpg",
     caption: "英語スピーチに挑戦するCOCO",
   },
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_7.jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_7.jpg",
     caption: "セブ島でお買い物体験",
   },
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_15.jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_15.jpg",
     caption: "仲間と一緒に勉強中",
   },
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_8.jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_8.jpg",
     caption: "キャンプでの思い出",
   },
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_3%20(1).jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_3%20(1).jpg",
     caption: "新しい友達との時間",
   },
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_6%20(1).jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_6%20(1).jpg",
     caption: "セブ島での日常",
   },
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_10%20(1).jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_10%20(1).jpg",
     caption: "英語キャンプの仲間たち",
   },
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_12%20(1).jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_12%20(1).jpg",
     caption: "充実した毎日",
   },
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_13.jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_13.jpg",
     caption: "成長の記録",
   },
   {
-    src: "/reviews/COCO/LINE_ALBUM_COCO_240625_17.jpg",
+    src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_17.jpg",
     caption: "かけがえのない体験",
   },
 ];
@@ -78,7 +78,7 @@ const storySections = [
 
 後で分かったことだが、37名いる日本人留学生の中で鹿児島県出身なのは私のみで、女子で一番年下なのは私だった。知っている人はゼロ。私は少し心配が大きくなった。`,
     image: {
-      src: "/reviews/COCO/LINE_ALBUM_COCO_240625_2.jpg",
+      src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_2.jpg",
       caption: "成田空港で出発を待つCOCO",
     },
   },
@@ -92,7 +92,7 @@ const storySections = [
 
 飛行機の中で、隣の子に声をかけてみることにした。隣の子の名前は玲奈ちゃん。埼玉県出身の中学1年生だ。私はその子とすぐ仲よしになり、残りの30分間、玲奈ちゃんとずっと喋っていた。`,
     image: {
-      src: "/reviews/COCO/LINE_ALBUM_COCO_240625_3%20(1).jpg",
+      src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_3%20(1).jpg",
       caption: "新しい友達との出会い",
     },
   },
@@ -106,7 +106,7 @@ const storySections = [
 
 トイレにトイレットペーパーを流してはいけないし、水道水も飲んではいけないから、とても不便だ。日本とちがいすぎる物ごとに、私は衝撃を受けた。`,
     image: {
-      src: "/reviews/COCO/LINE_ALBUM_COCO_240625_15.jpg",
+      src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_15.jpg",
       caption: "仲間たちとの勉強風景",
     },
   },
@@ -120,7 +120,7 @@ const storySections = [
 
 スピーチの練習は、ダイアリーの時間にステージに立って、マイクで自分で作った英語の文章を話すこと。かなり緊張するものだった。`,
     image: {
-      src: "/reviews/COCO/LINE_ALBUM_COCO_240625_11.jpg",
+      src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_11.jpg",
       caption: "ステージで英語スピーチに挑戦",
     },
   },
@@ -147,7 +147,7 @@ const storySections = [
 
 のぞみはマレーシアに住んでいるので、一日前にお母さんと帰ってしまう。のぞみを見送って、お土産をがんばってスーツケースに詰めて、眠る準備をする。明日は午前4時集合、午前3時起きだ。`,
     image: {
-      src: "/reviews/COCO/LINE_ALBUM_COCO_240625_7.jpg",
+      src: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/COCO/LINE_ALBUM_COCO_240625_7.jpg",
       caption: "セブ島でのお買い物体験",
     },
   },

@@ -5,18 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const gallery = [
-  "/gallery/1.jpg",
-  "/gallery/3.jpg",
-  "/gallery/LINE_ALBUM_2025%20November_251215_92.jpg",
-  "/gallery/5.jpg",
-  "/gallery/LINE_ALBUM_COCO_240625_12.jpg",
-  "/gallery/2.jpg",
-  "/gallery/LINE_ALBUM_2025%20November_251215_362.jpg",
-  "/gallery/4.jpg",
-  "/gallery/LINE_ALBUM_2025%20December_251229_839.jpg",
-  "/gallery/LINE_ALBUM_2025%20November_251215_439.jpg",
-  "/gallery/51.jpg",
-  "/gallery/6.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/1.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/3.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_2025%20November_251215_92.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/5.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_COCO_240625_12.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/2.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_2025%20November_251215_362.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/4.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_2025%20December_251229_839.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_2025%20November_251215_439.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/51.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/6.jpg",
 ];
 
 const SPEED = 0.45; // px per frame
