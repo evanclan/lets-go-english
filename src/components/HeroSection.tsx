@@ -113,7 +113,7 @@ export default function HeroSection() {
               RaJA 英会話スクール
             </p>
             <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-6 max-w-lg mx-auto lg:mx-0">
-              鹿児島市の英会話教室。楽しく・わかりやすく・自信を持って！<br />
+              鹿児島市の英会話教室です。楽しく・わかりやすく・自信を持って！<br />
               こどもから大人まで、あなたのペースで英語を学べる英会話スクールです。
             </p>
           </motion.div>
@@ -182,8 +182,8 @@ export default function HeroSection() {
             <div
               className="absolute bottom-0 left-1/2 -translate-x-1/2 rounded-full blur-3xl opacity-25 pointer-events-none"
               style={{
-                width: 320,
-                height: 120,
+                width: 480,
+                height: 160,
                 background: "radial-gradient(ellipse, #E8571A 0%, #F5C200 60%, transparent 100%)",
               }}
             />
@@ -245,16 +245,17 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="relative z-10"
+              className="relative z-10 w-[min(92vw,360px)] sm:w-[min(88vw,440px)] lg:w-[min(46vw,560px)] shrink-0"
             >
               <Image
-                src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/ted-miller.png"
+                src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/main-hero-image.png"
                 alt="校長先生 Ted Miller｜鹿児島市の英会話教室 Let's Go English! RaJA英会話スクール"
-                width={600}
-                height={1000}
+                width={900}
+                height={1500}
                 priority
                 fetchPriority="high"
-                className="w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[380px] drop-shadow-2xl h-auto"
+                sizes="(max-width: 640px) 92vw, (max-width: 1024px) 88vw, 46vw"
+                className="h-auto w-full drop-shadow-2xl"
                 style={{ objectFit: "contain", objectPosition: "bottom" }}
               />
             </motion.div>
