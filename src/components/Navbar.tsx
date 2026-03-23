@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const homeSectionLinksBeforeConcept = [
   { label: "特徴", labelEn: "Features", id: "features" as const },
@@ -50,7 +51,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Navbar brand logo */}
-          <a
+          <Link
             href="/"
             className="flex items-center gap-2 transition-transform duration-200 hover:scale-105 active:scale-95"
           >
@@ -70,7 +71,7 @@ export default function Navbar() {
                 RaJA 英会話スクール
               </div>
             </div>
-          </a>
+          </Link>
 
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link, i) => (

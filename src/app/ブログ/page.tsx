@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 import type { Metadata } from "next";
 
@@ -47,12 +48,12 @@ export default function BlogPage() {
               <br className="hidden sm:block" />
               楽しいコンテンツをお届けする予定です。お楽しみに！
             </p>
-            <a
+            <Link
               href="/"
               className="inline-flex items-center gap-2 btn-primary text-sm py-3 px-6 font-bold"
             >
               🏠 ホームに戻る
-            </a>
+            </Link>
           </div>
         </div>
       </section>

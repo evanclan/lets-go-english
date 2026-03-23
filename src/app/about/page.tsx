@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 import type { Metadata } from "next";
 
@@ -53,12 +54,12 @@ export default function AboutPage() {
               近日中に公開予定ですので、もうしばらくお待ちください。
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <a
+              <Link
                 href="/"
                 className="inline-flex items-center gap-2 btn-primary text-sm py-3 px-6 font-bold"
               >
                 🏠 ホームに戻る
-              </a>
+              </Link>
               <a
                 href="/concept"
                 className="inline-flex items-center gap-2 btn-secondary text-sm py-3 px-6 font-bold"

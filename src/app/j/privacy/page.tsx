@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 import type { Metadata } from "next";
 
@@ -151,7 +152,7 @@ export default function PrivacyPolicyPage() {
             </PolicySection>
 
             <div className="pt-6 border-t border-gray-100 text-center">
-              <a
+              <Link
                 href="/"
                 className="inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-orange-600 transition-colors"
               >
@@ -169,7 +170,7 @@ export default function PrivacyPolicyPage() {
                   />
                 </svg>
                 ホームに戻る
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -140,7 +140,7 @@ export default function ReviewsSection() {
 
               {/* Quote decoration */}
               <div className="absolute top-4 right-4 text-4xl opacity-10 font-serif leading-none select-none">
-                "
+                &ldquo;
               </div>
             </motion.div>
           ))}
