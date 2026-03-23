@@ -46,7 +46,7 @@ export default function EikenJrSection() {
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl">
               <Image
                 src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/eiken/eiken.png"
-                alt="英検Jr. 受験会場 RaJA"
+                alt="英検Jr. 受験会場 RaJA英会話スクール｜鹿児島市英検Jr.英会話教室"
                 width={800}
                 height={600}
                 className="w-full h-auto object-cover"
@@ -79,7 +79,7 @@ export default function EikenJrSection() {
 
             {/* Title */}
             <h2 className="relative z-10 text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
-              英検<span className="text-blue-600"> Jr.</span>
+              鹿児島市で英検<span className="text-blue-600"> Jr.</span>
             </h2>
 
             {/* Description */}

@@ -3,10 +3,16 @@ import Footer from "@/components/Footer";
 import CoursesDetailPage from "@/components/CoursesDetailPage";
 import PlanFeesHomeHashRedirect from "@/components/PlanFeesHomeHashRedirect";
 
-export const metadata = {
-  title: "プラン＆料金 | Let's Go English! RaJA 英会話スクール",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "プラン＆料金｜月謝¥7,700〜鹿児島市の安い英会話教室 RaJA英会話スクール",
   description:
-    "幼児から大人まで、留学対策まで。Let's Go English!の全コースの詳細・料金・特徴をご紹介します。",
+    "鹿児島市の英会話教室 RaJA英会話スクールのコース・料金一覧。こども英会話¥7,700〜、大人英会話¥10,000/月。英検Jr.対策・留学クラスも。鹿児島市で安い英会話スクールをお探しの方に。無料体験レッスン受付中。",
+  alternates: {
+    canonical: "https://www.raja-english.com/plan-fees",
+  },
 };
 
 export default function PlanFeesPage() {

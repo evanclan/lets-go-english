@@ -2,10 +2,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-export const metadata = {
-  title: "サイトマップ | Let's Go English! RaJA 英会話スクール",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "サイトマップ",
   description:
-    "Let's Go English! RaJA英会話スクールのサイトマップです。全ページの一覧をご確認いただけます。",
+    "鹿児島市の英会話教室 Let's Go English!（RaJA英会話スクール）のサイトマップ。全ページの一覧をご確認いただけます。",
+  alternates: {
+    canonical: "https://www.raja-english.com/sitemap",
+  },
 };
 
 const sitemapSections = [

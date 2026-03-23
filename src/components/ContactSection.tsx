@@ -58,10 +58,10 @@ export default function ContactSection() {
             <span>📬</span> Contact Us
           </div>
           <h2 className="section-title text-gray-900 mb-4">
-            お問い合わせ・<span className="text-gradient-green">無料体験申込</span>
+            鹿児島市の英会話無料体験・<span className="text-gradient-green">お問い合わせ</span>
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            お気軽にご連絡ください。通常24時間以内にご返答いたします。
+            英会話無料体験レッスン受付中！お気軽にご連絡ください。通常24時間以内にご返答いたします。
           </p>
         </motion.div>
 

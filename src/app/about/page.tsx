@@ -1,10 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "About | Let's Go English! RaJA 英会話スクール",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "スクール紹介（About）｜鹿児島市の英会話教室 RaJA英会話スクール",
   description:
-    "Let's Go English! RaJA英会話スクールについて。私たちのミッション、ビジョン、スクールの紹介です。",
+    "鹿児島市の英会話スクール Let's Go English!（RaJA英会話）のスクール紹介。私たちのミッション・ビジョン・鹿児島で選ばれる理由をご紹介します。",
+  alternates: {
+    canonical: "https://www.raja-english.com/about",
+  },
 };
 
 export default function AboutPage() {

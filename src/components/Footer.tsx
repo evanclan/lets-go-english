@@ -48,15 +48,14 @@ export default function Footer() {
             <motion.div whileHover={{ scale: 1.03 }} className="inline-block mb-4">
               <Image
                 src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/logo-white-bg.png"
-                alt="Let's Go English RaJA"
+                alt="Let's Go English RaJA英会話スクール｜鹿児島市の英会話教室"
                 width={160}
                 height={80}
                 className="h-16 w-auto object-contain brightness-110"
               />
             </motion.div>
             <p className="text-sm text-gray-400 leading-relaxed mb-5 max-w-xs">
-              RaJA英会話スクールは、楽しく・分かりやすく・自信を持って英語を話せるようになるための
-              英語学習環境を提供しています。
+              鹿児島市の英会話教室 RaJA英会話スクールは、こどもから大人まで楽しく・分かりやすく・自信を持って英語を話せるようになるための英会話スクールです。英検Jr.対応・初心者歓迎・無料体験レッスン実施中。
             </p>
             <div className="flex gap-3">
               {[

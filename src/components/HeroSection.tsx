@@ -113,8 +113,8 @@ export default function HeroSection() {
               RaJA 英会話スクール
             </p>
             <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-6 max-w-lg mx-auto lg:mx-0">
-              楽しく・わかりやすく・自信を持って！<br />
-              子どもから大人まで、あなたのペースで英語を学べる教室です。
+              鹿児島市の英会話教室。楽しく・わかりやすく・自信を持って！<br />
+              こどもから大人まで、あなたのペースで英語を学べる英会話スクールです。
             </p>
           </motion.div>
 
@@ -154,7 +154,7 @@ export default function HeroSection() {
                 <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
                 <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span className="text-[13px] font-semibold text-gray-600">信頼の英会話教室</span>
+              <span className="text-[13px] font-semibold text-gray-600">鹿児島市の信頼の英会話教室</span>
             </div>
 
             <span className="w-px h-4 bg-gray-300" />
@@ -250,7 +250,7 @@ export default function HeroSection() {
             >
               <img
                 src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/ted-miller.png"
-                alt="校長先生 Ted Miller"
+                alt="校長先生 Ted Miller｜鹿児島市の英会話教室 Let's Go English! RaJA英会話スクール"
                 className="w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[380px] drop-shadow-2xl h-auto"
                 style={{ objectFit: "contain", objectPosition: "bottom" }}
               />

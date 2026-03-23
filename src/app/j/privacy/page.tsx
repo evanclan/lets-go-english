@@ -1,10 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "プライバシーポリシー | Let's Go English! RaJA 英会話スクール",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "プライバシーポリシー",
   description:
-    "Let's Go English! RaJA英会話スクールのプライバシーポリシーです。個人情報の取り扱いについてご確認ください。",
+    "鹿児島市の英会話教室 Let's Go English!（RaJA英会話スクール）のプライバシーポリシー。個人情報の取り扱いについてご確認ください。",
+  alternates: {
+    canonical: "https://www.raja-english.com/j/privacy",
+  },
 };
 
 export default function PrivacyPolicyPage() {
