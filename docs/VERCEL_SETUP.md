@@ -1,51 +1,48 @@
-# Vercel deploy (when GitHub integration shows “Blocked”)
+# Vercel deploy (when Git shows “Blocked”)
 
-Your Git commits already use the correct author email (`eoalferez@gmail.com`). If Vercel still blocks production deploys (“commit author does not have contributing access”), use **GitHub Actions** so deploys use a **Vercel token** instead of the Git author check.
+## Why you still see “Blocked” on Vercel
 
-## 1. Create a Vercel token
+Vercel shows **two different things**:
 
-1. Open [Vercel → Account Settings → Tokens](https://vercel.com/account/tokens)
-2. Create a token (e.g. name: `github-actions-lets-go-english`)
-3. Copy it once (you won’t see it again)
+1. **Git integration deploy** (GitHub App) — runs on every push. On Hobby, this can stay **Blocked** when the Vercel team (`tech@…`) and the GitHub pusher don’t match. **That row can stay red forever** and still be OK.
 
-## 2. Get Org and Project IDs
+2. **GitHub Actions deploy** — this workflow uses the **Vercel CLI + token**. It does **not** use that Git author check. A **green** run in **Actions** + a **new Ready** deployment in Vercel means you’re fine.
 
-1. Open your project in Vercel → **Settings → General**
-2. Copy **Project ID**
-3. Copy **Team / Personal account** ID if shown, or use **Vercel CLI**:  
-   `npx vercel whoami` then in `.vercel/project.json` after `vercel link` you’ll see `orgId` and `projectId`
+**Ignore the blocked Git deployment** if **Actions → Deploy Production** succeeds and production works.
 
-Alternatively run locally in the repo:
-
-```bash
-npx vercel link
-cat .vercel/project.json
-```
-
-You need `orgId` → `VERCEL_ORG_ID` and `projectId` → `VERCEL_PROJECT_ID`.
-
-## 3. Add GitHub repository secrets
-
-GitHub repo → **Settings → Secrets and variables → Actions → New repository secret**:
-
-| Name                 | Value              |
-|----------------------|--------------------|
-| `VERCEL_TOKEN`       | Token from step 1  |
-| `VERCEL_ORG_ID`      | From step 2        |
-| `VERCEL_PROJECT_ID`  | From step 2        |
-
-## 4. Push to `main` or run the workflow manually
-
-- Every push to `main` runs **Deploy Production** (after secrets exist).
-- Or: **Actions** tab → **Deploy Production** → **Run workflow**.
-
-## 5. Optional: avoid double deploys
-
-If the native Vercel Git integration **also** starts succeeding again, you might get two deploys per push. Then either:
-
-- Leave only one method active, or  
-- In Vercel: **Project → Settings → Git** and adjust automation if available for your plan.
+Optional: **Vercel → Project → Settings → Git → Disconnect** the repository if you only want CLI/Actions deploys (stops the extra “Blocked” entries). You lose automatic Git-based preview deploys unless you add them another way.
 
 ---
 
-**Note:** `.env.local` is not in git. Set the same variables in **Vercel → Project → Settings → Environment Variables** for Resend, etc.
+## GitHub secrets (required)
+
+Repo → **Settings → Secrets and variables → Actions**:
+
+| Name | Where to get it |
+|------|------------------|
+| `VERCEL_TOKEN` | [Vercel → Account → Tokens](https://vercel.com/account/tokens) (create while logged in as `tech@raja-international.com`) |
+| `VERCEL_ORG_ID` | Team **Settings → General → Team ID** (starts with `team_`) |
+| `VERCEL_PROJECT_ID` | **Project** → **Settings → General → Project ID** |
+
+---
+
+## Trigger a deploy
+
+- Push to `main`, or  
+- **Actions** → **Deploy Production** → **Run workflow**
+
+---
+
+## Optional: Deploy Hook only (no CLI)
+
+If you prefer a single `curl` instead of a full build on GitHub:
+
+1. Vercel → **Project → Settings → Git → Deploy Hooks** → create hook for **Production**.
+2. Add a secret `VERCEL_DEPLOY_HOOK_URL` with the hook URL.
+3. Use a tiny workflow that only runs `curl -X POST "$VERCEL_DEPLOY_HOOK_URL"` (ask to add this if you want it).
+
+---
+
+## Production env vars
+
+`.env.local` is not deployed. Copy the same keys into **Vercel → Project → Settings → Environment Variables** (e.g. `RESEND_API_KEY`, `EMAIL_FROM`, `EMAIL_TO`).
