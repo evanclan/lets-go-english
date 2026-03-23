@@ -470,7 +470,7 @@ export default function TedMillerProfile() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  🏠 ホームに戻る
+                  🏠 ホームに戻ります！
                 </motion.span>
               </Link>
             </div>
