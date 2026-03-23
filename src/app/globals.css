@@ -24,10 +24,22 @@ html {
 }
 
 body {
-  font-family: var(--font-noto-sans-jp), 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', system-ui, sans-serif;
   background-color: var(--warm-white);
   color: #1a1a1a;
   overflow-x: hidden;
+}
+
+/* next/font variables — used where display fonts replace inline Google Font names */
+.font-brand {
+  font-family: var(--font-fredoka-one), var(--font-nunito), system-ui, sans-serif;
+}
+
+.font-nunito-only {
+  font-family: var(--font-nunito), system-ui, sans-serif;
+}
+
+.font-fredoka-only {
+  font-family: var(--font-fredoka-one), system-ui, sans-serif;
 }
 
 /* Marquee: hide scrollbar, drag still works */

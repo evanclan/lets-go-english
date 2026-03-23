@@ -30,10 +30,7 @@ export default function PrivacyPolicyPage() {
             <div className="inline-flex items-center gap-2 bg-gray-100 border border-gray-200 text-gray-600 px-4 py-2 rounded-full text-sm font-bold mb-6">
               <span>🔒</span> Privacy Policy
             </div>
-            <h1
-              className="text-3xl sm:text-4xl font-black text-gray-900 mb-4"
-              style={{ fontFamily: "'Fredoka One', 'Nunito', sans-serif" }}
-            >
+            <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4 font-brand">
               プライバシーポリシー
             </h1>
             <p className="text-gray-400 text-sm">最終更新日：2025年1月1日</p>

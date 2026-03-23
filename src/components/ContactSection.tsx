@@ -218,11 +218,15 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label htmlFor="course-select" className="block text-sm font-bold text-gray-600 mb-1.5">
+                  <label
+                    htmlFor="contact-course"
+                    className="block text-sm font-bold text-gray-600 mb-1.5"
+                  >
                     興味のあるコース
                   </label>
                   <select
-                    id="course-select"
+                    id="contact-course"
+                    name="course"
                     value={formData.course}
                     onChange={(e) => setFormData({ ...formData, course: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-400 outline-none transition-colors text-gray-800 text-sm"

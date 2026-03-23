@@ -91,10 +91,12 @@ export default function Footer() {
                 ) : (
                   <motion.button
                     key={s.label}
+                    type="button"
                     className={`w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-sm transition-colors ${s.color}`}
                     whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.9 }}
                     title={s.label}
+                    aria-label={s.label}
                   >
                     {s.icon}
                   </motion.button>

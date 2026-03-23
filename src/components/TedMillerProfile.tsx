@@ -189,8 +189,8 @@ export default function TedMillerProfile() {
                   <div className="absolute inset-x-3 top-1 h-px bg-white/40 rounded-full" />
                   <p className="text-white text-[10px] font-black tracking-widest uppercase opacity-90 mb-0.5">校長先生 / Principal</p>
                   <p
-                    className="text-white font-black tracking-wide text-xl sm:text-2xl"
-                    style={{ fontFamily: "'Fredoka One', 'Nunito', sans-serif", textShadow: "0 1px 6px rgba(0,0,0,0.2)" }}
+                    className="text-white font-black tracking-wide text-xl sm:text-2xl font-brand"
+                    style={{ textShadow: "0 1px 6px rgba(0,0,0,0.2)" }}
                   >
                     TED MILLER
                   </p>

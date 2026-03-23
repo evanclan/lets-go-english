@@ -310,9 +310,8 @@ export default function LaylaReviewContent() {
                 社会人 · RaJA歴1年半
               </span>
               <h1
-                className="font-black mt-2"
+                className="font-black mt-2 font-brand"
                 style={{
-                  fontFamily: "'Fredoka One', 'Nunito', sans-serif",
                   fontSize: "clamp(2.5rem, 6vw, 4rem)",
                 }}
               >

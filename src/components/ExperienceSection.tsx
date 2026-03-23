@@ -198,10 +198,8 @@ export default function ExperienceSection() {
                         }}
                       >
                         <span
-                          className="text-6xl lg:text-7xl font-black opacity-30"
+                          className="text-6xl lg:text-7xl font-black opacity-30 font-brand"
                           style={{
-                            fontFamily:
-                              "'Fredoka One', 'Nunito', sans-serif",
                             color: exp.accentFrom,
                           }}
                         >
@@ -285,9 +283,8 @@ export default function ExperienceSection() {
 
                 {/* Name */}
                 <motion.h3
-                  className="font-black mt-3 mb-1"
+                  className="font-black mt-3 mb-1 font-brand"
                   style={{
-                    fontFamily: "'Fredoka One', 'Nunito', sans-serif",
                     fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
                     lineHeight: 1.1,
                   }}

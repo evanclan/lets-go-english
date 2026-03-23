@@ -145,8 +145,8 @@ export default function ConceptPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.15 }}
-                className="font-black text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6 text-white"
-                style={{ fontFamily: "'Fredoka One', 'Nunito', sans-serif", textShadow: "0 2px 14px rgba(0,0,0,0.35)" }}
+                className="font-black text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6 text-white font-brand"
+                style={{ textShadow: "0 2px 14px rgba(0,0,0,0.35)" }}
               >
                 Concept
               </motion.h1>
@@ -204,7 +204,7 @@ export default function ConceptPage() {
                         English
                       </span>
                     </div>
-                    <p className="text-gray-700 font-bold text-base leading-relaxed" style={{ fontFamily: "'Nunito', sans-serif" }}>
+                    <p className="text-gray-700 font-bold text-base leading-relaxed font-nunito-only">
                       &ldquo;I ate sushi yesterday.&rdquo;
                     </p>
                     <div className="mt-2 flex flex-wrap gap-2 text-xs font-bold">
@@ -336,8 +336,8 @@ export default function ConceptPage() {
                   >
                     <div className="text-center">
                       <div
-                        className="text-4xl font-black opacity-20 leading-none mb-2"
-                        style={{ color: p.accent, fontFamily: "'Fredoka One', sans-serif" }}
+                        className="text-4xl font-black opacity-20 leading-none mb-2 font-fredoka-only"
+                        style={{ color: p.accent }}
                       >
                         {p.num}
                       </div>

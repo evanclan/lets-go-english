@@ -64,10 +64,7 @@ export default function Navbar() {
               priority
             />
             <div className="leading-tight">
-              <div
-                className="font-black text-orange-600 text-lg sm:text-xl tracking-tight"
-                style={{ fontFamily: "'Fredoka One', 'Nunito', sans-serif" }}
-              >
+              <div className="font-black text-orange-600 text-lg sm:text-xl tracking-tight font-brand">
                 Let&apos;s Go English!
               </div>
               <div className="hidden sm:block text-xs font-bold text-gray-500 -mt-0.5">
@@ -155,11 +152,13 @@ export default function Navbar() {
               </svg>
             </a>
             <motion.button
+              type="button"
               className="p-2 rounded-xl bg-orange-50 text-orange-600"
               onClick={() => setMenuOpen(!menuOpen)}
               whileTap={{ scale: 0.9 }}
-              aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
               aria-expanded={menuOpen}
+              aria-controls="mobile-nav-menu"
+              aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
             >
               <div className="w-6 h-5 flex flex-col justify-between">
                 <motion.span
@@ -188,6 +187,7 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="fixed top-[72px] left-0 right-0 z-40 glass shadow-2xl border-t border-orange-100 lg:hidden"
+            id="mobile-nav-menu"
           >
             <div className="p-4 flex flex-col gap-2">
               {navLinks.map((link) => (

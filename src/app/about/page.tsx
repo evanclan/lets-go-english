@@ -36,10 +36,7 @@ export default function AboutPage() {
           <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 px-4 py-2 rounded-full text-sm font-bold mb-6">
             <span>🏫</span> About Us
           </div>
-          <h1
-            className="text-4xl sm:text-5xl font-black text-gray-900 mb-6"
-            style={{ fontFamily: "'Fredoka One', 'Nunito', sans-serif" }}
-          >
+          <h1 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6 font-brand">
             About
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed max-w-xl mx-auto mb-12">

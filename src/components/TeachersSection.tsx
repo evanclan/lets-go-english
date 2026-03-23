@@ -481,31 +481,31 @@ export default function TeachersSection() {
         </div>
 
         {/* Dot indicators */}
-        <div className="flex items-center justify-center gap-1 mt-8">
+        <div className="flex items-center justify-center gap-1 sm:gap-2 mt-8">
           {teachers.map((_, i) => (
             <button
               key={i}
+              type="button"
               onClick={() => {
                 setTransitioning(true);
                 setCurrent(i);
               }}
-              className="relative flex items-center justify-center transition-all duration-300"
-              style={{
-                width: "44px",
-                height: "44px",
-              }}
-              aria-label={`Go to ${teachers[i].name}`}
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center p-0 border-0 bg-transparent cursor-pointer transition-all duration-300"
+              aria-label={`${teachers[i].name}のスライドを表示`}
+              aria-current={activeIndex === i ? "true" : undefined}
             >
               <span
-                className="block rounded-full transition-all duration-300"
+                className="block transition-all duration-300"
                 style={{
                   width: activeIndex === i ? "28px" : "8px",
                   height: "8px",
+                  borderRadius: "9999px",
                   background:
                     activeIndex === i
                       ? `linear-gradient(90deg, ${teachers[i].color.primary}, ${teachers[i].color.secondary})`
                       : "rgba(0,0,0,0.15)",
                 }}
+                aria-hidden
               />
             </button>
           ))}
