@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CoursesDetailPage from "@/components/CoursesDetailPage";
 import PlanFeesHomeHashRedirect from "@/components/PlanFeesHomeHashRedirect";
+import { BreadcrumbSchema } from "@/components/JsonLd";
 
 import type { Metadata } from "next";
 
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
 export default function PlanFeesPage() {
   return (
     <main>
+      <BreadcrumbSchema
+        items={[
+          { name: "ホーム", url: "https://www.raja-english.com" },
+          { name: "プラン＆料金", url: "https://www.raja-english.com/plan-fees" },
+        ]}
+      />
       <PlanFeesHomeHashRedirect />
       <Navbar />
       <CoursesDetailPage />

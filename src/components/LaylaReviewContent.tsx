@@ -154,9 +154,11 @@ function LightboxModal({
             className="relative max-w-4xl max-h-[85vh] cursor-default"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
+            <Image
               src={image.src}
               alt={image.caption}
+              width={1200}
+              height={800}
               className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
             />
             <p className="text-white text-center mt-4 font-medium">
@@ -352,7 +354,7 @@ export default function LaylaReviewContent() {
       </section>
 
       {/* Story content */}
-      <section className="py-16 relative">
+      <section className="py-16 relative" aria-label="LAYLAのセブ島留学体験記">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           {storySections.map((section, i) => (
             <motion.div
@@ -387,9 +389,11 @@ export default function LaylaReviewContent() {
                   onClick={() => setLightboxImage(section.image!)}
                 >
                   <div className="overflow-hidden rounded-2xl shadow-lg">
-                    <img
+                    <Image
                       src={section.image.src}
                       alt={section.image.caption}
+                      width={800}
+                      height={600}
                       className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -472,9 +476,11 @@ export default function LaylaReviewContent() {
                 onClick={() => setLightboxImage(img)}
               >
                 <div className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                  <img
+                  <Image
                     src={img.src}
                     alt={img.caption}
+                    width={600}
+                    height={400}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
