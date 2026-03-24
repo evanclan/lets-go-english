@@ -3,7 +3,7 @@ import BaliCampaignPage from "@/components/BaliCampaignPage";
 
 const SITE_URL = "https://www.raja-english.com";
 const OG_IMAGE =
-  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/bali-campaign/tanah-lot-sunset.png";
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/bali-campaign/tanah-lot-sunset.webp";
 
 export const metadata: Metadata = {
   title:

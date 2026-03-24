@@ -81,7 +81,7 @@ function HeroSection() {
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={`${CDN}/tanah-lot-sunset.png`}
+          src={`${CDN}/tanah-lot-sunset.webp`}
           alt="バリ島タナロット寺院の美しい夕日"
           fill
           className="object-cover"
@@ -295,7 +295,7 @@ function OverviewSection() {
           <div className="grid md:grid-cols-2">
             <div className="relative h-64 md:h-auto">
               <Image
-                src={`${CDN}/classroom-interaction.jpeg`}
+                src={`${CDN}/classroom-interaction.webp`}
                 alt="バリの現地校で交流する日本人生徒とバリの生徒たち"
                 fill
                 className="object-cover"
@@ -533,49 +533,49 @@ function ActivitiesSection() {
     {
       title: "バリ伝統舞踊体験",
       desc: "簡単なステップからバリ舞踊を体験。踊りを通してバリの神話や祭礼文化に触れます。",
-      image: `${CDN}/kecak-dancers.jpeg`,
+      image: `${CDN}/kecak-dancers.webp`,
       alt: "バリ伝統のケチャックダンス",
     },
     {
       title: "ガムラン演奏体験",
       desc: "打楽器を使った伝統音楽「ガムラン」の演奏に挑戦。楽しく学びながらバリ文化への理解を深めます。",
-      image: `${CDN}/gamelan-experience.jpeg`,
+      image: `${CDN}/gamelan-experience.webp`,
       alt: "ガムラン楽器の演奏体験",
     },
     {
       title: "サーフィン体験",
       desc: "プロインストラクターによる基礎レッスンから始める安心のサーフィン体験。バリの自然とビーチ文化を満喫。",
-      image: `${CDN}/surfing-lesson.png`,
+      image: `${CDN}/surfing-lesson.webp`,
       alt: "ビーチでのサーフィンレッスン",
     },
     {
       title: "ゲボガン（フルーツタワー）づくり",
       desc: "果物や花を積み上げるバリの伝統的な供物づくり。素材の選び方や飾り付けの意味を学びます。",
-      image: `${CDN}/gebogan-offerings.jpeg`,
+      image: `${CDN}/gebogan-offerings.webp`,
       alt: "ゲボガン（フルーツタワー）の伝統的な供物",
     },
     {
       title: "タナロット寺院で夕日鑑賞",
       desc: "16世紀建立の海の神を祀る寺院。夕日に染まるシルエットはバリ島屈指の絶景です。",
-      image: `${CDN}/tanah-lot-temple.jpeg`,
+      image: `${CDN}/tanah-lot-temple.webp`,
       alt: "タナロット寺院の壮大な風景",
     },
     {
       title: "世界遺産ジャティルウィ棚田",
       desc: "ユネスコ世界遺産の棚田で、バリの伝統的な水利システム「スバック」と持続可能な農業文化を学びます。",
-      image: `${CDN}/jatiluwih-rice-terraces.jpeg`,
+      image: `${CDN}/jatiluwih-rice-terraces.webp`,
       alt: "ジャティルウィの美しい棚田",
     },
     {
       title: "メラスティビーチ",
       desc: "バリ島南部の神聖な海岸。白砂のビーチと青い海が広がり、ヒンドゥー教の儀式の舞台としても有名です。",
-      image: `${CDN}/bali-coastline.jpeg`,
+      image: `${CDN}/bali-coastline.webp`,
       alt: "メラスティビーチの美しい海岸線",
     },
     {
       title: "ケチャックダンス鑑賞",
       desc: "迫力ある男性合唱とリズムで物語を紡ぐバリの伝統舞踊。ラーマヤナ物語を通してヒンドゥー文化を学びます。",
-      image: `${CDN}/kecak-dance-fire.jpeg`,
+      image: `${CDN}/kecak-dance-fire.webp`,
       alt: "ケチャックダンスの迫力あるファイヤーパフォーマンス",
     },
   ];
@@ -620,7 +620,7 @@ function ActivitiesSection() {
         <motion.div variants={fadeUp} className="mt-12 grid md:grid-cols-2 gap-6">
           <div className="relative h-72 sm:h-96 rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src={`${CDN}/jatiluwih-sign.jpeg`}
+              src={`${CDN}/jatiluwih-sign.webp`}
               alt="ジャティルウィ世界遺産の看板"
               fill
               className="object-cover"
@@ -634,7 +634,7 @@ function ActivitiesSection() {
           </div>
           <div className="relative h-72 sm:h-96 rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src={`${CDN}/melasti-beach-aerial.jpeg`}
+              src={`${CDN}/melasti-beach-aerial.webp`}
               alt="メラスティビーチの空撮"
               fill
               className="object-cover"
@@ -678,7 +678,7 @@ function SchoolSection() {
           <motion.div variants={fadeUp} className="space-y-6">
             <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src={`${CDN}/sma-tabanan-emblem.jpeg`}
+                src={`${CDN}/sma-tabanan-emblem.webp`}
                 alt="SMA Negeri 1 Tabanan校章"
                 fill
                 className="object-cover"
@@ -687,7 +687,7 @@ function SchoolSection() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-40 rounded-xl overflow-hidden shadow-md">
                 <Image
-                  src={`${CDN}/school-building.jpeg`}
+                  src={`${CDN}/school-building.webp`}
                   alt="学校の校舎"
                   fill
                   className="object-cover"
@@ -695,7 +695,7 @@ function SchoolSection() {
               </div>
               <div className="relative h-40 rounded-xl overflow-hidden shadow-md">
                 <Image
-                  src={`${CDN}/school-courtyard.jpeg`}
+                  src={`${CDN}/school-courtyard.webp`}
                   alt="学校の中庭"
                   fill
                   className="object-cover"
@@ -723,13 +723,13 @@ function SchoolSection() {
 
         <motion.div variants={fadeUp} className="grid grid-cols-3 gap-4">
           <div className="relative h-48 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
-            <Image src={`${CDN}/classroom.jpeg`} alt="教室の様子" fill className="object-cover" />
+            <Image src={`${CDN}/classroom.webp`} alt="教室の様子" fill className="object-cover" />
           </div>
           <div className="relative h-48 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
-            <Image src={`${CDN}/bali-students-group.jpeg`} alt="バリの生徒たち" fill className="object-cover" />
+            <Image src={`${CDN}/bali-students-group.webp`} alt="バリの生徒たち" fill className="object-cover" />
           </div>
           <div className="relative h-48 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
-            <Image src={`${CDN}/classroom-interaction.jpeg`} alt="授業での交流" fill className="object-cover" />
+            <Image src={`${CDN}/classroom-interaction.webp`} alt="授業での交流" fill className="object-cover" />
           </div>
         </motion.div>
       </div>
@@ -771,14 +771,14 @@ function VideoEmbed() {
 /* ─── PAST PROGRAMS (Slide 8) ─── */
 function PastProgramsSection() {
   const photos = [
-    { src: `${CDN}/school-assembly-balloons.jpeg`, alt: "全校生徒との交流セレモニー", label: "全校生徒との交流" },
-    { src: `${CDN}/classroom-students.jpeg`, alt: "授業体験の様子", label: "授業体験" },
-    { src: `${CDN}/buddy-lunch.png`, alt: "バディとランチ", label: "バディとランチ" },
-    { src: `${CDN}/friends-thumbsup.png`, alt: "バディ・先生と", label: "バディ・先生と" },
-    { src: `${CDN}/farewell-hug.png`, alt: "涙のお別れ", label: "涙のお別れ" },
-    { src: `${CDN}/traditional-experience.png`, alt: "伝統文化体験", label: "伝統文化体験" },
-    { src: `${CDN}/cultural-exchange.png`, alt: "文化交流", label: "文化交流" },
-    { src: `${CDN}/group-activity.png`, alt: "グループアクティビティ", label: "グループアクティビティ" },
+    { src: `${CDN}/school-assembly-balloons.webp`, alt: "全校生徒との交流セレモニー", label: "全校生徒との交流" },
+    { src: `${CDN}/classroom-students.webp`, alt: "授業体験の様子", label: "授業体験" },
+    { src: `${CDN}/buddy-lunch.webp`, alt: "バディとランチ", label: "バディとランチ" },
+    { src: `${CDN}/friends-thumbsup.webp`, alt: "バディ・先生と", label: "バディ・先生と" },
+    { src: `${CDN}/farewell-hug.webp`, alt: "涙のお別れ", label: "涙のお別れ" },
+    { src: `${CDN}/traditional-experience.webp`, alt: "伝統文化体験", label: "伝統文化体験" },
+    { src: `${CDN}/cultural-exchange.webp`, alt: "文化交流", label: "文化交流" },
+    { src: `${CDN}/group-activity.webp`, alt: "グループアクティビティ", label: "グループアクティビティ" },
   ];
 
   return (
@@ -840,7 +840,7 @@ function AboutSection() {
           <motion.div variants={fadeUp} className="lg:col-span-2 flex flex-col items-center">
             <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden shadow-2xl mb-6 border-4 border-white">
               <Image
-                src={`${CDN}/ceo-sato-jun.png`}
+                src={`${CDN}/ceo-sato-jun.webp`}
                 alt="代表 佐藤 潤"
                 fill
                 className="object-cover object-top"
@@ -898,13 +898,13 @@ function AboutSection() {
 
         <motion.div variants={fadeUp} className="grid grid-cols-3 gap-4">
           <div className="relative h-48 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
-            <Image src={`${CDN}/indonesia-scene-1.png`} alt="インドネシアの風景" fill className="object-cover" />
+            <Image src={`${CDN}/indonesia-scene-1.webp`} alt="インドネシアの風景" fill className="object-cover" />
           </div>
           <div className="relative h-48 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
-            <Image src={`${CDN}/indonesia-scene-2.png`} alt="インドネシアの風景" fill className="object-cover" />
+            <Image src={`${CDN}/indonesia-scene-2.webp`} alt="インドネシアの風景" fill className="object-cover" />
           </div>
           <div className="relative h-48 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
-            <Image src={`${CDN}/indonesia-scene-3.png`} alt="インドネシアの風景" fill className="object-cover" />
+            <Image src={`${CDN}/indonesia-scene-3.webp`} alt="インドネシアの風景" fill className="object-cover" />
           </div>
         </motion.div>
       </div>
@@ -953,6 +953,8 @@ function CancellationSection() {
   );
 }
 
+const BALI_INQUIRY_TOPIC = "Bali Indonesia Program inquiry";
+
 /* ─── CONTACT / CTA SECTION ─── */
 function ContactCTASection() {
   const [formData, setFormData] = useState({
@@ -969,19 +971,27 @@ function ContactCTASection() {
     e.preventDefault();
     setSending(true);
     setError("");
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
-          course: "バリ島短期留学プログラム",
+          course: "baliIndonesia",
+          topic: BALI_INQUIRY_TOPIC,
         }),
       });
-      if (!res.ok) throw new Error("送信に失敗しました");
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "送信に失敗しました。");
+      }
+
       setSubmitted(true);
-    } catch {
-      setError("送信に失敗しました。お手数ですがもう一度お試しください。");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "送信に失敗しました。もう一度お試しください。");
     } finally {
       setSending(false);
     }
@@ -1001,34 +1011,48 @@ function ContactCTASection() {
         <div className="grid lg:grid-cols-5 gap-8">
           <motion.div variants={fadeUp} className="lg:col-span-3">
             {submitted ? (
-              <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-12 text-center">
-                <div className="text-5xl mb-4">🎉</div>
-                <h3 className="font-black text-2xl text-emerald-700 mb-3">お問い合わせありがとうございます！</h3>
-                <p className="text-emerald-600 text-sm">担当者より2営業日以内にご連絡いたします。</p>
-              </div>
+              <motion.div
+                initial={{ scale: 0.96, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                className="h-full flex flex-col items-center justify-center text-center bg-emerald-50 border border-emerald-200 rounded-3xl p-12"
+              >
+                <motion.div
+                  animate={{ scale: [1, 1.08, 1] }}
+                  transition={{ duration: 1, repeat: Infinity }}
+                  className="text-6xl mb-6"
+                >
+                  🎉
+                </motion.div>
+                <h3 className="text-2xl font-black text-emerald-800 mb-2">送信完了！</h3>
+                <p className="text-emerald-700 text-sm mb-6">
+                  お問い合わせありがとうございます。
+                  <br />
+                  担当者より2営業日以内にご連絡いたします。
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="btn-primary text-sm py-3 px-6"
+                >
+                  もう一度送る
+                </button>
+              </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 sm:p-10">
-                <div className="space-y-5">
+              <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 sm:p-10 space-y-5">
+                <h3 className="text-xl font-black text-gray-800 mb-4">お問い合わせフォーム</h3>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">お名前 <span className="text-red-500">*</span></label>
+                    <label className="block text-sm font-bold text-gray-700 mb-2">
+                      お名前 <span className="text-orange-500">*</span>
+                    </label>
                     <input
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-sm"
-                      placeholder="山田 太郎"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">メールアドレス <span className="text-red-500">*</span></label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-sm"
-                      placeholder="email@example.com"
+                      className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-sm text-gray-800"
+                      placeholder="田中 太郎"
                     />
                   </div>
                   <div>
@@ -1037,33 +1061,56 @@ function ContactCTASection() {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-sm"
-                      placeholder="090-1234-5678"
+                      className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-sm text-gray-800"
+                      placeholder="090-XXXX-XXXX"
                     />
                   </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">お問い合わせ内容</label>
-                    <textarea
-                      rows={4}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-sm resize-none"
-                      placeholder="ご質問やご要望をお書きください"
-                    />
-                  </div>
-                  {error && (
-                    <div className="bg-red-50 text-red-600 text-sm p-4 rounded-xl border border-red-200">
-                      {error}
-                    </div>
-                  )}
-                  <button
-                    type="submit"
-                    disabled={sending}
-                    className="w-full btn-primary justify-center text-lg py-4 disabled:opacity-50"
-                  >
-                    {sending ? "送信中..." : "お問い合わせを送信する"}
-                  </button>
                 </div>
+
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">
+                    メールアドレス <span className="text-orange-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-sm text-gray-800"
+                    placeholder="example@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">メッセージ・ご質問</label>
+                  <textarea
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 outline-none transition-all text-sm text-gray-800 resize-none"
+                    placeholder="ご質問やご要望がありましたらお気軽にどうぞ..."
+                  />
+                </div>
+
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm">
+                    {error}
+                  </div>
+                )}
+
+                <motion.button
+                  type="submit"
+                  disabled={sending}
+                  className="w-full btn-primary justify-center text-base py-4 disabled:opacity-60 disabled:cursor-not-allowed"
+                  whileHover={sending ? {} : { scale: 1.02 }}
+                  whileTap={sending ? {} : { scale: 0.98 }}
+                >
+                  {sending ? "送信中..." : "お問い合わせを送信する"}
+                </motion.button>
+
+                <p className="text-center text-xs text-gray-400">
+                  ご入力いただいた情報はプライバシーポリシーに基づき適切に管理いたします。
+                </p>
               </form>
             )}
           </motion.div>

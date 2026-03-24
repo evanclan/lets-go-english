@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PROMO_IMAGE =
-  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/bali-campaign/promo-popup.png";
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/bali-campaign/promo-popup.webp";
 const CAMPAIGN_PATH = "/campaign/bali-indonesia";
 const STORAGE_KEY = "bali-promo-dismissed";
 const DISMISS_HOURS = 24;

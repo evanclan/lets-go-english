@@ -9,6 +9,7 @@ const COURSE_LABELS: Record<string, string> = {
   studyabroad: "留学クラス（留学希望者）",
   firststudyabroad: "初めての留学クラス（小学4年生〜高校3年生）",
   undecided: "まだ決めていない",
+  baliIndonesia: "バリ島インドネシア短期留学プログラム（キャンペーン）",
 };
 
 export async function POST(request: Request) {
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
     }
 
     const resend = new Resend(apiKey);
-    const { name, email, phone, course, message } = await request.json();
+    const { name, email, phone, course, message, topic } = await request.json();
 
     if (!name || !email) {
       return NextResponse.json(
@@ -33,19 +34,30 @@ export async function POST(request: Request) {
       );
     }
 
-    const courseLabel = COURSE_LABELS[course] || "未選択";
+    const courseLabel = COURSE_LABELS[course] || course || "未選択";
+    const topicLabel =
+      typeof topic === "string" && topic.trim() ? topic.trim() : null;
+    const subjectPrefix = topicLabel || "無料体験申込";
 
     const { error } = await resend.emails.send({
       from: emailFrom,
       to: process.env.EMAIL_TO || "info@raja-international.com",
       replyTo: email,
-      subject: `【無料体験申込】${name}様からのお問い合わせ`,
+      subject: `【${subjectPrefix}】${name}様からのお問い合わせ`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #0d9488; border-bottom: 2px solid #0d9488; padding-bottom: 8px;">
             新しいお問い合わせがありました
           </h2>
           <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
+            ${
+              topicLabel
+                ? `<tr>
+              <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #555; width: 120px;">トピック</td>
+              <td style="padding: 12px; border-bottom: 1px solid #eee;">${topicLabel}</td>
+            </tr>`
+                : ""
+            }
             <tr>
               <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #555; width: 120px;">お名前</td>
               <td style="padding: 12px; border-bottom: 1px solid #eee;">${name}</td>
