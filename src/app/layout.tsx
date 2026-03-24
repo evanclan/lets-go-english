@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fredoka, Noto_Sans_JP, Nunito } from "next/font/google";
+import BaliPromoPopup from "@/components/BaliPromoPopup";
 import "./globals.css";
 
 const notoSansJp = Noto_Sans_JP({
@@ -132,7 +133,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className={notoSansJp.className}>{children}</body>
+      <body className={notoSansJp.className}>
+        <BaliPromoPopup />
+        {children}
+      </body>
     </html>
   );
 }

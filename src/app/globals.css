@@ -65,6 +65,13 @@ body {
   background-clip: text;
 }
 
+.text-gradient-gold {
+  background: linear-gradient(135deg, #F5C200, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .bubble {
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }

@@ -13,6 +13,7 @@ const pages = [
     changefreq: "weekly",
     priority: "0.5",
   },
+  { loc: "/campaign/bali-indonesia", changefreq: "weekly", priority: "0.9" },
   { loc: "/j/privacy", changefreq: "yearly", priority: "0.3" },
   { loc: "/sitemap", changefreq: "monthly", priority: "0.3" },
 ];
