@@ -24,7 +24,7 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
-const SITE_URL = "https://www.raja-english.com";
+export const SITE_URL = "https://www.raja-english.com";
 const SITE_ICON =
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/navbar-logo.png";
 const OG_IMAGE =
@@ -34,12 +34,16 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "鹿児島市の英会話教室 Let's Go English! | RaJA英会話スクール｜こども〜大人・英検Jr.対応",
-    template: "%s | Let's Go English! RaJA英会話スクール 鹿児島市",
+      "鹿児島英会話 Let's Go English!｜鹿児島市の英会話教室 RaJA英会話スクール｜こども〜大人・英検Jr.対応",
+    template: "%s | Let's Go English! RaJA英会話スクール 鹿児島",
   },
   description:
-    "鹿児島市の英会話教室 Let's Go English!（RaJA英会話スクール）は、こども英会話・大人英会話・英検Jr.対応・初心者歓迎の英会話スクールです。月謝¥7,700〜の安い料金設定と無料体験レッスンで、鹿児島で楽しく英語を学べます。",
+    "鹿児島市の英会話教室 Let's Go English!（RaJA英会話スクール）は、こども英会話・大人英会話・英検Jr.対応・初心者歓迎の英会話スクールです。月謝¥7,700〜の安い料金設定と無料体験レッスンで、鹿児島で楽しく英語を学べます。Lets Go English Kagoshima — the friendly English school for kids and adults.",
   keywords: [
+    "Lets Go English",
+    "lets go english kagoshima",
+    "鹿児島英会話",
+    "英会話",
     "鹿児島市英会話",
     "英会話教室",
     "鹿児島市英会話スクール",
@@ -49,9 +53,8 @@ export const metadata: Metadata = {
     "鹿児島市初心者英会話",
     "RaJA英会話",
     "RaJA 英会話",
-    "lets go english kagoshima",
-    "Let's Go English Kagoshima English school",
-    "鹿児島英会話",
+    "Let's Go English",
+    "Let's Go English Kagoshima",
     "鹿児島市英会話安い",
     "安い英会話",
     "英会話無料体験鹿児島",
@@ -68,7 +71,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Let's Go English! RaJA英会話スクール",
     title:
-      "鹿児島市の英会話教室 Let's Go English! | RaJA英会話スクール",
+      "鹿児島英会話 Let's Go English!｜鹿児島市の英会話教室 RaJA英会話スクール",
     description:
       "鹿児島市のこども〜大人向け英会話教室。英検Jr.対応・月謝¥7,700〜・無料体験レッスン実施中。RaJA英会話スクールで楽しく英語を学ぼう！",
     images: [
@@ -83,17 +86,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "鹿児島市の英会話教室 Let's Go English! | RaJA英会話スクール",
+      "鹿児島英会話 Let's Go English!｜鹿児島市の英会話教室 RaJA英会話スクール",
     description:
       "鹿児島市のこども〜大人向け英会話スクール。英検Jr.対応・月謝¥7,700〜・無料体験レッスン実施中！",
     images: [OG_IMAGE],
   },
   alternates: {
     canonical: SITE_URL,
-    languages: {
-      "ja": SITE_URL,
-      "en": `${SITE_URL}/en`,
-    },
   },
   robots: {
     index: true,
@@ -107,7 +106,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "GOOGLE_VERIFICATION_CODE_HERE",
+    google: "google2d2e3121990e6f50",
   },
   other: {
     "geo.region": "JP-46",

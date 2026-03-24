@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/JsonLd";
 
 import type { Metadata } from "next";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "鹿児島市の英会話教室 Let's Go English!（RaJA英会話スクール）のサイトマップ。全ページの一覧をご確認いただけます。",
   alternates: {
-    canonical: "https://www.raja-english.com/sitemap",
+    canonical: "https://www.raja-english.com/html-sitemap",
   },
 };
 
@@ -82,7 +83,7 @@ const sitemapSections = [
         href: "/j/privacy",
         desc: "個人情報の取り扱い",
       },
-      { label: "サイトマップ", href: "/sitemap/", desc: "全ページ一覧" },
+      { label: "サイトマップ", href: "/html-sitemap/", desc: "全ページ一覧" },
     ],
   },
 ];
@@ -90,6 +91,12 @@ const sitemapSections = [
 export default function SitemapPage() {
   return (
     <main>
+      <BreadcrumbSchema
+        items={[
+          { name: "ホーム", url: "https://www.raja-english.com" },
+          { name: "サイトマップ", url: "https://www.raja-english.com/html-sitemap" },
+        ]}
+      />
       <Navbar />
       <section
         className="pt-32 pb-24 relative overflow-hidden"

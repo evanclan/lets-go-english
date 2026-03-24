@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ConceptPage from "@/components/ConceptPage";
+import { BreadcrumbSchema } from "@/components/JsonLd";
 
 import type { Metadata } from "next";
 
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 export default function ConceptRoute() {
   return (
     <main>
+      <BreadcrumbSchema
+        items={[
+          { name: "ホーム", url: "https://www.raja-english.com" },
+          { name: "コンセプト・教育理念", url: "https://www.raja-english.com/concept" },
+        ]}
+      />
       <Navbar />
       <ConceptPage />
       <Footer />

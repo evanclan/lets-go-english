@@ -33,7 +33,7 @@ const footerLinks = [
       { label: "お問い合わせ", href: "/#contact" },
       { label: "無料体験レッスン", href: "/#contact" },
       { label: "プライバシーポリシー", href: "/j/privacy" },
-      { label: "サイトマップ", href: "/sitemap/" },
+      { label: "サイトマップ", href: "/html-sitemap/" },
     ],
   },
 ];

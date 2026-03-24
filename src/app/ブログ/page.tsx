@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { BreadcrumbSchema } from "@/components/JsonLd";
 
 import type { Metadata } from "next";
 
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <main>
+      <BreadcrumbSchema
+        items={[
+          { name: "ホーム", url: "https://www.raja-english.com" },
+          { name: "ブログ", url: "https://www.raja-english.com/%E3%83%96%E3%83%AD%E3%82%B0" },
+        ]}
+      />
       <Navbar />
       <section
         className="min-h-screen pt-32 pb-24 relative overflow-hidden"

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TedMillerProfile from "@/components/TedMillerProfile";
+import { BreadcrumbSchema } from "@/components/JsonLd";
 
 import type { Metadata } from "next";
 
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 export default function AboutTedMillerPage() {
   return (
     <main>
+      <BreadcrumbSchema
+        items={[
+          { name: "ホーム", url: "https://www.raja-english.com" },
+          { name: "テッド・ミラー校長", url: "https://www.raja-english.com/about-tedmiller" },
+        ]}
+      />
       <Navbar />
       <TedMillerProfile />
       <Footer />

@@ -100,7 +100,7 @@ const pillars = [
 
 export default function ConceptPage() {
   return (
-    <div className="pt-24 sm:pt-28">
+    <article className="pt-24 sm:pt-28">
       {/* ─── Hero ─── */}
       <section
         className="relative overflow-hidden py-20 sm:py-28 lg:py-36"
@@ -453,6 +453,6 @@ export default function ConceptPage() {
           </FadeSection>
         </div>
       </section>
-    </div>
+    </article>
   );
 }

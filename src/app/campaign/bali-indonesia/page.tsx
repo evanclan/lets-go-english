@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BaliCampaignPage from "@/components/BaliCampaignPage";
+import { BreadcrumbSchema } from "@/components/JsonLd";
 
 const SITE_URL = "https://www.raja-english.com";
 const OG_IMAGE =
@@ -54,5 +55,15 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <BaliCampaignPage />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "ホーム", url: "https://www.raja-english.com" },
+          { name: "バリ島短期留学プログラム", url: "https://www.raja-english.com/campaign/bali-indonesia" },
+        ]}
+      />
+      <BaliCampaignPage />
+    </>
+  );
 }
