@@ -4,7 +4,7 @@ import BaliPromoPopup from "@/components/BaliPromoPopup";
 import VercelSpeedInsights from "@/components/VercelSpeedInsights";
 import {
   HERO_BACKGROUND_IMAGE,
-  HERO_MAIN_PORTRAIT_IMAGE,
+  HERO_MAIN_PORTRAIT_IMAGE_AVIF,
 } from "@/lib/r2-assets";
 import "./globals.css";
 
@@ -139,8 +139,9 @@ export default function RootLayout({
         {/* LCP: hero portrait + background load early (CSS bg is discovered late) */}
         <link
           rel="preload"
-          href={HERO_MAIN_PORTRAIT_IMAGE}
+          href={HERO_MAIN_PORTRAIT_IMAGE_AVIF}
           as="image"
+          type="image/avif"
           crossOrigin="anonymous"
         />
         <link

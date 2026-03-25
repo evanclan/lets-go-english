@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "compress:bali-r2": "node scripts/compress-bali-r2.mjs"
+    "compress:bali-r2": "node scripts/compress-bali-r2.mjs",
+    "optimize:hero-r2": "node scripts/optimize-hero-r2.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1014.0",

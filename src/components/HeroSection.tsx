@@ -5,6 +5,7 @@ import Image from "next/image";
 import {
   HERO_BACKGROUND_IMAGE,
   HERO_MAIN_PORTRAIT_IMAGE,
+  HERO_MAIN_PORTRAIT_IMAGE_AVIF,
 } from "@/lib/r2-assets";
 
 const floatingWords = [
@@ -231,17 +232,21 @@ export default function HeroSection() {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="relative z-10 w-[min(92vw,360px)] sm:w-[min(88vw,440px)] lg:w-[min(46vw,560px)] shrink-0"
             >
-              <Image
-                src={HERO_MAIN_PORTRAIT_IMAGE}
-                alt="校長先生 Ted Miller｜鹿児島市の英会話教室 Let's Go English! RaJA英会話スクール"
-                width={900}
-                height={1500}
-                priority
-                fetchPriority="high"
-                sizes="(max-width: 640px) 92vw, (max-width: 1024px) 88vw, 46vw"
-                className="h-auto w-full drop-shadow-2xl"
-                style={{ objectFit: "contain", objectPosition: "bottom" }}
-              />
+              <picture className="block">
+                <source srcSet={HERO_MAIN_PORTRAIT_IMAGE_AVIF} type="image/avif" />
+                <source srcSet={HERO_MAIN_PORTRAIT_IMAGE} type="image/webp" />
+                <Image
+                  src={HERO_MAIN_PORTRAIT_IMAGE}
+                  alt="校長先生 Ted Miller｜鹿児島市の英会話教室 Let's Go English! RaJA英会話スクール"
+                  width={900}
+                  height={1500}
+                  priority
+                  fetchPriority="high"
+                  sizes="(max-width: 640px) 92vw, (max-width: 1024px) 88vw, 46vw"
+                  className="h-auto w-full drop-shadow-2xl"
+                  style={{ objectFit: "contain", objectPosition: "bottom" }}
+                />
+              </picture>
             </motion.div>
 
             {/* Speech bubble */}
