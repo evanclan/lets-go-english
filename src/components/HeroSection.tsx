@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import {
+  HERO_BACKGROUND_IMAGE,
+  HERO_MAIN_PORTRAIT_IMAGE,
+} from "@/lib/r2-assets";
 
 const floatingWords = [
   { word: "Hello!", x: "8%", y: "18%", delay: 0, color: "bg-orange-100 text-orange-600", rotate: -8 },
@@ -26,8 +30,7 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-[65vh] lg:min-h-[72vh] flex flex-col items-center justify-center overflow-hidden"
       style={{
-        backgroundImage:
-          "linear-gradient(160deg, rgba(255, 249, 240, 0.9) 0%, rgba(255, 240, 224, 0.88) 30%, rgba(232, 248, 244, 0.86) 65%, rgba(240, 255, 248, 0.9) 100%), url('https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/self%20intro/hero%20background.png')",
+        backgroundImage: `linear-gradient(160deg, rgba(255, 249, 240, 0.9) 0%, rgba(255, 240, 224, 0.88) 30%, rgba(232, 248, 244, 0.86) 65%, rgba(240, 255, 248, 0.9) 100%), url('${HERO_BACKGROUND_IMAGE}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -75,9 +78,7 @@ export default function HeroSection() {
         {/* Left text content */}
         <div className="flex-1 text-center lg:text-left">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            initial={false}
             className="inline-flex items-center gap-2 bg-white/80 border border-orange-200 text-orange-600 px-4 py-2 rounded-full text-sm font-bold shadow-sm mb-4"
           >
             <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
@@ -85,9 +86,7 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={false}
             className="font-black leading-tight mb-4 font-brand"
           >
             <span
@@ -104,11 +103,7 @@ export default function HeroSection() {
             </span>
           </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-          >
+          <motion.div initial={false}>
             <p className="text-xl sm:text-2xl font-bold text-gray-600 mb-2">
               RaJA 英会話スクール
             </p>
@@ -119,9 +114,7 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
+            initial={false}
             className="flex flex-nowrap items-center gap-2 sm:gap-3 justify-center lg:justify-start"
           >
             <motion.a
@@ -143,9 +136,7 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.0, duration: 0.8 }}
+            initial={false}
             className="mt-7 flex items-center gap-4 justify-center lg:justify-start text-gray-500"
           >
             <div className="flex items-center gap-1.5">
@@ -173,9 +164,7 @@ export default function HeroSection() {
         {/* Right — Ted Miller */}
         <div className="flex-1 flex justify-center items-end relative pt-8 lg:pt-0">
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.4, type: "spring", bounce: 0.3 }}
+            initial={false}
             className="relative flex flex-col items-center"
           >
             {/* Soft ground-glow halo */}
@@ -189,12 +178,7 @@ export default function HeroSection() {
             />
 
             {/* Floating name badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -20, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ delay: 1.1, type: "spring", bounce: 0.5 }}
-              className="relative z-20 mb-4"
-            >
+            <motion.div initial={false} className="relative z-20 mb-4">
               <div
                 className="relative px-6 py-3 rounded-2xl shadow-xl text-center"
                 style={{
@@ -248,7 +232,7 @@ export default function HeroSection() {
               className="relative z-10 w-[min(92vw,360px)] sm:w-[min(88vw,440px)] lg:w-[min(46vw,560px)] shrink-0"
             >
               <Image
-                src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/main-hero-image.png"
+                src={HERO_MAIN_PORTRAIT_IMAGE}
                 alt="校長先生 Ted Miller｜鹿児島市の英会話教室 Let's Go English! RaJA英会話スクール"
                 width={900}
                 height={1500}
@@ -263,9 +247,7 @@ export default function HeroSection() {
             {/* Speech bubble */}
             <motion.div
               className="absolute top-[4.5rem] -right-6 sm:-right-10 bg-white rounded-2xl shadow-lg px-4 py-2 text-sm font-bold text-green-700 border-2 border-green-200 whitespace-nowrap z-30"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.6, type: "spring" }}
+              initial={false}
               style={{ borderRadius: "16px 16px 4px 16px" }}
             >
               <span className="text-lg">👋</span> Nice to meet you!
@@ -273,9 +255,7 @@ export default function HeroSection() {
 
             <motion.div
               className="absolute bottom-[30%] -left-6 sm:-left-10 bg-white rounded-2xl shadow-lg px-4 py-2 text-sm font-bold text-orange-700 border-2 border-orange-200 whitespace-nowrap z-30"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 2.0, type: "spring" }}
+              initial={false}
               style={{ borderRadius: "16px 16px 16px 4px" }}
             >
               <span className="text-lg">🌸</span> 楽しく学ぼう！
@@ -287,9 +267,7 @@ export default function HeroSection() {
       {/* Bottom skill banner */}
       <motion.div
         className="absolute left-1/2 -translate-x-1/2 bottom-6 sm:bottom-7 md:bottom-8 z-20 w-[94%] max-w-6xl px-2 pointer-events-none"
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.15, duration: 0.6 }}
+        initial={false}
       >
         
       </motion.div>
@@ -297,9 +275,7 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-24 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 z-30"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
+        initial={false}
       >
         <span className="text-xs text-gray-400 font-medium tracking-wider uppercase">Scroll</span>
         <motion.div

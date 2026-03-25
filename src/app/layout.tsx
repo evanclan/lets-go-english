@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Fredoka, Noto_Sans_JP, Nunito } from "next/font/google";
 import BaliPromoPopup from "@/components/BaliPromoPopup";
 import VercelSpeedInsights from "@/components/VercelSpeedInsights";
+import {
+  HERO_BACKGROUND_IMAGE,
+  HERO_MAIN_PORTRAIT_IMAGE,
+} from "@/lib/r2-assets";
 import "./globals.css";
 
 const notoSansJp = Noto_Sans_JP({
@@ -130,6 +134,19 @@ export default function RootLayout({
         <link
           rel="preconnect"
           href="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev"
+          crossOrigin="anonymous"
+        />
+        {/* LCP: hero portrait + background load early (CSS bg is discovered late) */}
+        <link
+          rel="preload"
+          href={HERO_MAIN_PORTRAIT_IMAGE}
+          as="image"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href={HERO_BACKGROUND_IMAGE}
+          as="image"
           crossOrigin="anonymous"
         />
       </head>
