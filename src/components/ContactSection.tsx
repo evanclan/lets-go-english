@@ -92,17 +92,7 @@ export default function ContactSection() {
               ))}
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-5 border-2 border-orange-200">
-              <h3 className="font-black text-orange-700 mb-2">🎁 無料体験レッスン特典</h3>
-              <ul className="space-y-2">
-                {["体験レッスン料：無料", "入会金：通常¥10,000 → 無料", "テキスト代：初月無料", "英語力診断テスト：無料"].map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-sm text-orange-800">
-                    <span className="w-4 h-4 rounded-full bg-orange-400 text-white text-xs flex items-center justify-center flex-shrink-0">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            
 
             <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
               <h3 className="font-black text-gray-800 mb-3">🗾 アクセス</h3>

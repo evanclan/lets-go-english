@@ -37,7 +37,7 @@ const courses = [
       "挨拶や基本的なやり取りが英語でできる",
       "「英語が好き！」という気持ちを育てる",
     ],
-    schedule: "週1回 / 40分",
+    schedule: "週1回 / 50分",
   },
   {
     id: "elementary",
@@ -105,7 +105,7 @@ const courses = [
       "入試の英語に自信を持って挑める",
       "将来の留学やキャリアに繋がる英語力を育てる",
     ],
-    schedule: "週1回 / 60分",
+    schedule: "週1回 / 50分",
   },
   {
     id: "adult",
@@ -139,7 +139,7 @@ const courses = [
       "外国人との会話に自信を持てるようになる",
       "英語を通じて世界を広げる",
     ],
-    schedule: "週1回 / 60分",
+    schedule: "週1回 / 50分",
   },
   {
     id: "studyabroad",
@@ -173,7 +173,7 @@ const courses = [
       "留学に向けた心構えと実践力を培う",
       "帰国後もグローバルに活躍できる力をつける",
     ],
-    schedule: "週1回 / 60分",
+    schedule: "週1回 / 50分",
     specialNote:
       "※留学専門「かえる留学」による事前のサポートやご相談も受け付けておりますので、安心してご参加いただけます。",
   },
@@ -183,7 +183,7 @@ const courses = [
     label: "First Study Abroad",
     labelJp: "初めての留学クラス",
     target: "小学4年生〜高校3年生",
-    price: "¥9,000",
+    price: "¥9,000~",
     priceNote: "月謝（税込）",
     color: "from-rose-400 to-orange-400",
     bg: "from-rose-50 to-orange-50",

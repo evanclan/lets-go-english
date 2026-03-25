@@ -81,7 +81,7 @@ const courses = [
     label: "First Study Abroad",
     labelJp: "初めての留学クラス",
     target: "小学4年生〜高校3年生",
-    price: "¥9,000",
+    price: "¥9,000~",
     color: "from-rose-400 to-orange-400",
     bg: "bg-gradient-to-br from-rose-50 to-orange-50",
     border: "border-rose-200",
@@ -166,9 +166,9 @@ export default function CoursesSection() {
             <div>
               <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Monthly Fee</p>
               <p className="font-black text-gray-800">
-                <span className="text-orange-600 text-lg">¥7,700</span>
+                <span className="text-orange-600 text-lg">¥8,000</span>
                 <span className="text-gray-400 text-sm mx-1">〜</span>
-                <span className="text-orange-600 text-lg">¥10,000</span>
+                <span className="text-orange-600 text-lg">¥11,000~</span>
                 <span className="text-gray-500 text-xs ml-1">/月</span>
               </p>
             </div>
