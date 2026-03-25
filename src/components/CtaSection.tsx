@@ -323,31 +323,18 @@ export default function CtaSection() {
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 p-10 sm:p-14">
             <div className="flex-1 text-center lg:text-left">
-              <motion.div
-                animate={{ rotate: [-3, 3, -3] }}
-                transition={{ duration: 2.5, repeat: Infinity }}
-                className="inline-block text-white/90 text-sm font-bold bg-white/20 px-4 py-2 rounded-full mb-4"
-              >
-                🎁 期間限定キャンペーン中！
-              </motion.div>
-              <h2 className="text-3xl sm:text-4xl font-black text-white mb-3 leading-tight">
-                今なら
-                <span className="bg-white text-orange-500 px-2 py-0.5 rounded-lg mx-1">
-                  無料
+              
+              <h2 className="text-3xl sm:text-4xl font-black text-white flex flex-col items-center lg:items-start gap-3 sm:gap-4 mb-3 leading-tight">
+                <span className="bg-white text-orange-500 px-9 py-2 rounded-lg mx-1 w-fit">
+                  無料体験レッスン
                 </span>
-                で
-                <br />
-                体験レッスン受講できます！
+                <span className="text-white text-5xl px-9 font-bold">受講できます！</span>
+                
               </h2>
-              <p className="text-white/85 text-base mb-2">
-                入会金0円・テキスト代無料・体験レッスン無料
-              </p>
-              <p className="text-white/70 text-sm">
-                ※ 定員になり次第、キャンペーン終了となります
-              </p>
+              
             </div>
 
-            <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col items-center gap-10">
               <Image
                 src="https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/logo-dark-bg.png"
                 alt="Let's Go English mascots"

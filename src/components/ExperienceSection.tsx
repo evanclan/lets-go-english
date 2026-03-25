@@ -37,7 +37,7 @@ const experiences = [
   {
     id: "layla",
     name: "LAYLA",
-    nameJp: "れいら",
+    nameJp: "",
     grade: "社会人",
     location: "RaJA歴1年半",
     profileImage: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/reviews/LAYLA/layla_profile.png",
