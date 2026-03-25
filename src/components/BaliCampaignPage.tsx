@@ -336,7 +336,6 @@ function ProgramDetailsSection() {
   ];
 
   const included = [
-    "往復航空券（燃油サーチャージ含む）",
     "現地校入学金・授業料・教材費",
     "旅程記載のアクティビティ費用",
     "ホテル手配/宿泊費（3食付）",
@@ -344,7 +343,12 @@ function ProgramDetailsSection() {
     "日本人コーディネーター1名引率",
   ];
 
-  const notIncluded = ["海外旅行保険", "日本国内の交通費", "個人的なお小遣い"];
+  const notIncluded = [
+    "往復航空券（燃油サーチャージ含む）",
+    "海外旅行保険",
+    "日本国内の交通費",
+    "個人的なお小遣い",
+  ];
 
   return (
     <Section id="details" className="py-20 sm:py-28 px-4">

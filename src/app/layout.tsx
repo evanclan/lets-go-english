@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Fredoka, Noto_Sans_JP, Nunito } from "next/font/google";
 import BaliPromoPopup from "@/components/BaliPromoPopup";
 import "./globals.css";
@@ -135,6 +136,7 @@ export default function RootLayout({
       <body className={notoSansJp.className}>
         <BaliPromoPopup />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
