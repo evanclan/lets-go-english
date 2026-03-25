@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Fredoka, Noto_Sans_JP, Nunito } from "next/font/google";
 import BaliPromoPopup from "@/components/BaliPromoPopup";
+import VercelSpeedInsights from "@/components/VercelSpeedInsights";
 import "./globals.css";
 
 const notoSansJp = Noto_Sans_JP({
@@ -136,7 +136,7 @@ export default function RootLayout({
       <body className={notoSansJp.className}>
         <BaliPromoPopup />
         {children}
-        <SpeedInsights />
+        <VercelSpeedInsights />
       </body>
     </html>
   );
