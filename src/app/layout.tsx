@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka, Noto_Sans_JP, Nunito } from "next/font/google";
-import BaliPromoPopup from "@/components/BaliPromoPopup";
+// Temporarily hidden — re-enable after Bali campaign update
+// import BaliPromoPopup from "@/components/BaliPromoPopup";
 import VercelSpeedInsights from "@/components/VercelSpeedInsights";
 import {
   HERO_BACKGROUND_IMAGE,
@@ -152,7 +153,7 @@ export default function RootLayout({
         />
       </head>
       <body className={notoSansJp.className}>
-        <BaliPromoPopup />
+        {/* <BaliPromoPopup /> */}
         {children}
         <VercelSpeedInsights />
       </body>
