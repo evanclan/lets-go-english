@@ -6,14 +6,18 @@ import Image from "next/image";
 
 const gallery = [
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/1.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/feature-age-optimized-2026.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/3.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_2025%20November_251215_92.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/5.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/feature-balanced-skills-2026.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_COCO_240625_12.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/2.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/feature-expert-staff-2026.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_2025%20November_251215_362.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/4.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/LINE_ALBUM_2025%20December_251229_839.jpg",
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/feature-active-lessons-2026.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/51.jpg",
   "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/6.jpg",
 ];

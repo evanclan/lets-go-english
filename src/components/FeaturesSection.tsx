@@ -5,6 +5,15 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
+const featureImages: Record<number, string> = {
+  1: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/feature-age-optimized-2026.jpg",
+  2: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/feature-balanced-skills-2026.jpg",
+  3: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/feature-expert-staff-2026.jpg",
+  4: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/feature-active-lessons-2026.jpg",
+  5: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/5.jpg",
+  6: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/feature-flexible-system-2026.jpg",
+};
+
 const reasons = [
   {
     num: 1,
@@ -205,7 +214,7 @@ export default function FeaturesSection() {
                 {/* Mobile-only image banner (shown on top) */}
                 <div className="relative sm:hidden w-full h-44 overflow-hidden">
                   <Image
-                    src={`https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/${r.num}.jpg`}
+                    src={featureImages[r.num]}
                     alt={r.titleEn}
                     fill
                     sizes="100vw"
@@ -311,7 +320,7 @@ export default function FeaturesSection() {
                   style={{ flex: "3 1 0%" }}
                 >
                   <Image
-                    src={`https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/gallery/${r.num}.jpg`}
+                    src={featureImages[r.num]}
                     alt={r.titleEn}
                     fill
                     sizes="(max-width: 640px) 0px, 200px"
