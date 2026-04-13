@@ -158,16 +158,15 @@ export default function FeaturesSection() {
           </div>
 
           <h2 className="section-title text-gray-900 mb-5 leading-snug">
-            鹿児島市の英会話教室 Let&apos;s Go English が選ばれる <br/>
+            Let&apos;s Go English RaJA英会話スクールが選ばれる
             <span className="text-gradient-orange"> 6つの理由</span>
           </h2>
 
           <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            私たちは単なる英会話スクールではありません。鹿児島市で一人ひとりが
+          私たちは単なる英会話スクールではありません。一人ひとりが
             <strong className="text-gray-700">「使える英語」</strong>
-            を身につけるための、
-            
-            こども英会話から大人英会話まで対応する総合的な英語学習環境を提供しています。
+            を身につけられるように、
+こどもから大人まで対応する総合的な英語学習環境を提供しています。
           </p>
         </motion.div>
 
@@ -345,7 +344,7 @@ export default function FeaturesSection() {
           className="mt-16 text-center"
         >
           <p className="text-gray-500 text-sm mb-5">
-            まずは気軽に体験してみてください。無料体験レッスン実施中！
+          まずはお気軽に体験してみてください。無料体験レッスン受付中！
           </p>
           <motion.a
             href="#contact"

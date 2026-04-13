@@ -99,10 +99,10 @@ export default function PrincipalSection() {
             <span>👋</span> Meet the Principal
           </div>
           <h2 className="section-title text-gray-900 mb-2">
-            校長先生の<span className="text-gradient-orange">自己紹介</span>
+            校長先生の<span className="text-gradient-orange">紹介</span>
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
-            Let&apos;s Go!! スクールを引っ張るリーダーをご紹介します
+            Let&apos;s Go Englishを監修している
           </p>
         </motion.div>
 
@@ -179,8 +179,7 @@ export default function PrincipalSection() {
                     <p className="relative z-10 text-gray-700 leading-[1.85] text-sm sm:text-[0.92rem] pt-3 pl-3 font-medium">
                       はじめまして。私の名前は<strong className="text-orange-600">テッド・ミラー</strong>です。みんなからは「テッド」と呼ばれています。
                       <span className="block mt-2">
-                        Let&apos;s Go!!では、生徒一人ひとりが本当に話せるようになるよう、経験を生かして楽しく教えています。
-                        英会話に対する思いはご挨拶をご覧ください。よろしくお願いします。
+          
                       </span>
                     </p>
                     <div

@@ -10,8 +10,6 @@ const teachers = [
     nameJp: "クリス先生",
     from: "Philippines",
     flag: "🇵🇭",
-    role: "English Conversation Teacher",
-    roleJp: "英会話講師",
     exp: "10+ Years",
     image: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/teachers/CHRIS.png",
     bio: "アメリカ出身のクリス先生は、楽しくエネルギッシュな授業で子どもたちに大人気。フォニックスと会話力を伸ばすプロフェッショナルです。",
@@ -33,8 +31,6 @@ const teachers = [
     nameJp: "マイタ先生",
     from: "Philippines",
     flag: "🇵🇭",
-    role: "English Conversation Teacher",
-    roleJp: "英会話講師",
     exp: "5+ Years",
     image: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/teachers/MAITA.png",
     bio: "フィリピン出身のマイタ先生は、フォニックスと子ども英語教育のスペシャリスト。笑顔あふれるレッスンで生徒の可能性を広げます。",
@@ -56,8 +52,6 @@ const teachers = [
     nameJp: "ミワ先生",
     from: "Japan",
     flag: "🇯🇵",
-    role: "English Conversation Teacher",
-    roleJp: "英会話講師",
     exp: "8+ Years",
     image: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/teachers/MIWA.png",
     bio: "日本語と英語のバイリンガル講師。初めて英語を学ぶ生徒にも安心のサポートで、自然な英語力を育てます。",
@@ -79,8 +73,6 @@ const teachers = [
     nameJp: "エリカ先生",
     from: "Japan",
     flag: "🇯🇵",
-    role: "English Conversation Teacher",
-    roleJp: "英会話講師",
     exp: "6+ Years",
     image: "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/teachers/ERIKA.png",
     bio: "フレンドリーで明るいエリカ先生は、実践的な英会話レッスンが得意。生徒の会話力を自然に引き出します。",
@@ -164,7 +156,7 @@ function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
         >
           <Image
             src={teacher.image}
-            alt={`${teacher.nameJp} - ${teacher.roleJp}`}
+            alt={teacher.nameJp}
             width={400}
             height={460}
             className="w-auto h-[250px] sm:h-[380px] object-contain object-bottom drop-shadow-xl"
@@ -197,22 +189,12 @@ function TeacherCard({ teacher }: { teacher: (typeof teachers)[0] }) {
 
       {/* Info area */}
       <div className="px-4 sm:px-6 pt-4 sm:pt-5 pb-5 sm:pb-6">
-        {/* Name + role */}
+        {/* Name */}
         <div className="text-center mb-3 sm:mb-4">
           <h3 className="text-xl sm:text-2xl font-black text-gray-800 mb-0.5">{teacher.nameJp}</h3>
           <p className="text-xs sm:text-sm font-bold tracking-wide" style={{ color: teacher.color.primary }}>
             {teacher.name}
           </p>
-          <div className="flex items-center justify-center gap-2 mt-2">
-            <div className="h-px flex-1 max-w-[40px]" style={{ background: teacher.color.border }} />
-            <span
-              className="text-xs font-bold px-3 py-1 rounded-full"
-              style={{ background: teacher.color.tagBg, color: teacher.color.tagText }}
-            >
-              {teacher.roleJp}
-            </span>
-            <div className="h-px flex-1 max-w-[40px]" style={{ background: teacher.color.border }} />
-          </div>
         </div>
 
         {SHOW_TEACHER_DETAILS && (

@@ -145,11 +145,11 @@ export default function CoursesSection() {
             <span>📚</span> Our Courses
           </div>
           <h2 className="section-title text-gray-900 mb-4">
-            鹿児島市の英会話教室で<span className="text-gradient-green"> あなたに合ったコースを選ぼう</span>
+          Let&apos;s Go English RaJA英会話スクール<span className="text-gradient-green">であなたに合ったコースを選ぼう</span>
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
-            こども英会話から大人英会話、初心者英会話、そして留学を目指す方まで。<br className="hidden sm:block" />
-            年齢・目標・ライフスタイルに合わせた<strong className="text-gray-700">6つのコース</strong>を月謝¥8,000〜の安い料金でご用意しています。
+          こどもから大人、初心者の方、そして留学を目指す方まで。<br className="hidden sm:block" />
+          年齢・目標・ライフスタイルに合わせた<strong className="text-gray-700">6つのコース</strong>を、月謝8,000円〜のお手頃な料金でご用意しています。
           </p>
         </motion.div>
 
