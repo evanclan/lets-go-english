@@ -92,7 +92,7 @@ export default function BaliPromoPopup() {
 
                   <h2 className="font-brand mt-3 text-[1.35rem] font-bold leading-snug tracking-tight text-slate-900 sm:text-2xl">
                     バリ島でバディと
-                    <span className="text-gradient-orange"> 過ごす7日間</span>
+                    <span className="text-gradient-orange"> 過ごす8日間</span>
                   </h2>
 
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">

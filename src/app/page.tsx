@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import MarqueeSection from "@/components/MarqueeSection";
-// Temporarily hidden — re-enable after Bali campaign update
-// import NewsSection from "@/components/NewsSection";
+import NewsSection from "@/components/NewsSection";
 import PrincipalSection from "@/components/PrincipalSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import CoursesSection from "@/components/CoursesSection";
@@ -96,7 +95,7 @@ export default function Home() {
       </article>
 
       <MarqueeSection />
-      {/* <NewsSection /> */}
+      <NewsSection />
       <PrincipalSection />
       <FeaturesSection />
       <CoursesSection />
