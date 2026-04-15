@@ -1188,107 +1188,6 @@ function CancellationSection() {
   );
 }
 
-/* ─── BROCHURE DOWNLOAD ─── */
-const PPTX_URL =
-  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/bali-campaign/%E6%8F%90%E6%A1%88%E6%9B%B8_26%E5%A4%8F%E3%83%90%E3%83%AA%E4%B8%AD%E9%AB%98%E7%94%9F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0.pptx";
-
-function BrochureDownloadSection() {
-  return (
-    <Section className="py-16 px-4">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          variants={fadeUp}
-          className="relative overflow-hidden rounded-[2rem] shadow-2xl"
-        >
-          {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-emerald-600 to-cyan-700" />
-          {/* Decorative pattern */}
-          <div
-            className="absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-            }}
-          />
-          {/* Glow orb */}
-          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/10 blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full bg-cyan-300/10 blur-2xl pointer-events-none" />
-
-          <div className="relative px-8 sm:px-14 py-12 sm:py-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-            {/* Left: icon + text */}
-            <div className="flex-1 text-center lg:text-left">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 mb-6 mx-auto lg:mx-0 shadow-xl">
-                <svg
-                  className="w-10 h-10 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-                  />
-                </svg>
-              </div>
-              <div className="inline-flex items-center gap-2 bg-white/15 rounded-full px-4 py-1.5 mb-4 backdrop-blur-sm border border-white/20">
-                <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" />
-                <span className="text-white/90 text-xs font-bold tracking-wide uppercase">
-                  Program Brochure
-                </span>
-              </div>
-              <h3 className="text-white text-2xl sm:text-3xl font-black mb-3 leading-snug">
-                プログラム資料を
-                <br />
-                ダウンロード
-              </h3>
-              <p className="text-white/75 text-sm sm:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">
-                旅程・費用・スケジュールをまとめた詳細提案書（PowerPoint）を無料でダウンロードいただけます。保護者の方との共有にも最適です。
-              </p>
-            </div>
-
-            {/* Right: download button */}
-            <div className="flex flex-col items-center gap-4 shrink-0">
-              <motion.a
-                href={PPTX_URL}
-                download="提案書_26夏バリ中高生プログラム.pptx"
-                className="group relative inline-flex items-center gap-3 bg-white text-teal-700 font-black text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-2xl hover:shadow-white/30 transition-all"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <svg
-                  className="w-6 h-6 text-teal-600 group-hover:animate-bounce"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
-                  />
-                </svg>
-                資料をダウンロードする
-                <span className="absolute -top-2.5 -right-2.5 bg-amber-400 text-gray-900 text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wide shadow">
-                  FREE
-                </span>
-              </motion.a>
-              <div className="flex items-center gap-2 text-white/50 text-xs">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                </svg>
-                PowerPoint形式 · 無料 · 登録不要
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </Section>
-  );
-}
-
 const BALI_INQUIRY_TOPIC = "Bali Indonesia Program inquiry";
 
 /* ─── CONTACT / CTA SECTION ─── */
@@ -1579,7 +1478,6 @@ export default function BaliCampaignPage() {
       <PastProgramsSection />
       <AboutSection />
       <CancellationSection />
-      <BrochureDownloadSection />
       <ContactCTASection />
 
       {/* Back to top */}
