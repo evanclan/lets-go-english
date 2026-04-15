@@ -135,7 +135,7 @@ function HeroSection() {
         >
           バリ島の自然と文化が色濃く残るタバナン地区で
           <br className="hidden sm:block" />
-          国際理解を深め、一生の友情を育む7日間
+          国際理解を深め、一生の友情を育む8日間
         </motion.p>
 
         <motion.div
@@ -169,7 +169,7 @@ function HeroSection() {
         >
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-            <span>2026年8月9日〜15日</span>
+            <span>2026年8月9日〜16日</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
@@ -272,7 +272,7 @@ function OverviewSection() {
         </SectionTitle>
         <motion.p variants={fadeUp} className="text-center text-gray-600 max-w-3xl mx-auto mb-14 text-base sm:text-lg leading-relaxed">
           バリ島タバナン地区の現地高校で、同世代のバディと共に学び、遊び、文化を体験する
-          7日間のプログラム。一生の思い出と友情が、ここで始まります。
+          8日間のプログラム。一生の思い出と友情が、ここで始まります。
         </motion.p>
 
         <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-16">
@@ -327,95 +327,248 @@ function OverviewSection() {
 /* ─── PROGRAM DETAILS (Slide 3) ─── */
 function ProgramDetailsSection() {
   const details = [
-    { label: "開催時期", value: "2026年8月9日（日）現地着 〜 8月15日（土）現地発", icon: "📅" },
-    { label: "開催場所", value: "インドネシア バリ州 タバナン県", icon: "📍" },
-    { label: "対象", value: "中学生・高校生", icon: "🎒" },
-    { label: "催行人数", value: "10名〜20名程度（1名様よりお申込み可）", icon: "👥" },
-    { label: "現地校", value: "公立高校 SMA Negeri 1 Tabanan", icon: "🏫" },
-    { label: "宿泊", value: "ホテル滞在（基本2名/室）専用チャーター車で通学", icon: "🏨" },
+    {
+      label: "開催時期",
+      value: "2026年8月9日（日）〜 8月15日（土）",
+      sub: "7泊8日の充実プログラム",
+      icon: "📅",
+      gradient: "from-sky-400 to-blue-500",
+    },
+    {
+      label: "開催場所",
+      value: "バリ州 タバナン県",
+      sub: "自然と文化が色濃く残る地域",
+      icon: "📍",
+      gradient: "from-emerald-400 to-teal-500",
+    },
+    {
+      label: "対象",
+      value: "中学生・高校生",
+      sub: "英語レベル不問・初海外でもOK",
+      icon: "🎒",
+      gradient: "from-amber-400 to-orange-500",
+    },
+    {
+      label: "定員",
+      value: "10〜20名",
+      sub: "1名様よりお申込み可能",
+      icon: "👥",
+      gradient: "from-pink-400 to-rose-500",
+    },
+    {
+      label: "提携校",
+      value: "SMA Negeri 1 Tabanan",
+      sub: "バリ州トップクラスの名門公立高校",
+      icon: "🏫",
+      gradient: "from-violet-400 to-purple-500",
+    },
+    {
+      label: "宿泊",
+      value: "ホテル滞在（2名/室）",
+      sub: "専用チャーター車で通学",
+      icon: "🏨",
+      gradient: "from-teal-400 to-cyan-500",
+    },
   ];
 
   const included = [
-    "現地校入学金・授業料・教材費",
-    "旅程記載のアクティビティ費用",
-    "ホテル手配/宿泊費（3食付）",
-    "現地空港往復送迎",
-    "日本人コーディネーター1名引率",
+    { text: "往復航空券（燃油サーチャージ含む）", icon: "✈️" },
+    { text: "現地校入学金・授業料・教材費", icon: "📚" },
+    { text: "旅程記載のアクティビティ費用", icon: "🏄" },
+    { text: "ホテル手配/宿泊費（3食付）", icon: "🍽️" },
+    { text: "現地空港往復送迎", icon: "🚐" },
+    { text: "日本人コーディネーター1名引率", icon: "🧑‍🏫" },
   ];
 
   const notIncluded = [
-    "往復航空券（燃油サーチャージ含む）",
     "海外旅行保険",
     "日本国内の交通費",
     "個人的なお小遣い",
   ];
 
   return (
-    <Section id="details" className="py-20 sm:py-28 px-4">
+    <Section id="details" className="py-20 sm:py-28 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <SectionLabel en="PROGRAM DETAILS" ja="プログラム概要" />
+        <SectionLabel en="PROGRAM DETAILS" ja="プログラム詳細" />
         <SectionTitle>
-          プログラム<span className="text-gradient-orange">詳細</span>
+          プログラム<span className="text-gradient-orange">詳細・料金</span>
         </SectionTitle>
+        <motion.p variants={fadeUp} className="text-center text-gray-500 max-w-2xl mx-auto mb-14 text-sm sm:text-base leading-relaxed">
+          航空券から宿泊、アクティビティまで<span className="font-bold text-gray-700">オールインワン</span>。<br className="hidden sm:block" />
+          面倒な手配は一切不要で、お子さまの成長体験に集中できます。
+        </motion.p>
 
-        <motion.div variants={fadeUp} className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden mb-12">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3">
-            {details.map((d, i) => (
-              <div
-                key={d.label}
-                className={`p-6 sm:p-8 ${
-                  i < details.length - 1 ? "border-b sm:border-b lg:border-b-0" : ""
-                } ${i % 3 !== 2 ? "lg:border-r" : ""} ${i % 2 !== 1 ? "sm:border-r lg:border-r-0" : "sm:border-r-0"} ${i < 3 ? "lg:border-b" : ""} border-gray-100`}
-              >
-                <div className="text-2xl mb-2">{d.icon}</div>
-                <div className="text-xs font-bold text-teal-600 uppercase tracking-wider mb-1">{d.label}</div>
-                <div className="font-bold text-gray-800 text-sm leading-relaxed">{d.value}</div>
+        {/* Details cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-14">
+          {details.map((d) => (
+            <motion.div
+              key={d.label}
+              variants={fadeUp}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="group relative bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 shadow-md border border-gray-100 hover:shadow-xl transition-all overflow-hidden"
+            >
+              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${d.gradient}`} />
+              <div className="text-2xl sm:text-3xl mb-3">{d.icon}</div>
+              <div className="text-[10px] sm:text-xs font-black text-gray-400 uppercase tracking-widest mb-1">
+                {d.label}
               </div>
-            ))}
+              <div className="font-black text-gray-800 text-sm sm:text-base leading-snug mb-1">
+                {d.value}
+              </div>
+              <div className="text-[11px] sm:text-xs text-gray-400 leading-relaxed">{d.sub}</div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Pricing hero card */}
+        <motion.div
+          variants={fadeUp}
+          className="relative rounded-[2rem] overflow-hidden mb-14 shadow-2xl"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-400" />
+          <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+          <div className="relative px-6 sm:px-12 py-10 sm:py-14">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+              {/* Left: price */}
+              <div className="text-center lg:text-left flex-1">
+                <motion.div
+                  initial={{ scale: 0.9 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                  className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-4"
+                >
+                  <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  <span className="text-white text-xs sm:text-sm font-bold tracking-wide">
+                    2026年夏 限定プログラム
+                  </span>
+                </motion.div>
+                <div className="text-white/80 text-sm font-bold mb-1">
+                  8日間オールインクルーシブ
+                </div>
+                <div className="flex items-baseline justify-center lg:justify-start gap-1 mb-2">
+                  <span className="text-white text-2xl sm:text-3xl font-black">¥</span>
+                  <span className="text-white text-5xl sm:text-7xl font-black tracking-tight">
+                    364,000
+                  </span>
+                  <span className="text-white/80 text-base sm:text-xl font-bold ml-1">（税込）</span>
+                </div>
+                <div className="text-white/60 text-xs sm:text-sm">
+                  1名あたり ｜ 1日あたり約45,500円
+                </div>
+              </div>
+
+              {/* Right: deadlines */}
+              <div className="flex flex-col sm:flex-row lg:flex-col gap-3 sm:gap-4 w-full lg:w-auto">
+                <div className="flex-1 bg-white/15 backdrop-blur-sm rounded-2xl px-5 py-4 border border-white/20 text-center">
+                  <div className="text-white/70 text-[10px] font-bold uppercase tracking-widest mb-1">催行決定日</div>
+                  <div className="text-white text-xl sm:text-2xl font-black">5/18</div>
+                </div>
+                <div className="flex-1 bg-white/15 backdrop-blur-sm rounded-2xl px-5 py-4 border border-white/20 text-center">
+                  <div className="text-white/70 text-[10px] font-bold uppercase tracking-widest mb-1">申込締切</div>
+                  <div className="text-white text-xl sm:text-2xl font-black">5月末</div>
+                </div>
+                <div className="flex-1 bg-white/25 backdrop-blur-sm rounded-2xl px-5 py-4 border border-white/30 text-center">
+                  <div className="text-white/70 text-[10px] font-bold uppercase tracking-widest mb-1">残り枠</div>
+                  <div className="text-white text-xl sm:text-2xl font-black">受付中</div>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
 
-        <motion.div variants={fadeUp} className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl p-8 sm:p-12 text-white text-center mb-12 shadow-xl">
-          <div className="text-white/80 text-sm font-bold mb-2">1名あたりの料金</div>
-          <div className="text-5xl sm:text-6xl font-black mb-2">
-            ¥364,000
-            <span className="text-xl sm:text-2xl font-bold ml-2">（税込）</span>
-          </div>
-          <div className="text-white/70 text-sm">
-            催行決定日 5/18 ｜ 5月末申し込み締め切り
-          </div>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <motion.div variants={fadeUp} className="bg-emerald-50 rounded-3xl p-8 border border-emerald-100">
-            <h3 className="font-black text-lg text-emerald-700 mb-4 flex items-center gap-2">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              料金に含まれるもの
-            </h3>
-            <ul className="space-y-3">
-              {included.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                  <svg className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" /></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
+        {/* Included / Not included */}
+        <div className="grid lg:grid-cols-5 gap-6">
+          {/* Included - takes more space */}
+          <motion.div variants={fadeUp} className="lg:col-span-3">
+            <div className="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-7 sm:p-9 border border-emerald-200/60 h-full">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-emerald-200/30 to-transparent rounded-bl-[4rem] pointer-events-none" />
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-md">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-black text-lg text-emerald-800">料金に含まれるもの</h3>
+                    <p className="text-emerald-600/70 text-xs">これだけ全部コミコミ！</p>
+                  </div>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {included.map((item) => (
+                    <div
+                      key={item.text}
+                      className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3.5 border border-emerald-100 shadow-sm hover:shadow-md transition-shadow"
+                    >
+                      <span className="text-lg shrink-0">{item.icon}</span>
+                      <span className="text-sm font-bold text-gray-700 leading-snug">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </motion.div>
-          <motion.div variants={fadeUp} className="bg-gray-50 rounded-3xl p-8 border border-gray-200">
-            <h3 className="font-black text-lg text-gray-600 mb-4 flex items-center gap-2">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              料金に含まれないもの
-            </h3>
-            <ul className="space-y-3">
-              {notIncluded.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
-                  <span className="w-5 h-5 flex items-center justify-center shrink-0 text-gray-400">—</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+
+          {/* Not included */}
+          <motion.div variants={fadeUp} className="lg:col-span-2">
+            <div className="bg-gray-50 rounded-3xl p-7 sm:p-9 border border-gray-200/60 h-full flex flex-col">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-black text-lg text-gray-600">含まれないもの</h3>
+                  <p className="text-gray-400 text-xs">別途ご準備ください</p>
+                </div>
+              </div>
+              <div className="space-y-3 flex-1">
+                {notIncluded.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 bg-white rounded-xl px-4 py-3.5 border border-gray-100"
+                  >
+                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center shrink-0">
+                      <div className="w-1.5 h-0.5 bg-gray-300 rounded-full" />
+                    </div>
+                    <span className="text-sm text-gray-500">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 bg-amber-50 rounded-xl px-4 py-3 border border-amber-100">
+                <p className="text-xs text-amber-700 leading-relaxed">
+                  <span className="font-bold">💡 ヒント：</span>海外旅行保険は出発前にご加入をお勧めします。お小遣いは1〜2万円程度で十分です。
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
+
+        {/* Bottom CTA nudge */}
+        <motion.div
+          variants={fadeUp}
+          className="mt-12 text-center"
+        >
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-orange-50 rounded-2xl px-6 sm:px-10 py-5 border border-orange-100">
+            <div className="text-left">
+              <p className="text-sm font-black text-gray-800">
+                お気軽にお問い合わせください
+              </p>
+              <p className="text-xs text-gray-500">
+                資料請求・ご質問だけでもOK！お子さまの夏を特別な体験に。
+              </p>
+            </div>
+            <motion.a
+              href="#contact"
+              className="shrink-0 bg-gradient-to-r from-orange-500 to-amber-500 text-white px-7 py-3 rounded-full text-sm font-bold shadow-lg hover:shadow-xl transition-shadow"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              今すぐ相談する
+            </motion.a>
+          </div>
+        </motion.div>
       </div>
     </Section>
   );
@@ -426,15 +579,19 @@ function ItinerarySection() {
   const days = [
     {
       day: 1, date: "8/9（日）",
-      am: "福岡空港出発→マニラ経由→デンパサール国際空港到着",
-      pm: "専用車でホテルへ移動",
+      am: "福岡空港出発 15:35（PR425）→マニラ空港到着 18:20\nマニラ空港出発 19:55（PR537）→デンパサール国際空港到着 23:55\n専用車でホテルへ移動",
+      pm: "",
+      stay: "ホテル",
+      meals: "朝：× 昼：TBD 夕：〇",
       highlight: "出発",
       color: "from-blue-500 to-sky-500",
     },
     {
       day: 2, date: "8/10（月）",
       am: "ウェルカムセレモニー",
-      pm: "スクールツアー・授業体験",
+      pm: "スクールツアー\n授業体験",
+      stay: "ホテル",
+      meals: "朝：〇 昼：〇 夕：〇",
       highlight: "歓迎式",
       color: "from-teal-500 to-emerald-500",
     },
@@ -442,36 +599,55 @@ function ItinerarySection() {
       day: 3, date: "8/11（火）",
       am: "サーフィン体験",
       pm: "バリ島クタダウンタウンツアー",
+      stay: "ホテル",
+      meals: "",
       highlight: "サーフィン",
       color: "from-cyan-500 to-blue-500",
     },
     {
       day: 4, date: "8/12（水）",
       am: "バリ伝統舞踊体験",
-      pm: "ガムラン演奏体験・クッキングクラス",
+      pm: "伝統楽器ガムラン演奏体験\nジャパニーズクラブとクッキングクラス",
+      stay: "ホテル",
+      meals: "朝：〇 昼：〇 夕：〇",
       highlight: "伝統文化",
       color: "from-purple-500 to-pink-500",
     },
     {
       day: 5, date: "8/13（木）",
-      am: "バリ語講座・ロンタル体験",
-      pm: "ゲボガンづくり・タナロット寺院で夕日鑑賞",
+      am: "バリ語講座\nロンタル（文字の刻み付け）体験",
+      pm: "市場で材料買い出し、\nゲボガン（フルーツタワー）づくり\nタナロット寺院で夕日鑑賞",
+      stay: "ホテル",
+      meals: "",
       highlight: "寺院",
       color: "from-amber-500 to-orange-500",
     },
     {
       day: 6, date: "8/14（金）",
-      am: "世界遺産ジャティルウィ棚田見学",
-      pm: "メラスティビーチ・ケチャックダンス鑑賞",
+      am: "世界遺産の棚田ジャティルウィ見学",
+      pm: "メラスティビーチで\n伝統ケチャックダンス鑑賞",
+      stay: "ホテル",
+      meals: "",
       highlight: "世界遺産",
       color: "from-emerald-500 to-green-600",
     },
     {
       day: 7, date: "8/15（土）",
-      am: "荷造り・チェックアウト",
-      pm: "ショッピングモールツアー→空港送迎→深夜便で帰国",
-      highlight: "帰国",
+      am: "荷造り・ホテルチェックアウト",
+      pm: "ローカルショッピングモールツアー\n＆お土産ショッピング\n専用車でデンパサール国際空港へ送迎",
+      stay: "機内",
+      meals: "朝：〇 昼：各自 夕：〇",
+      highlight: "買い物",
       color: "from-rose-500 to-red-500",
+    },
+    {
+      day: 8, date: "8/16（日）",
+      am: "デンパサール国際空港出発 00:55（PR538）→マニラ空港到着 05:00\nマニラ空港出発 09:50（PR426）→福岡空港到着 14:30",
+      pm: "",
+      stay: "機内",
+      meals: "",
+      highlight: "帰国",
+      color: "from-gray-500 to-slate-600",
     },
   ];
 
@@ -480,10 +656,10 @@ function ItinerarySection() {
       <div className="max-w-5xl mx-auto">
         <SectionLabel en="ITINERARY" ja="旅程表" />
         <SectionTitle>
-          7日間の<span className="text-gradient-orange">冒険スケジュール</span>
+          8日間の<span className="text-gradient-orange">冒険スケジュール</span>
         </SectionTitle>
         <motion.p variants={fadeUp} className="text-center text-gray-500 mb-12 text-sm">
-          ※天候等により日程・内容が変更になる場合があります
+          ※天候等の止むを得ない事情により、現地校や現地教育省の判断で日程や内容が変更になる場合がありますので予めご了承下さい。
         </motion.p>
 
         <div className="space-y-4">
@@ -502,15 +678,33 @@ function ItinerarySection() {
                   <div className="text-sm font-bold opacity-90">{d.date}</div>
                 </div>
                 <div className="flex-1 p-5 sm:p-6 flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1">
-                    <div className="text-xs font-bold text-gray-400 uppercase mb-1">AM</div>
-                    <div className="text-sm font-bold text-gray-700">{d.am}</div>
+                  <div className={d.pm ? "flex-1" : "flex-1"}>
+                    <div className="text-xs font-bold text-gray-400 uppercase mb-1">{d.pm ? "AM" : "終日"}</div>
+                    <div className="text-sm font-bold text-gray-700 whitespace-pre-line">{d.am}</div>
                   </div>
+                  {d.pm && (
+                    <>
+                      <div className="hidden sm:block w-px bg-gray-200" />
+                      <div className="flex-1">
+                        <div className="text-xs font-bold text-gray-400 uppercase mb-1">PM</div>
+                        <div className="text-sm font-bold text-gray-700 whitespace-pre-line">{d.pm}</div>
+                      </div>
+                    </>
+                  )}
                   <div className="hidden sm:block w-px bg-gray-200" />
-                  <div className="flex-1">
-                    <div className="text-xs font-bold text-gray-400 uppercase mb-1">PM</div>
-                    <div className="text-sm font-bold text-gray-700">{d.pm}</div>
+                  <div className="sm:w-20 shrink-0 text-center">
+                    <div className="text-xs font-bold text-gray-400 uppercase mb-1">宿泊</div>
+                    <div className="text-sm font-bold text-gray-700">{d.stay}</div>
                   </div>
+                  {d.meals && (
+                    <>
+                      <div className="hidden sm:block w-px bg-gray-200" />
+                      <div className="sm:w-28 shrink-0">
+                        <div className="text-xs font-bold text-gray-400 uppercase mb-1">食事</div>
+                        <div className="text-xs font-bold text-gray-500 whitespace-pre-line">{d.meals}</div>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -535,50 +729,76 @@ function ItinerarySection() {
 function ActivitiesSection() {
   const activities = [
     {
-      title: "バリ伝統舞踊体験",
-      desc: "簡単なステップからバリ舞踊を体験。踊りを通してバリの神話や祭礼文化に触れます。",
-      image: `${CDN}/kecak-dancers.webp`,
-      alt: "バリ伝統のケチャックダンス",
+      title: "バリ伝統舞踊・楽器体験",
+      bullets: [
+        "簡単なステップからバリ舞踊を体験。踊りを通してバリの神話や祭礼文化に触れます",
+        "打楽器を使った伝統音楽「ガムラン」の演奏に挑戦",
+        "楽しく学びながらバリ文化への理解を深めます",
+      ],
+      image: `${CDN}/gamelan-experience.webp`,
+      alt: "バリ伝統舞踊・ガムラン楽器の演奏体験",
     },
     {
-      title: "ガムラン演奏体験",
-      desc: "打楽器を使った伝統音楽「ガムラン」の演奏に挑戦。楽しく学びながらバリ文化への理解を深めます。",
-      image: `${CDN}/gamelan-experience.webp`,
-      alt: "ガムラン楽器の演奏体験",
+      title: "ロンタル体験",
+      bullets: [
+        "バリ島の伝統的な文書であるロンタルについて学び、宗教・神話・歴史の記録としての役割を学習します",
+      ],
+      image: `${CDN}/rontal-experience.jpg`,
+      alt: "ロンタル（伝統文書）体験",
     },
     {
       title: "サーフィン体験",
-      desc: "プロインストラクターによる基礎レッスンから始める安心のサーフィン体験。バリの自然とビーチ文化を満喫。",
+      bullets: [
+        "プロインストラクターによる基礎レッスンから始める安心のサーフィン体験",
+        "波の特徴や安全ルールを学んだ上で海での実践",
+        "挑戦を通して育まれる自信と、バリの自然・ビーチ文化への理解深化",
+      ],
       image: `${CDN}/surfing-lesson.webp`,
       alt: "ビーチでのサーフィンレッスン",
     },
     {
       title: "ゲボガン（フルーツタワー）づくり",
-      desc: "果物や花を積み上げるバリの伝統的な供物づくり。素材の選び方や飾り付けの意味を学びます。",
+      bullets: [
+        "果物や花を積み上げてつくる、バリの伝統的な供物",
+        "素材の選び方や飾り付けの意味を学びながら体験",
+      ],
       image: `${CDN}/gebogan-offerings.webp`,
       alt: "ゲボガン（フルーツタワー）の伝統的な供物",
     },
     {
       title: "タナロット寺院で夕日鑑賞",
-      desc: "16世紀建立の海の神を祀る寺院。夕日に染まるシルエットはバリ島屈指の絶景です。",
+      bullets: [
+        "タナロット寺院は16世紀、ジャワ島から渡ってきた高僧ニラルタが海の神を祀る場所として建てたと伝えられる",
+        "寺院が建つ岩島は長い年月の浸食によって形成され、干潮時に歩いて渡れる岩礁の道や、夕日に染まる寺院のシルエットなど、バリ島屈指の観光地として有名",
+      ],
       image: `${CDN}/tanah-lot-temple.webp`,
       alt: "タナロット寺院の壮大な風景",
     },
     {
       title: "世界遺産ジャティルウィ棚田",
-      desc: "ユネスコ世界遺産の棚田で、バリの伝統的な水利システム「スバック」と持続可能な農業文化を学びます。",
+      bullets: [
+        "ユネスコ世界遺産に登録された、広大な棚田が幾重にも連なるジャティルウィ地域",
+        "緑一面に広がるライステラスの絶景を眺めながら、バリ島の自然の豊かさと農村の暮らしを身近に感じる",
+        "バリ独自の伝統的な水利システム「スバック」の歴史や仕組みに触れる、持続可能な農業文化の理解促進",
+        "棚田の中を歩きながら自然と共存してきたバリの人々の知恵を学び、文化遺産が今も日常に息づくことを実感する貴重なフィールド体験",
+      ],
       image: `${CDN}/jatiluwih-rice-terraces.webp`,
       alt: "ジャティルウィの美しい棚田",
     },
     {
       title: "メラスティビーチ",
-      desc: "バリ島南部の神聖な海岸。白砂のビーチと青い海が広がり、ヒンドゥー教の儀式の舞台としても有名です。",
+      bullets: [
+        "バリ島南部の神聖な海岸、白砂のビーチと青い海が広がり、古くから続くヒンドゥー教の儀式「メラスティ祭」の舞台として有名",
+      ],
       image: `${CDN}/bali-coastline.webp`,
       alt: "メラスティビーチの美しい海岸線",
     },
     {
       title: "ケチャックダンス鑑賞",
-      desc: "迫力ある男性合唱とリズムで物語を紡ぐバリの伝統舞踊。ラーマヤナ物語を通してヒンドゥー文化を学びます。",
+      bullets: [
+        "迫力ある男性合唱とリズムで物語を紡ぐ、バリの伝統舞踊「ケチャック」鑑賞体験",
+        "ラーマヤナ物語や舞の演出を通して、ヒンドゥー文化やバリ神話など独自の伝統芸能について学習",
+      ],
       image: `${CDN}/kecak-dance-fire.webp`,
       alt: "ケチャックダンスの迫力あるファイヤーパフォーマンス",
     },
@@ -615,7 +835,14 @@ function ActivitiesSection() {
               </div>
               <div className="p-5">
                 <h3 className="font-black text-base mb-2 text-gray-800">{a.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{a.desc}</p>
+                <ul className="space-y-1.5">
+                  {a.bullets.map((b, i) => (
+                    <li key={i} className="flex items-start gap-1.5 text-gray-500 text-xs leading-relaxed">
+                      <span className="text-teal-500 mt-1 shrink-0">•</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}
@@ -659,12 +886,14 @@ function ActivitiesSection() {
 /* ─── SCHOOL (Slide 7) ─── */
 function SchoolSection() {
   const features = [
-    "1961年創立の歴史ある公立高校",
-    "生徒数1,400名超、理系・文系両コース対応",
-    "学校評価「A」ランク取得",
-    "全国大学入試（UTBK）バリ州上位",
-    "日本語選択クラス＆日本クラブあり",
-    "充実した教室・実験室・図書館完備",
+    "タバナン県タバナン区に位置する男女共学の公立高校で、1961年に創立された歴史ある学校",
+    "地域を代表する優秀校として、学力・教育環境ともに高く評価されている",
+    "生徒数は1,400名超、理系（IPA）・文系（IPS）の両コースに対応",
+    "最新の「自由カリキュラム（Kurikulum Merdeka）」を採用し、生徒の個性や能力を伸ばす教育に力を入れている",
+    "全国大学入試（UTBK）でも高いスコアを記録しており、バリ州内で上位にランクイン",
+    "進学を目指す生徒が多く、学びに注力できる環境が整っており、充実した教室・実験室・図書館などの設備に加え、伝統舞踊や演劇、スポーツ、科学研究など多彩な課外活動が行われている",
+    "学校評価（アクレディテーション）は「A」で、地域社会からの信頼も厚い学校",
+    "日本語の選択クラスがあり、日本クラブは課外活動としても人気",
   ];
 
   return (
@@ -675,7 +904,7 @@ function SchoolSection() {
           <span className="text-gradient-green">SMA Negeri 1 Tabanan</span>
         </SectionTitle>
         <motion.p variants={fadeUp} className="text-center text-gray-600 max-w-3xl mx-auto mb-14 text-lg">
-          バリ州タバナン県を代表する名門公立高校
+          タバナン県タバナン区に位置する、地域を代表する名門公立高校
         </motion.p>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
@@ -775,14 +1004,16 @@ function VideoEmbed() {
 /* ─── PAST PROGRAMS (Slide 8) ─── */
 function PastProgramsSection() {
   const photos = [
-    { src: `${CDN}/school-assembly-balloons.webp`, alt: "全校生徒との交流セレモニー", label: "全校生徒との交流" },
     { src: `${CDN}/classroom-students.webp`, alt: "授業体験の様子", label: "授業体験" },
-    { src: `${CDN}/buddy-lunch.webp`, alt: "バディとランチ", label: "バディとランチ" },
+    { src: `${CDN}/school-assembly-balloons.webp`, alt: "全校生徒との交流セレモニー", label: "全校生徒と" },
+    { src: `${CDN}/cultural-exchange.webp`, alt: "日本の生徒による日本語クラス", label: "日本の生徒による日本語クラス" },
+    { src: `${CDN}/traditional-experience.webp`, alt: "伝統染色・絵付け体験", label: "伝統染色・絵付け体験" },
+    { src: `${CDN}/group-activity.webp`, alt: "ジャパンフェア", label: "ジャパンフェア" },
+    { src: `${CDN}/classroom-interaction.webp`, alt: "炊き出しボランティア", label: "炊き出しボランティア" },
+    { src: `${CDN}/gamelan-experience.webp`, alt: "伝統音楽体験", label: "伝統音楽体験" },
     { src: `${CDN}/friends-thumbsup.webp`, alt: "バディ・先生と", label: "バディ・先生と" },
+    { src: `${CDN}/buddy-lunch.webp`, alt: "バディとランチ", label: "バディとランチ" },
     { src: `${CDN}/farewell-hug.webp`, alt: "涙のお別れ", label: "涙のお別れ" },
-    { src: `${CDN}/traditional-experience.webp`, alt: "伝統文化体験", label: "伝統文化体験" },
-    { src: `${CDN}/cultural-exchange.webp`, alt: "文化交流", label: "文化交流" },
-    { src: `${CDN}/group-activity.webp`, alt: "グループアクティビティ", label: "グループアクティビティ" },
   ];
 
   return (
@@ -796,7 +1027,7 @@ function PastProgramsSection() {
           過去の類似プログラムの様子をご覧ください。笑顔と感動があふれる日々がここにあります。
         </motion.p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-10">
           {photos.map((p) => (
             <motion.div
               key={p.label}
@@ -951,6 +1182,107 @@ function CancellationSection() {
           <p className="text-xs text-gray-400 mt-4">
             ※航空券に関しては、別途キャリアの条件に従います。
           </p>
+        </motion.div>
+      </div>
+    </Section>
+  );
+}
+
+/* ─── BROCHURE DOWNLOAD ─── */
+const PPTX_URL =
+  "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev/bali-campaign/%E6%8F%90%E6%A1%88%E6%9B%B8_26%E5%A4%8F%E3%83%90%E3%83%AA%E4%B8%AD%E9%AB%98%E7%94%9F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0.pptx";
+
+function BrochureDownloadSection() {
+  return (
+    <Section className="py-16 px-4">
+      <div className="max-w-4xl mx-auto">
+        <motion.div
+          variants={fadeUp}
+          className="relative overflow-hidden rounded-[2rem] shadow-2xl"
+        >
+          {/* Background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-emerald-600 to-cyan-700" />
+          {/* Decorative pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+            }}
+          />
+          {/* Glow orb */}
+          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/10 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full bg-cyan-300/10 blur-2xl pointer-events-none" />
+
+          <div className="relative px-8 sm:px-14 py-12 sm:py-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+            {/* Left: icon + text */}
+            <div className="flex-1 text-center lg:text-left">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 mb-6 mx-auto lg:mx-0 shadow-xl">
+                <svg
+                  className="w-10 h-10 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                  />
+                </svg>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-white/15 rounded-full px-4 py-1.5 mb-4 backdrop-blur-sm border border-white/20">
+                <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" />
+                <span className="text-white/90 text-xs font-bold tracking-wide uppercase">
+                  Program Brochure
+                </span>
+              </div>
+              <h3 className="text-white text-2xl sm:text-3xl font-black mb-3 leading-snug">
+                プログラム資料を
+                <br />
+                ダウンロード
+              </h3>
+              <p className="text-white/75 text-sm sm:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">
+                旅程・費用・スケジュールをまとめた詳細提案書（PowerPoint）を無料でダウンロードいただけます。保護者の方との共有にも最適です。
+              </p>
+            </div>
+
+            {/* Right: download button */}
+            <div className="flex flex-col items-center gap-4 shrink-0">
+              <motion.a
+                href={PPTX_URL}
+                download="提案書_26夏バリ中高生プログラム.pptx"
+                className="group relative inline-flex items-center gap-3 bg-white text-teal-700 font-black text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-2xl hover:shadow-white/30 transition-all"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <svg
+                  className="w-6 h-6 text-teal-600 group-hover:animate-bounce"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                  />
+                </svg>
+                資料をダウンロードする
+                <span className="absolute -top-2.5 -right-2.5 bg-amber-400 text-gray-900 text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wide shadow">
+                  FREE
+                </span>
+              </motion.a>
+              <div className="flex items-center gap-2 text-white/50 text-xs">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+                PowerPoint形式 · 無料 · 登録不要
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </Section>
@@ -1247,6 +1579,7 @@ export default function BaliCampaignPage() {
       <PastProgramsSection />
       <AboutSection />
       <CancellationSection />
+      <BrochureDownloadSection />
       <ContactCTASection />
 
       {/* Back to top */}
