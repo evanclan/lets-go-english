@@ -1418,7 +1418,7 @@ function StickyNav() {
     { href: "#activities", label: "アクティビティ" },
     { href: "#school", label: "学校" },
     { href: "#past-programs", label: "実績" },
-    { href: "#about", label: "運営" },
+    // { href: "#about", label: "運営" }, // temporarily hidden
   ];
 
   const [visible, setVisible] = useState(false);
@@ -1476,7 +1476,7 @@ export default function BaliCampaignPage() {
       <ActivitiesSection />
       <SchoolSection />
       <PastProgramsSection />
-      <AboutSection />
+      {/* <AboutSection /> — temporarily hidden, details to be confirmed */}
       <CancellationSection />
       <ContactCTASection />
 
