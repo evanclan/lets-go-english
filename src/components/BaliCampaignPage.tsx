@@ -329,7 +329,7 @@ function ProgramDetailsSection() {
   const details = [
     {
       label: "開催時期",
-      value: "2026年8月9日（日）〜 8月15日（土）",
+      value: "2026年8月9日（日）〜 8月16日（日）",
       sub: "7泊8日の充実プログラム",
       icon: "📅",
       gradient: "from-sky-400 to-blue-500",
@@ -372,7 +372,6 @@ function ProgramDetailsSection() {
   ];
 
   const included = [
-    { text: "往復航空券（燃油サーチャージ含む）", icon: "✈️" },
     { text: "現地校入学金・授業料・教材費", icon: "📚" },
     { text: "旅程記載のアクティビティ費用", icon: "🏄" },
     { text: "ホテル手配/宿泊費（3食付）", icon: "🍽️" },
@@ -381,6 +380,7 @@ function ProgramDetailsSection() {
   ];
 
   const notIncluded = [
+    "往復航空券（燃油サーチャージ含む）",
     "海外旅行保険",
     "日本国内の交通費",
     "個人的なお小遣い",

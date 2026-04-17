@@ -117,9 +117,7 @@ export default function ContactSection() {
               >
                 Google Mapで開く →
               </a>
-              <p className="text-xs text-gray-500 mt-1">
-                渋谷駅 徒歩5分 / 原宿駅 徒歩10分
-              </p>
+              
             </div>
           </motion.div>
 

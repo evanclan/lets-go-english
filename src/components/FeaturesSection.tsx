@@ -89,12 +89,12 @@ const reasons = [
     num: 6,
     icon: "🗓️",
     titleEn: "Flexible & Easy System",
-    title: "柔軟で通いやすい\nシステム",
+    title: "通いやすいシステム",
     desc: null,
     bullets: [
-      { text: "月4回制" },
-      { text: "振替OK（1ヶ月以内）" },
-      { text: "無料体験あり" },
+      { text: "家族割引あり" },
+      { text: "振替OK" },
+      { text: "土曜開講あり" },
     ],
     note: "忙しくても続けやすいが結果につながります。",
     accent: "#C44010",
@@ -287,11 +287,22 @@ export default function FeaturesSection() {
                           <ul className="space-y-2.5 mb-3">
                             {r.bullets.map((b, i) => (
                               <li key={i} className="flex items-center gap-2.5">
-                                <span
-                                  className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-white text-[10px] font-black shadow-sm"
-                                  style={{ background: r.gradient }}
-                                >
-                                  ✓
+                                <span className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-green-600 text-white shadow-sm">
+                                  <svg
+                                    className="w-2.5 h-2.5 shrink-0"
+                                    viewBox="0 0 12 10"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden
+                                  >
+                                    <path
+                                      d="M1 5.2 4.4 8.6 11 1.4"
+                                      stroke="currentColor"
+                                      strokeWidth="2.2"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    />
+                                  </svg>
                                 </span>
                                 <span className="text-gray-800 font-semibold text-sm">{b.text}</span>
                               </li>

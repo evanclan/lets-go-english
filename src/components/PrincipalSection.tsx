@@ -98,12 +98,13 @@ export default function PrincipalSection() {
           <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 text-orange-700 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold mb-3">
             <span>👋</span> Meet the Principal
           </div>
-          <h2 className="section-title text-gray-900 mb-2">
-            校長先生の<span className="text-gradient-orange">紹介</span>
-          </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
             Let&apos;s Go Englishを監修している
           </p>
+          <h2 className="section-title text-gray-900 mb-2">
+            校長先生の<span className="text-gradient-orange">紹介</span>
+          </h2>
+          
         </motion.div>
 
         {/* Main content card */}
