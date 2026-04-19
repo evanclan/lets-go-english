@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import MarqueeSection from "@/components/MarqueeSection";
-import NewsSection from "@/components/NewsSection";
 import PrincipalSection from "@/components/PrincipalSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import CoursesSection from "@/components/CoursesSection";
@@ -95,7 +94,6 @@ export default function Home() {
       </article>
 
       <MarqueeSection />
-      <NewsSection />
       <PrincipalSection />
       <FeaturesSection />
       <CoursesSection />
