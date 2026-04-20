@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { InstagramFeatureImage } from "@/components/instagram/InstagramFeatureImage";
 
 export const metadata: Metadata = {
   title: "Instagram Posts — 6つの理由",
@@ -6,6 +7,16 @@ export const metadata: Metadata = {
 };
 
 const R2 = "https://pub-66c5c22c5ee44cf59854b6183fe23b92.r2.dev";
+
+/** Same image URLs as `FeaturesSection` feature cards */
+const featureImages: Record<number, string> = {
+  1: `${R2}/gallery/feature-age-optimized-2026.jpg`,
+  2: `${R2}/gallery/feature-balanced-skills-2026.jpg`,
+  3: `${R2}/gallery/feature-expert-staff-2026.jpg`,
+  4: `${R2}/gallery/feature-active-lessons-2026.jpg`,
+  5: `${R2}/gallery/5.jpg`,
+  6: `${R2}/gallery/feature-flexible-system-2026.jpg`,
+};
 
 const reasons = [
   {
@@ -29,7 +40,7 @@ const reasons = [
     num: 2,
     icon: "⚡",
     titleEn: "Balanced English Skills",
-    title: "英語の力を\nバランスよく強化",
+    title: "英語の力をバランスよく強化",
     desc: "実際に使える英語力を育成。テスト対策だけでも、会話だけでも終わらないのが強み。「英語を勉強する」から使える自分へ。",
     bullets: null as null | string[],
     note: null as null | string,
@@ -47,7 +58,7 @@ const reasons = [
     icon: "🌍",
     titleEn: "Expert Teaching Staff",
     title: "外国人講師と\n日本人講師の在籍",
-    desc: "外国人講師からは実践的なコミュニケーションを学び、日本人講師からは文法理解のサポートを安心して受けられます。",
+    desc: "外国人講師からは実践的なコミュニケーションを学び、日本人講師からは文法理解のサポートを安心して受けられます。「わからないまま進む」がない安心感を提供いたします。",
     bullets: null as null | string[],
     note: null as null | string,
     point: "「わからないまま進む」がない\n安心のW講師体制",
@@ -63,7 +74,7 @@ const reasons = [
     num: 4,
     icon: "🎵",
     titleEn: "Active Fun Lessons",
-    title: "楽しく学べる\nアクティブレッスン",
+    title: "楽しく学べる\nアクティブレッスン\n（幼児〜小学生）",
     desc: "歌・ダンス・ゲームなどを通して自然に英語が身につく。「勉強してる感」より「気づいたら話してる」がポイントです。",
     bullets: null as null | string[],
     note: null as null | string,
@@ -81,7 +92,7 @@ const reasons = [
     icon: "✈️",
     titleEn: "Study Abroad Support",
     title: "留学サポート",
-    desc: "ワーキングホリデー・海外移住・留学など、\u201c学んで終わりじゃない\u201dキャリア支援あり。留学会社「かえる留学」が手厚くサポートします。",
+    desc: "ワーキングホリデー・海外移住・留学など、\u201c学んで終わりじゃない\u201dキャリア支援あり。RaJAの母体である留学会社「かえる留学」が手厚くサポートします。",
     bullets: null as null | string[],
     note: null as null | string,
     point: "学んで終わりじゃない\n次のステージへつなげる",
@@ -97,12 +108,12 @@ const reasons = [
     num: 6,
     icon: "🗓️",
     titleEn: "Flexible & Easy System",
-    title: "柔軟で通いやすい\nシステム",
+    title: "通いやすいシステム",
     desc: null,
-    bullets: ["月4回制", "振替OK（1ヶ月以内）", "無料体験あり"],
+    bullets: ["家族割引あり", "振替OK", "土曜開講あり"],
     note: "忙しくても続けやすいが結果につながります。",
     point: "続けやすいから\n結果が出る",
-    tags: ["月謝制", "振替自由", "初心者歓迎", "月謝¥7,700〜"],
+    tags: ["家族割引", "振替OK", "土曜開講", "通いやすさ"],
     accent: "#C44010",
     accentRgb: "196,64,16",
     gradient: "linear-gradient(135deg, #C44010 0%, #F5C200 100%)",
@@ -446,13 +457,18 @@ export default function InstagramPage() {
               </div>
             </div>
 
-            {/* Right image (42%) */}
+            {/* Right image (42%) — prefers gallery/instagram/* (hi-res), falls back to gallery/* */}
             <div style={{ flex: "42 1 0%", position: "relative", overflow: "hidden" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`${R2}/gallery/${r.num}.jpg`}
+              <InstagramFeatureImage
+                lowSrc={featureImages[r.num]}
                 alt={r.titleEn}
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
               />
               <div
                 style={{

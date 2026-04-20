@@ -203,7 +203,7 @@ function HeroSection() {
 /* ─── HIGHLIGHTS BAR ─── */
 function HighlightsBar() {
   const highlights = [
-    { icon: "🎓", label: "現地校バディ制度", desc: "3〜5:1の少人数比率" },
+    { icon: "🎓", label: "現地校バディ制度", desc: "日本人生徒3〜5人に対し、バリ人生徒1人の少人数グループ制" },
     { icon: "🏫", label: "教育省公認", desc: "安心・安全の環境" },
     { icon: "🏄", label: "豊富なアクティビティ", desc: "文化体験・自然体験" },
     { icon: "🏨", label: "ホテル滞在", desc: "専用車送迎付き" },
@@ -271,7 +271,7 @@ function OverviewSection() {
           <span className="text-gradient-orange">本物の国際交流</span>を。
         </SectionTitle>
         <motion.p variants={fadeUp} className="text-center text-gray-600 max-w-3xl mx-auto mb-14 text-base sm:text-lg leading-relaxed">
-          バリ島タバナン地区の現地高校で、同世代のバディと共に学び、遊び、文化を体験する
+        バリ州タバナン県の現地高校で、同世代のバディと共に学び、遊び、文化を体験する<br/>
           8日間のプログラム。一生の思い出と友情が、ここで始まります。
         </motion.p>
 
@@ -306,8 +306,9 @@ function OverviewSection() {
                 すべてのアクティビティに<br />高校生バディが同行
               </h3>
               <p className="text-white/85 leading-relaxed mb-6">
-                英語力の高い現地の高校生バディが3〜5:1の比率で全行程に同行。
-                授業もアクティビティも一緒だから、自然と友情が芽生えます。
+              英語力の高い現地の高校生バディ１人が<br/>
+              日本人生徒３～５のグループに全日程同行。<br/>
+              授業もアクティビティも一緒だから、自然と友情が芽生えます。
               </p>
               <div className="flex items-center gap-3 bg-white/15 rounded-xl p-4">
                 <div className="text-3xl">🤝</div>
@@ -814,7 +815,7 @@ function ActivitiesSection() {
           <span className="text-gradient-green">豊富な文化体験</span>
         </SectionTitle>
         <motion.p variants={fadeUp} className="text-center text-gray-600 max-w-3xl mx-auto mb-14 text-base sm:text-lg leading-relaxed">
-          楽しさと学びの両立で、現地社会や生活を多角的に理解。
+          楽しさと学びの両立で、現地社会や生活を多角的に理解。<br/>
           インドネシア語・バリ語講座で第三言語の学習体験も。
         </motion.p>
 
@@ -1388,7 +1389,7 @@ function ContactCTASection() {
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
               <h3 className="font-black text-lg text-gray-800 mb-4">お電話でのお問い合わせ</h3>
               <a
-                href="tel:099-213-0051"
+                href="tel:099-204-7730"
                 className="flex items-center gap-3 bg-orange-50 rounded-xl p-4 border border-orange-100 hover:bg-orange-100 transition-colors"
               >
                 <div className="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center shrink-0">
@@ -1397,8 +1398,8 @@ function ContactCTASection() {
                   </svg>
                 </div>
                 <div>
-                  <div className="font-black text-lg text-orange-600">099-213-0051</div>
-                  <div className="text-xs text-gray-500">RaJA英会話スクール</div>
+                  <div className="font-black text-lg text-orange-600">099-204-7730</div>
+                  <div className="text-xs text-gray-500">運営：株式会社RaJA</div>
                 </div>
               </a>
             </div>
