@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import NewsSection from "@/components/NewsSection";
 import MarqueeSection from "@/components/MarqueeSection";
 import PrincipalSection from "@/components/PrincipalSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -73,6 +74,7 @@ export default function Home() {
       />
       <Navbar />
       <HeroSection />
+      <NewsSection />
 
       {/* AI-extractable overview — hidden visually but crawlable by search engines and LLMs */}
       <article className="sr-only" aria-label="Let's Go English スクール概要">
