@@ -395,7 +395,7 @@ function ProgramDetailsSection() {
           プログラム<span className="text-gradient-orange">詳細・料金</span>
         </SectionTitle>
         <motion.p variants={fadeUp} className="text-center text-gray-500 max-w-2xl mx-auto mb-14 text-sm sm:text-base leading-relaxed">
-          航空券から宿泊、アクティビティまで<span className="font-bold text-gray-700">オールインワン</span>。<br className="hidden sm:block" />
+        アクティビティまで<span className="font-bold text-gray-700">オールインワン</span>。<br className="hidden sm:block" />
           面倒な手配は一切不要で、お子さまの成長体験に集中できます。
         </motion.p>
 
