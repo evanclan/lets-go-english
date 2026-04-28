@@ -25,7 +25,46 @@ export async function POST(request: Request) {
     }
 
     const resend = new Resend(apiKey);
-    const { name, email, phone, course, message, topic } = await request.json();
+    const {
+      name,
+      email,
+      phone,
+      course,
+      message,
+      topic,
+      website,
+      formLoadTime,
+    } = await request.json();
+
+    // Spam protection #1 — honeypot.
+    // The `website` field is hidden from real users via CSS/aria. Bots that
+    // auto-fill every input will populate it. Silently return success so the
+    // bot thinks it worked and doesn't retry from a different angle.
+    if (typeof website === "string" && website.trim() !== "") {
+      console.warn("[contact] Honeypot triggered — submission silently dropped.", {
+        nameSnippet: typeof name === "string" ? name.slice(0, 40) : null,
+        emailSnippet: typeof email === "string" ? email.slice(0, 80) : null,
+      });
+      return NextResponse.json({ success: true });
+    }
+
+    // Spam protection #2 — time-trap.
+    // Real users take far longer than 3 seconds to fill the form. Submissions
+    // that arrive faster are almost certainly bots. Silently drop.
+    if (typeof formLoadTime === "number" && Number.isFinite(formLoadTime)) {
+      const elapsedMs = Date.now() - formLoadTime;
+      if (elapsedMs >= 0 && elapsedMs < 3000) {
+        console.warn(
+          `[contact] Time-trap triggered (${elapsedMs}ms) — submission silently dropped.`,
+          {
+            nameSnippet: typeof name === "string" ? name.slice(0, 40) : null,
+            emailSnippet:
+              typeof email === "string" ? email.slice(0, 80) : null,
+          }
+        );
+        return NextResponse.json({ success: true });
+      }
+    }
 
     if (!name || !email) {
       return NextResponse.json(

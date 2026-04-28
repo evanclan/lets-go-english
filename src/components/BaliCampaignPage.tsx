@@ -1198,10 +1198,12 @@ function ContactCTASection() {
     email: "",
     phone: "",
     message: "",
+    website: "",
   });
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const formLoadTimeRef = useRef<number>(Date.now());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -1216,6 +1218,7 @@ function ContactCTASection() {
           ...formData,
           course: "baliIndonesia",
           topic: BALI_INQUIRY_TOPIC,
+          formLoadTime: formLoadTimeRef.current,
         }),
       });
 
@@ -1225,7 +1228,8 @@ function ContactCTASection() {
       }
 
       setSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "", website: "" });
+      formLoadTimeRef.current = Date.now();
     } catch (err) {
       setError(err instanceof Error ? err.message : "送信に失敗しました。もう一度お試しください。");
     } finally {
@@ -1276,6 +1280,30 @@ function ContactCTASection() {
             ) : (
               <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 sm:p-10 space-y-5">
                 <h3 className="text-xl font-black text-gray-800 mb-4">お問い合わせフォーム</h3>
+
+                {/* Honeypot — hidden from real users; bots that auto-fill every field will populate it and be silently rejected. Do NOT remove. */}
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: "-9999px",
+                    top: "auto",
+                    width: 1,
+                    height: 1,
+                    overflow: "hidden",
+                  }}
+                >
+                  <label htmlFor="bali-website-field">Website (leave blank)</label>
+                  <input
+                    type="text"
+                    id="bali-website-field"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.website}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                  />
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>

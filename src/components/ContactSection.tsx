@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -13,7 +13,9 @@ export default function ContactSection() {
     phone: "",
     course: "",
     message: "",
+    website: "",
   });
+  const formLoadTimeRef = useRef<number>(Date.now());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +26,10 @@ export default function ContactSection() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          formLoadTime: formLoadTimeRef.current,
+        }),
       });
 
       if (!res.ok) {
@@ -33,7 +38,8 @@ export default function ContactSection() {
       }
 
       setSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", course: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", course: "", message: "", website: "" });
+      formLoadTimeRef.current = Date.now();
     } catch (err) {
       setError(err instanceof Error ? err.message : "送信に失敗しました。もう一度お試しください。");
     } finally {
@@ -162,6 +168,30 @@ export default function ContactSection() {
                 <h3 className="text-xl font-black text-gray-800 mb-2">
                   無料体験レッスン申込フォーム
                 </h3>
+
+                {/* Honeypot — hidden from real users; bots that auto-fill every field will populate it and be silently rejected. Do NOT remove. */}
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: "-9999px",
+                    top: "auto",
+                    width: 1,
+                    height: 1,
+                    overflow: "hidden",
+                  }}
+                >
+                  <label htmlFor="contact-website-field">Website (leave blank)</label>
+                  <input
+                    type="text"
+                    id="contact-website-field"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.website}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                  />
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
