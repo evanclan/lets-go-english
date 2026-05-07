@@ -466,7 +466,7 @@ function ProgramDetailsSection() {
                 </div>
                 <div className="flex-1 bg-white/15 backdrop-blur-sm rounded-2xl px-5 py-4 border border-white/20 text-center">
                   <div className="text-white/70 text-[10px] font-bold uppercase tracking-widest mb-1">申込締切</div>
-                  <div className="text-white text-xl sm:text-2xl font-black">5月末</div>
+                  <div className="text-white text-xl sm:text-2xl font-black">５月17日</div>
                 </div>
                 <div className="flex-1 bg-white/25 backdrop-blur-sm rounded-2xl px-5 py-4 border border-white/30 text-center">
                   <div className="text-white/70 text-[10px] font-bold uppercase tracking-widest mb-1">残り枠</div>
@@ -1394,7 +1394,7 @@ function ContactCTASection() {
                   <span className="text-2xl">⏰</span>
                   <div>
                     <div className="font-bold">申し込み締め切り</div>
-                    <div className="text-white/80">2026年5月末</div>
+                    <div className="text-white/80">2026年5月17日</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
