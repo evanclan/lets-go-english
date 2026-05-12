@@ -85,7 +85,6 @@ export default function ContactSection() {
               {[
                 { icon: "📍", label: "住所", val: "株式会社RaJA\n〒890-0051鹿児島県鹿児島市高\n麗町40-39" },
                 { icon: "📞", label: "電話", val: "+81-99-204-7730" },
-                { icon: "✉️", label: "メール", val: "info@raja-international.com" },
                 { icon: "⏰", label: "お問合せ時間", val: "月〜金 10：00～17：00" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-3 py-3 border-b border-gray-50 last:border-0">

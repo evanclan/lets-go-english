@@ -509,7 +509,7 @@ export default function InstagramPage() {
                   Let&apos;s Go English!
                 </p>
                 <p style={{ fontSize: 10, color: "#888", fontWeight: 600 }}>
-                  RaJA英会話スクール｜鹿児島市
+                  運営：株式会社RaJA
                 </p>
               </div>
             </div>

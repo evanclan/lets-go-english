@@ -1650,7 +1650,7 @@ function CTASlide({ index, total }: { index: number; total: number }) {
               backgroundClip: "text",
             }}
           >
-            バリ島 8日間へ。
+            バリ島 8日間
           </span>
         </h2>
 
@@ -1665,7 +1665,7 @@ function CTASlide({ index, total }: { index: number; total: number }) {
             marginBottom: 32,
           }}
         >
-          バリ島タバナン県・現地校短期留学プログラム<br />
+          バリ州タバナン県・現地校短期留学プログラム<br />
           資料請求・ご質問だけでもお気軽にどうぞ。
         </p>
 
